@@ -9,12 +9,12 @@ class DishonestBroker
     double percentage;
     void Copy(const DishonestBroker &x);
     void Erase();
-    RealEstates y;
+    RealEstates listOfEstates;
 
 
     public:
     DishonestBroker();
-    DishonestBroker(Estate **estates,RealEstates y,const char* name,double percentage);
+    DishonestBroker(Estate **estates,RealEstates listOfEstates,const char* name,double percentage);
     DishonestBroker(const DishonestBroker &x);
     ~DishonestBroker();
     DishonestBroker& operator=(const DishonestBroker & x);

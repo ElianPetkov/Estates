@@ -11,11 +11,11 @@ class HelpfulBroker
     double percentage;
     void Copy(const HelpfulBroker &x);
     void Erase();
-    RealEstates y;
+    RealEstates listOfEstates;
 
     public:
     HelpfulBroker();
-    HelpfulBroker(Estate **estates,RealEstates y,const char* name,double percentage);
+    HelpfulBroker(Estate **estates,RealEstates listOfEstates,const char* name,double percentage);
     HelpfulBroker(const HelpfulBroker &x);
     ~HelpfulBroker();
     HelpfulBroker & operator=(const HelpfulBroker & x);

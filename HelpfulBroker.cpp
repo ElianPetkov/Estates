@@ -2,14 +2,14 @@
 #include "RegImot.h"
 #include <string.h>
 #include "HelpfulBroker.h"
-HelpfulBroker::HelpfulBroker():name(nullptr),percentage(0),y() {}
-HelpfulBroker::HelpfulBroker(Estate **estates,RealEstates y,const char * name,double percentage)
+HelpfulBroker::HelpfulBroker():name(nullptr),percentage(0),listOfEstates() {}
+HelpfulBroker::HelpfulBroker(Estate **estates,RealEstates listOfEstates,const char * name,double percentage)
 {
     this->name=new char[strlen(name)+1];
     strcpy(this->name,name);
     this->percentage=percentage;
-    this->y=y;
-    this->y.NewPrice(percentage);
+    this->listOfEstates=listOfEstates;
+    this->listOfEstates.NewPrice(percentage);
 
 }
 void HelpfulBroker::Copy(const HelpfulBroker & x)
@@ -17,7 +17,7 @@ void HelpfulBroker::Copy(const HelpfulBroker & x)
     this->name=new char[strlen(x.name)+1];
     strcpy(this->name,x.name);
     this->percentage=x.percentage;
-    this->y=x.y;
+    this->listOfEstates=x.listOfEstates;
 }
 HelpfulBroker::HelpfulBroker(const HelpfulBroker & x)
 {
@@ -45,7 +45,7 @@ void HelpfulBroker::print()const
     std::cout<<"Helpful Broker:"<<std::endl;
     std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
     std::cout<<"Estates:";
-    y.print();
+    listOfEstates.print();
     std::cout<<std::endl;
 }
 
@@ -59,7 +59,7 @@ void HelpfulBroker::PrintByVip()const
     std::cout<<"Helpful Broker:"<<std::endl;
     std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
     std::cout<<"Estates:";
-    y.PrintByVip();
+    listOfEstates.PrintByVip();
     std::cout<<std::endl;
 }
 
@@ -69,7 +69,7 @@ void HelpfulBroker::LowestPrintHouseByVip()const
     std::cout<<"Helpful Broker:"<<std::endl;
     std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
     std::cout<<"Estates:";
-    y.LowestPrintHouseByVip();
+    listOfEstates.LowestPrintHouseByVip();
     std::cout<<std::endl;
 }
 
@@ -78,7 +78,7 @@ void HelpfulBroker::LowestPrintFlatByVip()const
     std::cout<<"Helpful Broker:"<<std::endl;
     std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
     std::cout<<"Estates:";
-    y.LowestPrintFlatByVip();
+    listOfEstates.LowestPrintFlatByVip();
     std::cout<<std::endl;
 }
 
@@ -87,7 +87,7 @@ void HelpfulBroker::LowestPrintByVip()const
     std::cout<<"Helpful Broker:"<<std::endl;
     std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
     std::cout<<"Estates:";
-    y.LowestPrintByVip();
+    listOfEstates.LowestPrintByVip();
     std::cout<<std::endl;
 }
 void HelpfulBroker::PrintHouseByVip()const
@@ -95,7 +95,7 @@ void HelpfulBroker::PrintHouseByVip()const
     std::cout<<"Helpful Broker:"<<std::endl;
     std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
     std::cout<<"Estates:";
-    y.PrintHouseByVip();
+    listOfEstates.PrintHouseByVip();
     std::cout<<std::endl;
 }
 void HelpfulBroker::PrintFlatByVip()const
@@ -103,7 +103,7 @@ void HelpfulBroker::PrintFlatByVip()const
     std::cout<<"Helpful Broker:"<<std::endl;
     std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
     std::cout<<"Estates:";
-    y.PrintFlatByVip();
+    listOfEstates.PrintFlatByVip();
     std::cout<<std::endl;
 }
 void HelpfulBroker::PrintByPriceByVip(double price1,double price2)const
@@ -111,7 +111,7 @@ void HelpfulBroker::PrintByPriceByVip(double price1,double price2)const
     std::cout<<"Helpful Broker:"<<std::endl;
     std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
     std::cout<<"Estates:";
-    y.PrintByPriceByVip(price1,price2);
+    listOfEstates.PrintByPriceByVip(price1,price2);
     std::cout<<std::endl;
 }
 void HelpfulBroker::PrintTownByVip(char * Town)const
@@ -119,7 +119,7 @@ void HelpfulBroker::PrintTownByVip(char * Town)const
     std::cout<<"Helpful Broker:"<<std::endl;
     std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
     std::cout<<"Estates:";
-    y.PrintTownByVip(Town);
+    listOfEstates.PrintTownByVip(Town);
     std::cout<<std::endl;
 }
 void HelpfulBroker::PrintBySpaceByVip(double size1,double size2)const
@@ -127,7 +127,7 @@ void HelpfulBroker::PrintBySpaceByVip(double size1,double size2)const
     std::cout<<"Helpful Broker:"<<std::endl;
     std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
     std::cout<<"Estates:";
-    y.PrintBySpaceByVip(size1,size2);
+    listOfEstates.PrintBySpaceByVip(size1,size2);
     std::cout<<std::endl;
 }
 

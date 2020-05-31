@@ -7,14 +7,14 @@ class SimpleBroker
     private:
     char * name;
     double percentage;
-    RealEstates y;
+    RealEstates listOfEstates;
 
     void Copy(const SimpleBroker &x);
     void Erase();
 
     public:
     SimpleBroker();
-    SimpleBroker(Estate **estates,RealEstates y,const char* name,double percentage);
+    SimpleBroker(Estate **estates,RealEstates listOfEstates,const char* name,double percentage);
     SimpleBroker(const SimpleBroker &x);
     virtual ~SimpleBroker();
     SimpleBroker& operator=(const SimpleBroker & x);
