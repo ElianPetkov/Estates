@@ -124,12 +124,12 @@ int main()
                 while(strcmp(b,"flat")&&strcmp(b,"house"));
                 if(!strcmp(b,"house"))
                 {
-                    Georgi.LowestPrintHouse();
+                    Georgi.PrintHousesFromLowestPrice();
                 }
 
                 if(!strcmp(b,"flat"))
                 {
-                    Georgi.LowestPrintFlat();
+                    Georgi.PrintFlatsFromLowestPrice();
                 }
                 break;
             case 2:
@@ -137,16 +137,16 @@ int main()
                 double price1,price2;
                 cin>>price1>>price2;
                 cin.ignore();
-                Georgi.PrintByPrice(price1,price2);
+                Georgi.PrintByPriceRange(price1,price2);
                 break;
             case 3:
-                Georgi.LowestPrint();
+                Georgi.PrintEstatesFromLowestPrice();
                 break;
             case 4:
                 cout<<"Type Town you want to search by:"<<" ";
                 char a[30];
                 cin.getline(a,30);
-                Georgi.PrintTown(a);
+                Georgi.PrintEstatesByTown(a);
                 break;
             case 5:
                 cout<<"Type space range:"<<" ";
@@ -154,7 +154,7 @@ int main()
                 int y;
                 cin>>x>>y;
                 cin.ignore();
-                Georgi.PrintBySpace(x,y);
+                Georgi.PrintBySpaceRange(x,y);
             }
             break;
         case 2:
@@ -170,12 +170,12 @@ int main()
                 while(strcmp(b,"flat")&&strcmp(b,"house"));
                 if(!strcmp(b,"house"))
                 {
-                    Denislav.LowestPrintHouseByVip();
+                    Denislav.ByVip();
                 }
 
                 if(!strcmp(b,"flat"))
                 {
-                    Denislav.LowestPrintFlatByVip();
+                    Denislav.PrintFlatsFromLowestPriceByVip();
                 }
                 break;
             case 2:
@@ -183,16 +183,16 @@ int main()
                 double price1,price2;
                 cin>>price1>>price2;
                 cin.ignore();
-                Denislav.PrintByPriceByVip(price1,price2);
+                Denislav.PrintByPriceRangeByVip(price1,price2);
                 break;
             case 3:
-                Denislav.LowestPrintByVip();
+                Denislav.PrintEstatesFromLowestPriceByVip();
                 break;
             case 4:
                 cout<<"Type Town you want to search by:"<<" ";
                 char a[30];
                 cin.getline(a,30);
-                Denislav.PrintTownByVip(a);
+                Denislav.PrintEstatesByTownByVip(a);
                 break;
             case 5:
                 cout<<"Type space range:"<<" ";
@@ -200,7 +200,7 @@ int main()
                 int y;
                 cin>>x>>y;
                 cin.ignore();
-                Denislav.PrintBySpaceByVip(x,y);
+                Denislav.PrintBySpaceRangeByVip(x,y);
                 break;
             }
             break;
@@ -217,12 +217,12 @@ int main()
                 while(strcmp(b,"flat")&&strcmp(b,"house"));
                 if(!strcmp(b,"house"))
                 {
-                    Ivan.LowestPrintHouse();
+                    Ivan.PrintHousesFromLowestPrice();
                 }
 
                 if(!strcmp(b,"flat"))
                 {
-                    Ivan.LowestPrintFlat();
+                    Ivan.PrintFlatsFromLowestPrice();
                 }
                 break;
             case 2:
@@ -230,16 +230,16 @@ int main()
                 double price1,price2;
                 cin>>price1>>price2;
                 cin.ignore();
-                Ivan.PrintByPrice(price1,price2);
+                Ivan.PrintByPriceRange(price1,price2);
                 break;
             case 3:
-                Ivan.LowestPrint();
+                Ivan.PrintEstatesFromLowestPrice();
                 break;
             case 4:
                 cout<<"Type Town you want to search by:"<<" ";
                 char a[30];
                 cin.getline(a,30);
-                Ivan.PrintTown(a);
+                Ivan.PrintEstatesByTown(a);
                 break;
             case 5:
                 cout<<"Type space range:"<<" ";
@@ -247,7 +247,7 @@ int main()
                 int y;
                 cin>>x>>y;
                 cin.ignore();
-                Ivan.PrintBySpace(x,y);
+                Ivan.PrintBySpaceRange(x,y);
                 break;
             }
             break;

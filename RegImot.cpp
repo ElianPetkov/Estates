@@ -127,7 +127,7 @@ void RealEstates::NewPrice(int x)
         estates[i]->Estate::setPrice(estates[i]->getPrice()+(estates[i]->getPrice()*x)/100);
     }
 }
-void RealEstates::LowestPrintHouse()const
+void RealEstates::PrintHousesFromLowestPrice()const
 {
     if(Current==0)
     {
@@ -171,7 +171,7 @@ void RealEstates::NewPrice(double x)
     }
 }
 
-void RealEstates::LowestPrintFlat()const
+void RealEstates::PrintFlatsFromLowestPrice()const
 {
     if(Current==0)
     {
@@ -208,7 +208,7 @@ void RealEstates::LowestPrintFlat()const
     }
 }
 
-void RealEstates::LowestPrint()const
+void RealEstates::PrintEstatesFromLowestPrice()const
 {
     if(Current==0)
     {
@@ -242,7 +242,7 @@ void RealEstates::LowestPrint()const
     }
 }
 
-void RealEstates::PrintHouse()const
+void RealEstates::PrintHouses()const
 {
 
     for(int i=0; i<Current; i++)
@@ -256,7 +256,7 @@ void RealEstates::PrintHouse()const
 
 }
 
-void RealEstates::PrintFlat()const
+void RealEstates::PrintFlats()const
 {
 
     for(int i=0; i<Current; i++)
@@ -270,7 +270,7 @@ void RealEstates::PrintFlat()const
 
 }
 
-void RealEstates::PrintByPrice(double price1,double price2)const
+void RealEstates::PrintByPriceRange(double price1,double price2)const
 {
     if(Current==0)
     {
@@ -288,7 +288,7 @@ void RealEstates::PrintByPrice(double price1,double price2)const
     }
 }
 
-void RealEstates::PrintTown(char * Town)const
+void RealEstates::PrintEstatesByTown(char * Town)const
 {
     if(Current==0)
     {
@@ -306,7 +306,7 @@ void RealEstates::PrintTown(char * Town)const
     }
 }
 
-void RealEstates::PrintBySpace(double size1,double size2)const
+void RealEstates::PrintBySpaceRange(double size1,double size2)const
 {
     if(Current==0)
     {
@@ -349,7 +349,7 @@ void RealEstates::PrintByVip()const
 
 }
 
-void RealEstates::LowestPrintHouseByVip()const
+void RealEstates::ByVip()const
 {
     if(Current==0)
     {
@@ -382,7 +382,7 @@ void RealEstates::LowestPrintHouseByVip()const
     }
 }
 
-void RealEstates::LowestPrintFlatByVip()const
+void RealEstates::PrintFlatsFromLowestPriceByVip()const
 {
     if(Current==0)
     {
@@ -414,7 +414,7 @@ void RealEstates::LowestPrintFlatByVip()const
         }
     }
 }
-void RealEstates::LowestPrintByVip()const
+void RealEstates::PrintEstatesFromLowestPriceByVip()const
 {
     if(Current==0)
     {
@@ -457,7 +457,7 @@ void RealEstates::LowestPrintByVip()const
         }
     }
 }
-void RealEstates::PrintHouseByVip()const
+void RealEstates::PrintHousesByVip()const
 {
 
     for(int i=0; i<Current; i++)
@@ -485,7 +485,7 @@ void RealEstates::PrintHouseByVip()const
 
 
 }
-void RealEstates::PrintFlatByVip()const
+void RealEstates::PrintFlatsByVip()const
 {
 
     for(int i=0; i<Current; i++)
@@ -512,7 +512,7 @@ void RealEstates::PrintFlatByVip()const
     }
 }
 
-void RealEstates::PrintByPriceByVip(double price1,double price2)const
+void RealEstates::PrintByPriceRangeByVip(double price1,double price2)const
 {
     if(Current==0)
     {
@@ -544,7 +544,7 @@ void RealEstates::PrintByPriceByVip(double price1,double price2)const
         }
     }
 }
-void RealEstates::PrintTownByVip(char * Town)const
+void RealEstates::PrintEstatesByTownByVip(char * Town)const
 {
     if(Current==0)
     {
@@ -578,7 +578,7 @@ void RealEstates::PrintTownByVip(char * Town)const
 
 }
 
-void RealEstates::PrintBySpaceByVip(double size1,double size2)const
+void RealEstates::PrintBySpaceRangeByVip(double size1,double size2)const
 {
     if(Current==0)
     {

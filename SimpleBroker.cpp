@@ -57,70 +57,70 @@ SimpleBroker * SimpleBroker:: Clone()const
 {
     return new SimpleBroker(*this);
 }
-void SimpleBroker::LowestPrintHouse()
+void SimpleBroker::PrintHousesFromLowestPrice()
 {
     std::cout<<"Simple Broker:"<<std::endl;
     std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
     std::cout<<"Estates:";
-    listOfEstates.LowestPrintHouse();
+    listOfEstates.PrintHousesFromLowestPrice();
     std::cout<<std::endl;
 }
-void SimpleBroker::LowestPrintFlat()
+void SimpleBroker::PrintFlatsFromLowestPrice()
 {
     std::cout<<"Simple Broker:"<<std::endl;
     std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
     std::cout<<"Estates:";
-    listOfEstates.LowestPrintFlat();
+    listOfEstates.PrintFlatsFromLowestPrice();
     std::cout<<std::endl;
 }
-void SimpleBroker::LowestPrint()
+void SimpleBroker::PrintEstatesFromLowestPrice()
 {
     std::cout<<"Simple Broker:"<<std::endl;
     std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
     std::cout<<"Estates:";
-    listOfEstates.LowestPrint();
+    listOfEstates.PrintEstatesFromLowestPrice();
     std::cout<<std::endl;
 }
 
-    void SimpleBroker::PrintHouse()
+    void SimpleBroker::PrintHouses()
     {
     std::cout<<"Simple Broker:"<<std::endl;
     std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
     std::cout<<"Estates:";
-    listOfEstates.PrintHouse();
+    listOfEstates.PrintHouses();
     std::cout<<std::endl;
 }
-void SimpleBroker::PrintFlat()
+void SimpleBroker::PrintFlats()
         {
     std::cout<<"Simple Broker:"<<std::endl;
     std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
     std::cout<<"Estates:";
-    listOfEstates.PrintFlat();
+    listOfEstates.PrintFlats();
     std::cout<<std::endl;
 }
-void SimpleBroker::PrintByPrice(double price1,double price2)
+void SimpleBroker::PrintByPriceRange(double price1,double price2)
         {
     std::cout<<"Simple Broker:"<<std::endl;
     std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
     std::cout<<"Estates:";
-    listOfEstates.PrintByPrice(price1,price2);
+    listOfEstates.PrintByPriceRange(price1,price2);
     std::cout<<std::endl;
 }
 
-void SimpleBroker::PrintTown(char * Town)
+void SimpleBroker::PrintEstatesByTown(char * Town)
         {
     std::cout<<"Simple Broker:"<<std::endl;
     std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
     std::cout<<"Estates:";
-    listOfEstates.PrintTown(Town);
+    listOfEstates.PrintEstatesByTown(Town);
     std::cout<<std::endl;
 }
 
-void SimpleBroker::PrintBySpace(double size1,double size2)
+void SimpleBroker::PrintBySpaceRange(double size1,double size2)
 {
     std::cout<<"Simple Broker:"<<std::endl;
     std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
     std::cout<<"Estates:";
-    listOfEstates.PrintBySpace(size1,size2);
+    listOfEstates.PrintBySpaceRange(size1,size2);
     std::cout<<std::endl;
 }

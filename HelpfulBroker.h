@@ -23,14 +23,14 @@ class HelpfulBroker
     virtual void PrintByVip()const;
     virtual HelpfulBroker*Clone()const;
 
-    virtual void LowestPrintHouseByVip()const;
-    virtual void LowestPrintFlatByVip()const;
-    virtual void LowestPrintByVip()const;
-    virtual void PrintHouseByVip()const;
-    virtual void PrintFlatByVip()const;
-    virtual void PrintByPriceByVip(double price1,double price2)const;
-    virtual void PrintTownByVip(char * Town)const;
-    virtual void PrintBySpaceByVip(double size1,double size2)const;
+    virtual void ByVip()const;
+    virtual void PrintFlatsFromLowestPriceByVip()const;
+    virtual void PrintEstatesFromLowestPriceByVip()const;
+    virtual void PrintHousesByVip()const;
+    virtual void PrintFlatsByVip()const;
+    virtual void PrintByPriceRangeByVip(double price1,double price2)const;
+    virtual void PrintEstatesByTownByVip(char * Town)const;
+    virtual void PrintBySpaceRangeByVip(double size1,double size2)const;
 
 };
 #endif

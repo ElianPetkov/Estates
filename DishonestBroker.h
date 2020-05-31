@@ -20,14 +20,14 @@ class DishonestBroker
     DishonestBroker& operator=(const DishonestBroker & x);
     virtual void print();
     virtual DishonestBroker * Clone()const;
-    virtual void LowestPrintHouse();
-    virtual void LowestPrintFlat();
-    virtual void LowestPrint();
-    virtual void PrintHouse();
-    virtual void PrintFlat();
-    virtual void PrintByPrice(double name1,double name2);
-    virtual void PrintTown(char * Town);
-    virtual void PrintBySpace(double size1,double size2);
+    virtual void PrintHousesFromLowestPrice();
+    virtual void PrintFlatsFromLowestPrice();
+    virtual void PrintEstatesFromLowestPrice();
+    virtual void PrintHouses();
+    virtual void PrintFlats();
+    virtual void PrintByPriceRange(double name1,double name2);
+    virtual void PrintEstatesByTown(char * Town);
+    virtual void PrintBySpaceRange(double size1,double size2);
 
 
 };

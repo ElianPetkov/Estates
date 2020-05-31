@@ -102,34 +102,34 @@
 	<iostream>
 	"RegImot.h"
 
-1590956288 source:d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\dishonestbroker.cpp
+1590959371 source:d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\dishonestbroker.cpp
 	<iostream>
 	"RegImot.h"
 	<string.h>
 	"DishonestBroker.h"
 
-1590957501 d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\regimot.h
+1590959350 d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\regimot.h
 	<iostream>
 	"Imot.h"
 
 1590957501 d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\imot.h
 	<iostream>
 
-1590957790 d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\dishonestbroker.h
+1590959361 d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\dishonestbroker.h
 	<iostream>
 	"RegImot.h"
 
-1590956719 source:d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\helpfulbroker.cpp
+1590959332 source:d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\helpfulbroker.cpp
 	<iostream>
 	"RegImot.h"
 	<string.h>
 	"HelpfulBroker.h"
 
-1590957791 d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\helpfulbroker.h
+1590959332 d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\helpfulbroker.h
 	<iostream>
 	"RegImot.h"
 
-1528191095 source:d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\house.cpp
+1590957501 source:d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\house.cpp
 	<string.h>
 	<iostream>
 	"House.h"
@@ -137,7 +137,7 @@
 1590957501 d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\house.h
 	"Imot.h"
 
-1528306461 source:d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\plot.cpp
+1590957501 source:d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\plot.cpp
 	<iostream>
 	<string.h>
 	"Plot.h"
@@ -147,25 +147,25 @@
 	<iostream>
 	"Imot.h"
 
-1528490401 source:d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\regimot.cpp
+1590959412 source:d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\regimot.cpp
 	<string.h>
 	<iostream>
 	"RegImot.h"
 	"Imot.h"
 	<cassert>
 
-1590956764 source:d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\simplebroker.cpp
+1590959412 source:d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\simplebroker.cpp
 	<iostream>
 	"RegImot.h"
 	<string.h>
 	"SimpleBroker.h"
 	<cassert>
 
-1590957791 d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\simplebroker.h
+1590959427 d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\simplebroker.h
 	<iostream>
 	"RegImot.h"
 
-1528191095 source:d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\flat.cpp
+1590957501 source:d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\flat.cpp
 	<string.h>
 	<iostream>
 	"flat.h"
@@ -175,7 +175,7 @@
 	<iostream>
 	"Imot.h"
 
-1528228675 source:d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\imot.cpp
+1590957501 source:d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\imot.cpp
 	<string.h>
 	<iostream>
 	"RegImot.h"
@@ -183,7 +183,7 @@
 	"flat.h"
 	<cassert>
 
-1590956852 source:d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\main.cpp
+1590959412 source:d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\main.cpp
 	<iostream>
 	<string.h>
 	"Imot.h"
