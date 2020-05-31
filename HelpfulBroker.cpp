@@ -2,8 +2,8 @@
 #include "RegImot.h"
 #include <string.h>
 #include "HelpfulBroker.h"
-HelpfulBroker::HelpfulBroker():RealEstates(),name(nullptr),percentage(0),y() {}
-HelpfulBroker::HelpfulBroker(Estate **estates,RealEstates y,const char * name,double percentage):RealEstates(estates)
+HelpfulBroker::HelpfulBroker():name(nullptr),percentage(0),y() {}
+HelpfulBroker::HelpfulBroker(Estate **estates,RealEstates y,const char * name,double percentage)
 {
     this->name=new char[strlen(name)+1];
     strcpy(this->name,name);
@@ -17,9 +17,9 @@ void HelpfulBroker::Copy(const HelpfulBroker & x)
     this->name=new char[strlen(x.name)+1];
     strcpy(this->name,x.name);
     this->percentage=x.percentage;
-    this->y=x;
+    this->y=x.y;
 }
-HelpfulBroker::HelpfulBroker(const HelpfulBroker & x):RealEstates(x)
+HelpfulBroker::HelpfulBroker(const HelpfulBroker & x)
 {
     Copy(x);
 }
@@ -35,7 +35,6 @@ HelpfulBroker & HelpfulBroker:: operator=(const HelpfulBroker & x)
 {
     if(this!=&x)
     {
-        RealEstates::operator=(x);
         Erase();
         Copy(x);
     }

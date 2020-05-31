@@ -2,7 +2,7 @@
 #define DISHONESTBROKER_H_DISHONESTBROKER
 #include <iostream>
 #include "RegImot.h"
-class DishonestBroker:public RealEstates
+class DishonestBroker
 {
     private:
     char * name;

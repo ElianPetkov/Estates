@@ -2,7 +2,7 @@
 #define SimpleBroker_H_SimpleBroker
 #include <iostream>
 #include "RegImot.h"
-class SimpleBroker:public RealEstates
+class SimpleBroker
 {
     private:
     char * name;

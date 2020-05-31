@@ -3,8 +3,8 @@
 #include <string.h>
 #include "DishonestBroker.h"
 using namespace std;
-DishonestBroker::DishonestBroker():RealEstates(),y(),name(nullptr),percentage(0) {}
-DishonestBroker::DishonestBroker(Estate **estates,RealEstates y,const char* name,double percentage):RealEstates(estates)
+DishonestBroker::DishonestBroker():y(),name(nullptr),percentage(0) {}
+DishonestBroker::DishonestBroker(Estate **estates,RealEstates y,const char* name,double percentage)
 {
     this->name=new char[strlen(name)+1];
     strcpy(this->name,name);
@@ -18,10 +18,10 @@ void DishonestBroker::Copy(const DishonestBroker & x)
     this->name=new char[strlen(x.name)+1];
     strcpy(this->name,x.name);
     this->percentage=x.percentage;
-    this->y=x;
+    this->y=x.y;
 
 }
-DishonestBroker::DishonestBroker(const DishonestBroker & x):RealEstates(x)
+DishonestBroker::DishonestBroker(const DishonestBroker & x)
 {
     Copy(x);
 }
@@ -37,7 +37,6 @@ DishonestBroker &DishonestBroker:: operator=(const DishonestBroker & x)
 {
     if(this!=&x)
     {
-        RealEstates::operator=(x);
         Erase();
         Copy(x);
     }

@@ -3,8 +3,8 @@
 #include <string.h>
 #include "SimpleBroker.h"
 #include <cassert>
-SimpleBroker::SimpleBroker():RealEstates(),y(),name(nullptr),percentage(0){}
-SimpleBroker::SimpleBroker(Estate **estates,RealEstates y,const char* name,double percentage):RealEstates(estates)
+SimpleBroker::SimpleBroker():y(),name(nullptr),percentage(0){}
+SimpleBroker::SimpleBroker(Estate **estates,RealEstates y,const char* name,double percentage)
 {
 this->name=new char[strlen(name)+1];
 assert(this->name!=nullptr);
@@ -19,10 +19,10 @@ void SimpleBroker::Copy(const SimpleBroker & x)
     assert(this->name!=nullptr);
     strcpy(this->name,x.name);
     this->percentage=x.percentage;
-     this->y=x;
+     this->y=x.y;
 
 }
-SimpleBroker::SimpleBroker(const SimpleBroker & x):RealEstates(x)
+SimpleBroker::SimpleBroker(const SimpleBroker & x)
 {
     Copy(x);
 }
@@ -38,7 +38,6 @@ SimpleBroker& SimpleBroker::operator=(const SimpleBroker & x)
 {
     if(this!=&x)
     {
-        RealEstates::operator=(x);
         Erase();
         Copy(x);
     }

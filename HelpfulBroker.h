@@ -2,7 +2,7 @@
 #define HelpfulBroker_H_HelpfulBroker
 #include <iostream>
 #include "RegImot.h"
-class HelpfulBroker:public RealEstates
+class HelpfulBroker
 {
 
 
