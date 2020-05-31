@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="DishonestBroker.cpp" open="0" top="0" tabpos="11">
+		<Cursor position="1318" topLine="100" />
+	</File>
+	<File name="DishonestBroker.h" open="0" top="0" tabpos="12">
+		<Cursor position="719" topLine="9" />
+	</File>
+	<File name="HelpfulBroker.cpp" open="1" top="0" tabpos="12">
+		<Cursor position="2809" topLine="89" />
+	</File>
+	<File name="HelpfulBroker.h" open="1" top="0" tabpos="11">
+		<Cursor position="287" topLine="11" />
+	</File>
+	<File name="House.cpp" open="1" top="0" tabpos="8">
+		<Cursor position="1254" topLine="0" />
+	</File>
+	<File name="House.h" open="1" top="0" tabpos="7">
+		<Cursor position="481" topLine="0" />
+	</File>
+	<File name="Imot.h" open="1" top="0" tabpos="1">
+		<Cursor position="127" topLine="0" />
+	</File>
+	<File name="Plot.cpp" open="1" top="0" tabpos="4">
+		<Cursor position="1799" topLine="144" />
+	</File>
+	<File name="Plot.h" open="1" top="0" tabpos="3">
+		<Cursor position="404" topLine="0" />
+	</File>
+	<File name="RegImot.cpp" open="1" top="1" tabpos="10">
+		<Cursor position="123" topLine="75" />
+	</File>
+	<File name="RegImot.h" open="1" top="0" tabpos="9">
+		<Cursor position="132" topLine="19" />
+	</File>
+	<File name="SimpleBroker.cpp" open="1" top="0" tabpos="14">
+		<Cursor position="693" topLine="0" />
+	</File>
+	<File name="SimpleBroker.h" open="1" top="0" tabpos="15">
+		<Cursor position="154" topLine="0" />
+	</File>
+	<File name="agent.h" open="0" top="0" tabpos="9">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="flat.cpp" open="1" top="0" tabpos="6">
+		<Cursor position="956" topLine="0" />
+	</File>
+	<File name="flat.h" open="1" top="0" tabpos="5">
+		<Cursor position="155" topLine="0" />
+	</File>
+	<File name="imot.cpp" open="1" top="0" tabpos="2">
+		<Cursor position="2456" topLine="0" />
+	</File>
+	<File name="main.cpp" open="1" top="0" tabpos="13">
+		<Cursor position="930" topLine="114" />
+	</File>
+</CodeBlocks_layout_file>
