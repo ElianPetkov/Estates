@@ -25,7 +25,7 @@ class DishonestBroker
     virtual void PrintEstatesFromLowestPrice();
     virtual void PrintHouses();
     virtual void PrintFlats();
-    virtual void PrintByPriceRange(double name1,double name2);
+    virtual void PrintByPriceRange(double price1,double price2);
     virtual void PrintEstatesByTown(char * Town);
     virtual void PrintBySpaceRange(double size1,double size2);
 

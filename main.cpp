@@ -9,6 +9,7 @@
 #include "HelpfulBroker.h"
 #include "DishonestBroker.h"
 #include "SimpleBroker.h"
+#include "agent.h"
 using namespace std;
 int Register(int NumberOfEstates,Estate **estates,RealEstates &x)
 {
@@ -78,9 +79,6 @@ int main()
     Register(NumberOfEstates,Iestates,LIvan);
     SimpleBroker Ivan(Iestates,LIvan,"Ivan Dimitrov",3.0);
     Ivan.print();
-
-
-
 
     cout<<"Choose a broker from 1 to 3:"<<" ";
     int a;
