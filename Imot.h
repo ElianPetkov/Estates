@@ -15,7 +15,7 @@ class Estate
 
     public:
     virtual void print()const;
-    virtual void read();
+    virtual void AddCharacteristicsToEstate();
     Estate();
     Estate(const char *town,const char *TypeOfEstate,const char*addr,const char*owner,double price,double space);
     Estate(const Estate & x);

@@ -11,7 +11,7 @@ class House:public Estate
 
     public:
     virtual void print()const;
-    virtual void read();
+    virtual void AddCharacteristicsToEstate();
     House();
     House(const char *town,const char *TypeOfEstate,const char*addr,const char*owner,double price,double space,int rooms,int floor);
     House(const House & x);

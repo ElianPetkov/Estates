@@ -11,10 +11,9 @@
 #include "SimpleBroker.h"
 #include "agent.h"
 using namespace std;
-int Register(RealEstates &listOfEstates)
+int RegisterEstates(RealEstates &listOfEstates)
 {
     int NumberOfEstates;
-    char a[20];
     cout<<"Number of estates:"<<" ";
     do
     {
@@ -22,35 +21,35 @@ int Register(RealEstates &listOfEstates)
     }
     while(NumberOfEstates<0);
     cin.ignore();
+
     Estate **estates=new Estate*[NumberOfEstates];
+    char typeOfEstate[20];
     for(int i=0; i<NumberOfEstates; i++)
     {
         cout<<"Type of the estate:Flat,House or Plot:"<<" ";
         do
         {
-            cin.getline(a,20);
+            cin.getline(typeOfEstate,20);
         }
-        while(strcmp(a,"Flat")&& strcmp(a,"House")&& strcmp(a,"Plot"));
+        while(strcmp(typeOfEstate,"Flat")&& strcmp(typeOfEstate,"House")&& strcmp(typeOfEstate,"Plot"));
 
-        if(!strcmp(a,"Flat"))
+        if(!strcmp(typeOfEstate,"Flat"))
         {
             estates[i]=new Flat();
         }
 
-        if(!strcmp(a,"House"))
+        if(!strcmp(typeOfEstate,"House"))
         {
             estates[i]=new House();
         }
 
-        if(!strcmp(a,"Plot"))
+        if(!strcmp(typeOfEstate,"Plot"))
         {
             estates[i]=new Plot();
         }
 
-        estates[i]->read();
-
+        estates[i]->AddCharacteristicsToEstate();
         listOfEstates.add(estates[i]);
-
         cout<<endl;
 
     }
@@ -61,15 +60,16 @@ void SearchEstates(Agent *listOfAgents[3])
     cout<<"1 for Dishonest broker"<<endl;
     cout<<"2 for Helpful broker"<<endl;
     cout<<"3 for Simple broker"<<endl;
-    int agentNumber;
+    int chosenAngen;
     do
     {
-        cin>>agentNumber;
+        cin>>chosenAngen;
     }
-    while(agentNumber<-1&&agentNumber>2);
+    while(chosenAngen<-1&&chosenAngen>2);
     cout<<endl;
     cin.ignore();
-    int c;
+
+    int option;
     do
     {
         cout<<"Chose a way to search:"<<endl;
@@ -82,57 +82,62 @@ void SearchEstates(Agent *listOfAgents[3])
 
         do
         {
-            cin>>c;
+            cin>>option;
         }
-        while(c<0&&c>6);
+        while(option<0&&option>6);
         cin.ignore();
-        switch(c)
+        switch(option)
         {
         case 1:
-            char b[20];
-            cout<<"Type of the estates you want to sort ,by lowest price:flat or house:"<<" ";
+            char typeOfEstates[20];
+            cout<<"Type of the estates you want to sort ,by lowest price:Flat or House:"<<" ";
             do
             {
-                cin.getline(b,20);
+                cin.getline(typeOfEstates,20);
             }
-            while(strcmp(b,"flat")&&strcmp(b,"house"));
-            if(!strcmp(b,"house"))
+            while(strcmp(typeOfEstates,"Flat")&&strcmp(typeOfEstates,"House"));
+
+            if(!strcmp(typeOfEstates,"House"))
             {
-                listOfAgents[agentNumber-1]->PrintHousesFromLowestPrice();
+                listOfAgents[chosenAngen-1]->PrintHousesFromLowestPrice();
             }
 
-            if(!strcmp(b,"flat"))
+            if(!strcmp(typeOfEstates,"Flat"))
             {
-                listOfAgents[agentNumber-1]->PrintFlatsFromLowestPrice();
+                listOfAgents[chosenAngen-1]->PrintFlatsFromLowestPrice();
             }
             break;
+
         case 2:
             cout<<"Type the price range:"<<" "<<endl;
-            double price1,price2;
-            cin>>price1>>price2;
+            double fromPrice,toPrice;
+            cin>>fromPrice>>toPrice;
             cin.ignore();
-            listOfAgents[agentNumber-1]->PrintByPriceRange(price1,price2);
+            listOfAgents[chosenAngen-1]->PrintByPriceRange(fromPrice,toPrice);
             break;
+
         case 3:
-            listOfAgents[agentNumber-1]->PrintEstatesFromLowestPrice();
+            listOfAgents[chosenAngen-1]->PrintEstatesFromLowestPrice();
             break;
+
         case 4:
             cout<<"Type Town you want to search by:"<<" ";
-            char a[30];
-            cin.getline(a,30);
-            listOfAgents[agentNumber-1]->PrintEstatesByTown(a);
+            char townName[30];
+            cin.getline(townName,30);
+            listOfAgents[chosenAngen-1]->PrintEstatesByTown(townName);
             break;
+
         case 5:
             cout<<"Type space range:"<<" ";
-            int x;
-            int y;
-            cin>>x>>y;
+            int fromSpace;
+            int toSpace;
+            cin>>fromSpace>>toSpace;
             cin.ignore();
-            listOfAgents[agentNumber-1]->PrintBySpaceRange(x,y);
+            listOfAgents[chosenAngen-1]->PrintBySpaceRange(fromSpace,toSpace);
             break;
         }
     }
-    while(c!=0);
+    while(option!=0);
 }
 int main()
 {
@@ -140,9 +145,9 @@ int main()
     RealEstates denislavListWithEstates;
     RealEstates ivanListWithEstates;
 
-    Register(georgiListWithEstates);
-    Register(denislavListWithEstates);
-    Register(ivanListWithEstates);
+    RegisterEstates(georgiListWithEstates);
+    RegisterEstates(denislavListWithEstates);
+    RegisterEstates(ivanListWithEstates);
 
     DishonestBroker Georgi(georgiListWithEstates,"Georgi Dimitrov",5.0);
     Georgi.print();

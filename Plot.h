@@ -15,7 +15,7 @@ class Plot:public Estate
 
 
     Plot * Clone()const;
-    virtual void read();
+    virtual void AddCharacteristicsToEstate();
     virtual void print()const;
 
 

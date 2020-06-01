@@ -82,7 +82,7 @@ void Estate::print()const
     std::cout<<"Price:"<<" "<<price<<std::endl;
     std::cout<<"Square meters of the estate:"<<" "<<space<<std::endl;
 }
-void Estate::read()
+void Estate::AddCharacteristicsToEstate()
 {
     char buffer[1024];
 

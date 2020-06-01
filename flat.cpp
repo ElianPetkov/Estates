@@ -24,9 +24,9 @@ void Flat::print()const
     std::cout<<"Floor of the estate:"<<" "<<floor<<std::endl;
 }
 
-void Flat::read()
+void Flat::AddCharacteristicsToEstate()
 {
-    Estate::read();
+    Estate::AddCharacteristicsToEstate();
     std::cout<<"Number of Rooms "<<" ";
     std::cin>>rooms;
     std::cout<<"Floor of the estate"<<" ";

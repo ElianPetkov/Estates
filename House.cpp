@@ -36,9 +36,9 @@ void House::print()const
     std::cout<<"square meters of the yard:"<<" "<<yard<<std::endl;
 }
 
-void House::read()
+void House::AddCharacteristicsToEstate()
 {
-    Estate::read();
+    Estate::AddCharacteristicsToEstate();
     std::cout<<"square meters of the yard:"<<" ";
     std::cin>>yard;
     std::cout<<"Number of rooms of the estate:"<<" ";
