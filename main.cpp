@@ -11,8 +11,9 @@
 #include "SimpleBroker.h"
 #include "agent.h"
 using namespace std;
-int Register(int NumberOfEstates,Estate **estates,RealEstates &x)
+int Register(RealEstates &listOfEstates)
 {
+    int NumberOfEstates;
     char a[20];
     cout<<"Number of estates:"<<" ";
     do
@@ -21,6 +22,7 @@ int Register(int NumberOfEstates,Estate **estates,RealEstates &x)
     }
     while(NumberOfEstates<0);
     cin.ignore();
+    Estate **estates=new Estate*[NumberOfEstates];
     for(int i=0; i<NumberOfEstates; i++)
     {
         cout<<"Type of the estate:Flat,House or Plot:"<<" ";
@@ -47,42 +49,14 @@ int Register(int NumberOfEstates,Estate **estates,RealEstates &x)
 
         estates[i]->read();
 
-        x.add(estates[i]);
+        listOfEstates.add(estates[i]);
 
         cout<<endl;
 
     }
 }
-int main()
+void SearchEstates(Agent *listOfAgents[3])
 {
-    int NumberOfEstates;
-
-    RealEstates LGeorgi;
-    RealEstates LDenislav;
-    RealEstates LIvan;
-
-
-    Estate **Gestates=new Estate*[NumberOfEstates];
-    Estate **Destates=new Estate*[NumberOfEstates];
-    Estate **Iestates=new Estate*[NumberOfEstates];
-
-    Register(NumberOfEstates,Gestates,LGeorgi);
-    DishonestBroker Georgi(LGeorgi,"Georgi Dimitrov",5.0);
-    Georgi.print();
-
-    Register(NumberOfEstates,Destates,LDenislav);
-    HelpfulBroker Denislav(LDenislav,"Denislav Dimitrov",3.0);
-    Denislav.Print();
-
-
-    Register(NumberOfEstates,Iestates,LIvan);
-    SimpleBroker Ivan(LIvan,"Ivan Dimitrov",3.0);
-    Ivan.print();
-
-    Agent *listOfAgents[3];
-    listOfAgents[0]=&Georgi;
-    listOfAgents[1]=&Denislav;
-    listOfAgents[2]=&Ivan;
     cout<<"Choose a broker:"<<endl;
     cout<<"1 for Dishonest broker"<<endl;
     cout<<"2 for Helpful broker"<<endl;
@@ -159,6 +133,32 @@ int main()
         }
     }
     while(c!=0);
+}
+int main()
+{
+    RealEstates georgiListWithEstates;
+    RealEstates denislavListWithEstates;
+    RealEstates ivanListWithEstates;
+
+    Register(georgiListWithEstates);
+    Register(denislavListWithEstates);
+    Register(ivanListWithEstates);
+
+    DishonestBroker Georgi(georgiListWithEstates,"Georgi Dimitrov",5.0);
+    Georgi.print();
+
+    HelpfulBroker Denislav(denislavListWithEstates,"Denislav Dimitrov",3.0);
+    Denislav.Print();
+
+    SimpleBroker Ivan(ivanListWithEstates,"Ivan Dimitrov",3.0);
+    Ivan.print();
+
+    Agent *listOfAgents[3];
+    listOfAgents[0]=&Georgi;
+    listOfAgents[1]=&Denislav;
+    listOfAgents[2]=&Ivan;
+
+    SearchEstates(listOfAgents);
 }
 
 
