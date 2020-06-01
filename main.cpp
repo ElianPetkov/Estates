@@ -67,39 +67,44 @@ int main()
     Estate **Iestates=new Estate*[NumberOfEstates];
 
     Register(NumberOfEstates,Gestates,LGeorgi);
-    //LGeorgi.remove(*Gestates[0]);
-    DishonestBroker Georgi(Gestates,LGeorgi,"Georgi Dimitrov",5.0);
+    DishonestBroker Georgi(LGeorgi,"Georgi Dimitrov",5.0);
     Georgi.print();
 
     Register(NumberOfEstates,Destates,LDenislav);
-    HelpfulBroker Denislav(Destates,LDenislav,"Denislav Dimitrov",3.0);
-    Denislav.PrintByVip();
+    HelpfulBroker Denislav(LDenislav,"Denislav Dimitrov",3.0);
+    Denislav.Print();
 
 
     Register(NumberOfEstates,Iestates,LIvan);
-    SimpleBroker Ivan(Iestates,LIvan,"Ivan Dimitrov",3.0);
+    SimpleBroker Ivan(LIvan,"Ivan Dimitrov",3.0);
     Ivan.print();
 
-    cout<<"Choose a broker from 1 to 3:"<<" ";
-    int a;
+    Agent *listOfAgents[3];
+    listOfAgents[0]=&Georgi;
+    listOfAgents[1]=&Denislav;
+    listOfAgents[2]=&Ivan;
+    cout<<"Choose a broker:"<<endl;
+    cout<<"1 for Dishonest broker"<<endl;
+    cout<<"2 for Helpful broker"<<endl;
+    cout<<"3 for Simple broker"<<endl;
+    int agentNumber;
     do
     {
-        cin>>a;
+        cin>>agentNumber;
     }
-    while(a<0&&a>4);
+    while(agentNumber<-1&&agentNumber>2);
     cout<<endl;
     cin.ignore();
-    //system("cls");
     int c;
     do
     {
-    cout<<"Chose a way to search:"<<endl;
-    cout<<"(1)-Type Of the estate:"<<endl;
-    cout<<"(2)-Price range:"<<endl;
-    cout<<"(3)-All estates by lowest price:"<<endl;
-    cout<<"(4)-By town:"<<endl;
-    cout<<"(5)-By space:"<<endl;
-    cout<<"(0)-For exit:"<<endl;
+        cout<<"Chose a way to search:"<<endl;
+        cout<<"(1)-Type Of the estate:"<<endl;
+        cout<<"(2)-Price range:"<<endl;
+        cout<<"(3)-All estates by lowest price:"<<endl;
+        cout<<"(4)-By town:"<<endl;
+        cout<<"(5)-By space:"<<endl;
+        cout<<"(0)-For exit:"<<endl;
 
         do
         {
@@ -107,153 +112,55 @@ int main()
         }
         while(c<0&&c>6);
         cin.ignore();
-        switch(a)
+        switch(c)
         {
         case 1:
-            switch(c)
+            char b[20];
+            cout<<"Type of the estates you want to sort ,by lowest price:flat or house:"<<" ";
+            do
             {
-            case 1:
-                char b[20];
-                cout<<"Type of the estates you want to sort ,by lowest price:flat or house:"<<" ";
-                do
-                {
-                    cin.getline(b,20);
-                }
-                while(strcmp(b,"flat")&&strcmp(b,"house"));
-                if(!strcmp(b,"house"))
-                {
-                    Georgi.PrintHousesFromLowestPrice();
-                }
+                cin.getline(b,20);
+            }
+            while(strcmp(b,"flat")&&strcmp(b,"house"));
+            if(!strcmp(b,"house"))
+            {
+                listOfAgents[agentNumber-1]->PrintHousesFromLowestPrice();
+            }
 
-                if(!strcmp(b,"flat"))
-                {
-                    Georgi.PrintFlatsFromLowestPrice();
-                }
-                break;
-            case 2:
-                cout<<"Type the price range:"<<" "<<endl;
-                double price1,price2;
-                cin>>price1>>price2;
-                cin.ignore();
-                Georgi.PrintByPriceRange(price1,price2);
-                break;
-            case 3:
-                Georgi.PrintEstatesFromLowestPrice();
-                break;
-            case 4:
-                cout<<"Type Town you want to search by:"<<" ";
-                char a[30];
-                cin.getline(a,30);
-                Georgi.PrintEstatesByTown(a);
-                break;
-            case 5:
-                cout<<"Type space range:"<<" ";
-                int x;
-                int y;
-                cin>>x>>y;
-                cin.ignore();
-                Georgi.PrintBySpaceRange(x,y);
+            if(!strcmp(b,"flat"))
+            {
+                listOfAgents[agentNumber-1]->PrintFlatsFromLowestPrice();
             }
             break;
         case 2:
-            switch(c)
-            {
-            case 1:
-                char b[20];
-                cout<<"Type of the estates you want to sort ,by lowest price:flat or house:"<<" ";
-                do
-                {
-                    cin.getline(b,20);
-                }
-                while(strcmp(b,"flat")&&strcmp(b,"house"));
-                if(!strcmp(b,"house"))
-                {
-                    Denislav.ByVip();
-                }
-
-                if(!strcmp(b,"flat"))
-                {
-                    Denislav.PrintFlatsFromLowestPriceByVip();
-                }
-                break;
-            case 2:
-                cout<<"Type the price range:"<<" "<<endl;
-                double price1,price2;
-                cin>>price1>>price2;
-                cin.ignore();
-                Denislav.PrintByPriceRangeByVip(price1,price2);
-                break;
-            case 3:
-                Denislav.PrintEstatesFromLowestPriceByVip();
-                break;
-            case 4:
-                cout<<"Type Town you want to search by:"<<" ";
-                char a[30];
-                cin.getline(a,30);
-                Denislav.PrintEstatesByTownByVip(a);
-                break;
-            case 5:
-                cout<<"Type space range:"<<" ";
-                int x;
-                int y;
-                cin>>x>>y;
-                cin.ignore();
-                Denislav.PrintBySpaceRangeByVip(x,y);
-                break;
-            }
+            cout<<"Type the price range:"<<" "<<endl;
+            double price1,price2;
+            cin>>price1>>price2;
+            cin.ignore();
+            listOfAgents[agentNumber-1]->PrintByPriceRange(price1,price2);
             break;
         case 3:
-            switch(c)
-            {
-            case 1:
-                char b[20];
-                cout<<"Type of the estates you want to sort ,by lowest price:flat or house:"<<" ";
-                do
-                {
-                    cin.getline(b,20);
-                }
-                while(strcmp(b,"flat")&&strcmp(b,"house"));
-                if(!strcmp(b,"house"))
-                {
-                    Ivan.PrintHousesFromLowestPrice();
-                }
-
-                if(!strcmp(b,"flat"))
-                {
-                    Ivan.PrintFlatsFromLowestPrice();
-                }
-                break;
-            case 2:
-                cout<<"Type the price range:"<<" "<<endl;
-                double price1,price2;
-                cin>>price1>>price2;
-                cin.ignore();
-                Ivan.PrintByPriceRange(price1,price2);
-                break;
-            case 3:
-                Ivan.PrintEstatesFromLowestPrice();
-                break;
-            case 4:
-                cout<<"Type Town you want to search by:"<<" ";
-                char a[30];
-                cin.getline(a,30);
-                Ivan.PrintEstatesByTown(a);
-                break;
-            case 5:
-                cout<<"Type space range:"<<" ";
-                int x;
-                int y;
-                cin>>x>>y;
-                cin.ignore();
-                Ivan.PrintBySpaceRange(x,y);
-                break;
-            }
+            listOfAgents[agentNumber-1]->PrintEstatesFromLowestPrice();
             break;
-
+        case 4:
+            cout<<"Type Town you want to search by:"<<" ";
+            char a[30];
+            cin.getline(a,30);
+            listOfAgents[agentNumber-1]->PrintEstatesByTown(a);
+            break;
+        case 5:
+            cout<<"Type space range:"<<" ";
+            int x;
+            int y;
+            cin>>x>>y;
+            cin.ignore();
+            listOfAgents[agentNumber-1]->PrintBySpaceRange(x,y);
+            break;
         }
     }
     while(c!=0);
 }
+
 
 
 

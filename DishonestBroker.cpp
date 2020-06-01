@@ -4,7 +4,7 @@
 #include "DishonestBroker.h"
 using namespace std;
 DishonestBroker::DishonestBroker():listOfEstates(),name(nullptr),percentage(0) {}
-DishonestBroker::DishonestBroker(Estate **estates,RealEstates listOfEstates,const char* name,double percentage)
+DishonestBroker::DishonestBroker(RealEstates listOfEstates,const char* name,double percentage)
 {
     this->name=new char[strlen(name)+1];
     strcpy(this->name,name);
@@ -42,7 +42,7 @@ DishonestBroker &DishonestBroker:: operator=(const DishonestBroker & x)
     }
     return *this;
 }
-void DishonestBroker::print()
+void DishonestBroker::print() const
 {
     std::cout<<"Dishonest Broker:"<<std::endl;
     std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
@@ -50,10 +50,10 @@ void DishonestBroker::print()
     listOfEstates.print();
     std::cout<<std::endl;
 }
-DishonestBroker * DishonestBroker:: Clone()const
-{
-    return new DishonestBroker(*this);
-}
+//DishonestBroker * DishonestBroker:: Clone()const
+//{
+ //   return new DishonestBroker(*this);
+//}
 void DishonestBroker::PrintHousesFromLowestPrice()
 {
     std::cout<<"Dishonest Broker:"<<std::endl;

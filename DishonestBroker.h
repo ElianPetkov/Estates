@@ -2,7 +2,8 @@
 #define DISHONESTBROKER_H_DISHONESTBROKER
 #include <iostream>
 #include "RegImot.h"
-class DishonestBroker
+#include "agent.h"
+class DishonestBroker:public Agent
 {
     private:
     char * name;
@@ -14,12 +15,13 @@ class DishonestBroker
 
     public:
     DishonestBroker();
-    DishonestBroker(Estate **estates,RealEstates listOfEstates,const char* name,double percentage);
+    DishonestBroker(RealEstates listOfEstates,const char* name,double percentage);
     DishonestBroker(const DishonestBroker &x);
-    ~DishonestBroker();
+    virtual ~DishonestBroker();
     DishonestBroker& operator=(const DishonestBroker & x);
-    virtual void print();
-    virtual DishonestBroker * Clone()const;
+
+    virtual void print()const;
+    //virtual DishonestBroker * Clone()const;
     virtual void PrintHousesFromLowestPrice();
     virtual void PrintFlatsFromLowestPrice();
     virtual void PrintEstatesFromLowestPrice();

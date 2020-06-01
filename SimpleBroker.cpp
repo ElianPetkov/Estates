@@ -3,15 +3,15 @@
 #include <string.h>
 #include "SimpleBroker.h"
 #include <cassert>
-SimpleBroker::SimpleBroker():listOfEstates(),name(nullptr),percentage(0){}
-SimpleBroker::SimpleBroker(Estate **estates,RealEstates listOfEstates,const char* name,double percentage)
+SimpleBroker::SimpleBroker():listOfEstates(),name(nullptr),percentage(0) {}
+SimpleBroker::SimpleBroker(RealEstates listOfEstates,const char* name,double percentage)
 {
-this->name=new char[strlen(name)+1];
-assert(this->name!=nullptr);
-strcpy(this->name,name);
-this->percentage=percentage;
-this->listOfEstates=listOfEstates;
-this->listOfEstates.NewPrice(percentage);
+    this->name=new char[strlen(name)+1];
+    assert(this->name!=nullptr);
+    strcpy(this->name,name);
+    this->percentage=percentage;
+    this->listOfEstates=listOfEstates;
+    this->listOfEstates.NewPrice(percentage);
 }
 void SimpleBroker::Copy(const SimpleBroker & x)
 {
@@ -19,7 +19,7 @@ void SimpleBroker::Copy(const SimpleBroker & x)
     assert(this->name!=nullptr);
     strcpy(this->name,x.name);
     this->percentage=x.percentage;
-     this->listOfEstates=x.listOfEstates;
+    this->listOfEstates=x.listOfEstates;
 
 }
 SimpleBroker::SimpleBroker(const SimpleBroker & x)
@@ -45,18 +45,18 @@ SimpleBroker& SimpleBroker::operator=(const SimpleBroker & x)
 }
 void SimpleBroker::print()const
 {
-std::cout<<"Simple Broker:"<<std::endl;
-std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
-std::cout<<"Estates:";
-listOfEstates.print();
-std::cout<<std::endl;
+    std::cout<<"Simple Broker:"<<std::endl;
+    std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
+    std::cout<<"Estates:";
+    listOfEstates.print();
+    std::cout<<std::endl;
 }
 
 
-SimpleBroker * SimpleBroker:: Clone()const
+/*Agent* SimpleBroker::Clone()const
 {
     return new SimpleBroker(*this);
-}
+}*/
 void SimpleBroker::PrintHousesFromLowestPrice()
 {
     std::cout<<"Simple Broker:"<<std::endl;
@@ -82,8 +82,8 @@ void SimpleBroker::PrintEstatesFromLowestPrice()
     std::cout<<std::endl;
 }
 
-    void SimpleBroker::PrintHouses()
-    {
+void SimpleBroker::PrintHouses()
+{
     std::cout<<"Simple Broker:"<<std::endl;
     std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
     std::cout<<"Estates:";
@@ -91,7 +91,7 @@ void SimpleBroker::PrintEstatesFromLowestPrice()
     std::cout<<std::endl;
 }
 void SimpleBroker::PrintFlats()
-        {
+{
     std::cout<<"Simple Broker:"<<std::endl;
     std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
     std::cout<<"Estates:";
@@ -99,7 +99,7 @@ void SimpleBroker::PrintFlats()
     std::cout<<std::endl;
 }
 void SimpleBroker::PrintByPriceRange(double price1,double price2)
-        {
+{
     std::cout<<"Simple Broker:"<<std::endl;
     std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
     std::cout<<"Estates:";
@@ -108,7 +108,7 @@ void SimpleBroker::PrintByPriceRange(double price1,double price2)
 }
 
 void SimpleBroker::PrintEstatesByTown(char * Town)
-        {
+{
     std::cout<<"Simple Broker:"<<std::endl;
     std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
     std::cout<<"Estates:";

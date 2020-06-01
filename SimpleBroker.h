@@ -2,10 +2,11 @@
 #define SimpleBroker_H_SimpleBroker
 #include <iostream>
 #include "RegImot.h"
-class SimpleBroker
+#include "agent.h"
+class SimpleBroker:public Agent
 {
     private:
-    char * name;
+    char* name;
     double percentage;
     RealEstates listOfEstates;
 
@@ -14,13 +15,13 @@ class SimpleBroker
 
     public:
     SimpleBroker();
-    SimpleBroker(Estate **estates,RealEstates listOfEstates,const char* name,double percentage);
+    SimpleBroker(RealEstates listOfEstates,const char* name,double percentage);
     SimpleBroker(const SimpleBroker &x);
     virtual ~SimpleBroker();
     SimpleBroker& operator=(const SimpleBroker & x);
 
     virtual void print()const;
-    virtual SimpleBroker * Clone()const;
+    //virtual Agent * Clone()const;
     virtual void PrintHousesFromLowestPrice();
     virtual void PrintFlatsFromLowestPrice();
     virtual void PrintEstatesFromLowestPrice();

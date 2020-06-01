@@ -102,7 +102,7 @@
 	<iostream>
 	"RegImot.h"
 
-1590959371 source:d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\dishonestbroker.cpp
+1591004931 source:d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\dishonestbroker.cpp
 	<iostream>
 	"RegImot.h"
 	<string.h>
@@ -115,19 +115,21 @@
 1590957501 d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\imot.h
 	<iostream>
 
-1590961195 d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\dishonestbroker.h
+1591004925 d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\dishonestbroker.h
 	<iostream>
 	"RegImot.h"
+	"agent.h"
 
-1590959332 source:d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\helpfulbroker.cpp
+1591005316 source:d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\helpfulbroker.cpp
 	<iostream>
 	"RegImot.h"
 	<string.h>
 	"HelpfulBroker.h"
 
-1590959332 d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\helpfulbroker.h
+1591005293 d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\helpfulbroker.h
 	<iostream>
 	"RegImot.h"
+	"agent.h"
 
 1590957501 source:d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\house.cpp
 	<string.h>
@@ -154,16 +156,17 @@
 	"Imot.h"
 	<cassert>
 
-1590959412 source:d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\simplebroker.cpp
+1591003685 source:d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\simplebroker.cpp
 	<iostream>
 	"RegImot.h"
 	<string.h>
 	"SimpleBroker.h"
 	<cassert>
 
-1590961195 d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\simplebroker.h
+1591003598 d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\simplebroker.h
 	<iostream>
 	"RegImot.h"
+	"agent.h"
 
 1590957501 source:d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\flat.cpp
 	<string.h>
@@ -183,7 +186,7 @@
 	"flat.h"
 	<cassert>
 
-1590961041 source:d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\main.cpp
+1591005442 source:d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\main.cpp
 	<iostream>
 	<string.h>
 	"Imot.h"
@@ -197,7 +200,7 @@
 	"SimpleBroker.h"
 	"agent.h"
 
-1590961191 d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\agent.h
+1591003699 d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\agent.h
 	<iostream>
 	"RegImot.h"
 

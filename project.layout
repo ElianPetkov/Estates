@@ -2,57 +2,57 @@
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
 	<File name="DishonestBroker.cpp" open="0" top="0" tabpos="11">
-		<Cursor position="1318" topLine="100" />
+		<Cursor position="1127" topLine="35" />
 	</File>
-	<File name="DishonestBroker.h" open="0" top="0" tabpos="12">
-		<Cursor position="719" topLine="9" />
+	<File name="DishonestBroker.h" open="0" top="0" tabpos="4">
+		<Cursor position="539" topLine="10" />
 	</File>
-	<File name="HelpfulBroker.cpp" open="1" top="0" tabpos="12">
-		<Cursor position="2809" topLine="89" />
+	<File name="HelpfulBroker.cpp" open="0" top="0" tabpos="12">
+		<Cursor position="1922" topLine="57" />
 	</File>
-	<File name="HelpfulBroker.h" open="1" top="0" tabpos="11">
-		<Cursor position="287" topLine="11" />
+	<File name="HelpfulBroker.h" open="0" top="0" tabpos="3">
+		<Cursor position="668" topLine="2" />
 	</File>
-	<File name="House.cpp" open="1" top="0" tabpos="8">
-		<Cursor position="1254" topLine="0" />
+	<File name="House.cpp" open="0" top="0" tabpos="8">
+		<Cursor position="1366" topLine="37" />
 	</File>
-	<File name="House.h" open="1" top="0" tabpos="7">
-		<Cursor position="481" topLine="0" />
+	<File name="House.h" open="0" top="0" tabpos="7">
+		<Cursor position="510" topLine="0" />
 	</File>
-	<File name="Imot.h" open="1" top="0" tabpos="1">
-		<Cursor position="127" topLine="0" />
+	<File name="Imot.h" open="0" top="0" tabpos="1">
+		<Cursor position="1044" topLine="16" />
 	</File>
-	<File name="Plot.cpp" open="1" top="0" tabpos="4">
-		<Cursor position="1799" topLine="144" />
+	<File name="Plot.cpp" open="0" top="0" tabpos="4">
+		<Cursor position="2626" topLine="137" />
 	</File>
-	<File name="Plot.h" open="1" top="0" tabpos="3">
-		<Cursor position="404" topLine="0" />
+	<File name="Plot.h" open="0" top="0" tabpos="3">
+		<Cursor position="376" topLine="0" />
 	</File>
-	<File name="RegImot.cpp" open="1" top="1" tabpos="10">
-		<Cursor position="123" topLine="75" />
+	<File name="RegImot.cpp" open="0" top="0" tabpos="10">
+		<Cursor position="2537" topLine="120" />
 	</File>
-	<File name="RegImot.h" open="1" top="0" tabpos="9">
-		<Cursor position="132" topLine="19" />
+	<File name="RegImot.h" open="0" top="0" tabpos="9">
+		<Cursor position="747" topLine="21" />
 	</File>
-	<File name="SimpleBroker.cpp" open="1" top="0" tabpos="14">
-		<Cursor position="693" topLine="0" />
+	<File name="SimpleBroker.cpp" open="0" top="0" tabpos="4">
+		<Cursor position="859" topLine="38" />
 	</File>
-	<File name="SimpleBroker.h" open="1" top="0" tabpos="15">
-		<Cursor position="154" topLine="0" />
+	<File name="SimpleBroker.h" open="0" top="0" tabpos="3">
+		<Cursor position="587" topLine="13" />
 	</File>
-	<File name="agent.h" open="0" top="0" tabpos="9">
-		<Cursor position="0" topLine="0" />
+	<File name="agent.h" open="1" top="0" tabpos="2">
+		<Cursor position="150" topLine="0" />
 	</File>
-	<File name="flat.cpp" open="1" top="0" tabpos="6">
-		<Cursor position="956" topLine="0" />
+	<File name="flat.cpp" open="0" top="0" tabpos="6">
+		<Cursor position="374" topLine="0" />
 	</File>
-	<File name="flat.h" open="1" top="0" tabpos="5">
-		<Cursor position="155" topLine="0" />
+	<File name="flat.h" open="0" top="0" tabpos="5">
+		<Cursor position="317" topLine="0" />
 	</File>
-	<File name="imot.cpp" open="1" top="0" tabpos="2">
-		<Cursor position="2456" topLine="0" />
+	<File name="imot.cpp" open="0" top="0" tabpos="2">
+		<Cursor position="3796" topLine="135" />
 	</File>
-	<File name="main.cpp" open="1" top="0" tabpos="13">
-		<Cursor position="930" topLine="114" />
+	<File name="main.cpp" open="1" top="1" tabpos="1">
+		<Cursor position="9359" topLine="5" />
 	</File>
 </CodeBlocks_layout_file>
