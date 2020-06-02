@@ -14,8 +14,8 @@ HelpfulBroker::HelpfulBroker(RealEstates listOfEstates, const char * name, doubl
     this->percentage=percentage;
     this->listOfEstates=listOfEstates;
     this->listOfEstates.NewPrice(percentage);
-
 }
+
 void HelpfulBroker::Copy(const HelpfulBroker & x)
 {
     this->name=new char[strlen(x.name)+1];
@@ -23,18 +23,22 @@ void HelpfulBroker::Copy(const HelpfulBroker & x)
     this->percentage=x.percentage;
     this->listOfEstates=x.listOfEstates;
 }
+
 HelpfulBroker::HelpfulBroker(const HelpfulBroker & x)
 {
     Copy(x);
 }
+
 void HelpfulBroker::Erase()
 {
     delete [] name;
 }
+
 HelpfulBroker::~HelpfulBroker()
 {
     Erase();
 }
+
 HelpfulBroker & HelpfulBroker:: operator=(const HelpfulBroker & x)
 {
     if(this!=&x)
@@ -44,6 +48,7 @@ HelpfulBroker & HelpfulBroker:: operator=(const HelpfulBroker & x)
     }
     return *this;
 }
+
 void HelpfulBroker::Print()const
 {
     std::cout<<"Helpful Broker:"<<std::endl;
@@ -89,6 +94,7 @@ void HelpfulBroker::PrintEstatesFromLowestPrice()
     listOfEstates.PrintEstatesFromLowestPriceByVip();
     std::cout<<std::endl;
 }
+
 void HelpfulBroker::PrintHouses()
 {
     std::cout<<"Helpful Broker:"<<std::endl;
@@ -97,6 +103,7 @@ void HelpfulBroker::PrintHouses()
     listOfEstates.PrintHousesByVip();
     std::cout<<std::endl;
 }
+
 void HelpfulBroker::PrintFlats()
 {
     std::cout<<"Helpful Broker:"<<std::endl;
@@ -105,6 +112,7 @@ void HelpfulBroker::PrintFlats()
     listOfEstates.PrintFlatsByVip();
     std::cout<<std::endl;
 }
+
 void HelpfulBroker::PrintByPriceRange(double fromPrice, double toPrice)
 {
      if(toPrice - fromPrice < 0){
@@ -117,6 +125,7 @@ void HelpfulBroker::PrintByPriceRange(double fromPrice, double toPrice)
     listOfEstates.PrintByPriceRangeByVip(fromPrice,toPrice);
     std::cout<<std::endl;
 }
+
 void HelpfulBroker::PrintEstatesByTown(char *townName){
     if(townName = " "){
         throw std::invalid_argument ("townName shouldn't be empty name");
@@ -128,6 +137,7 @@ void HelpfulBroker::PrintEstatesByTown(char *townName){
     listOfEstates.PrintEstatesByTownByVip(townName);
     std::cout<<std::endl;
 }
+
 void HelpfulBroker::PrintBySpaceRange(double fromSize, double toSize)
 {
     if(toSize - fromSize < 0){
@@ -140,4 +150,3 @@ void HelpfulBroker::PrintBySpaceRange(double fromSize, double toSize)
     listOfEstates.PrintBySpaceRangeByVip(fromSize,toSize);
     std::cout<<std::endl;
 }
-

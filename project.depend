@@ -102,7 +102,7 @@
 	<iostream>
 	"RegImot.h"
 
-1591094510 source:d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\dishonestbroker.cpp
+1591095003 source:d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\dishonestbroker.cpp
 	<iostream>
 	"RegImot.h"
 	<string.h>
@@ -116,9 +116,8 @@
 1591089417 d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\imot.h
 	<iostream>
 
-1591094363 d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\dishonestbroker.h
+1591094851 d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\dishonestbroker.h
 	<iostream>
-	"RegImot.h"
 	"agent.h"
 
 1591094516 source:d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\helpfulbroker.cpp
@@ -128,9 +127,8 @@
 	"HelpfulBroker.h"
 	<cassert>
 
-1591093782 d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\helpfulbroker.h
+1591094860 d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\helpfulbroker.h
 	<iostream>
-	"RegImot.h"
 	"agent.h"
 
 1591007119 source:d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\house.cpp
@@ -166,9 +164,8 @@
 	"MyAssert.h"
 	<cassert>
 
-1591090426 d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\simplebroker.h
+1591094885 d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\simplebroker.h
 	<iostream>
-	"RegImot.h"
 	"agent.h"
 
 1591007119 source:d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\flat.cpp

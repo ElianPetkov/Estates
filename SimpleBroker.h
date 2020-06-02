@@ -1,7 +1,6 @@
 #ifndef SimpleBroker_H_SimpleBroker
 #define SimpleBroker_H_SimpleBroker
 #include <iostream>
-#include "RegImot.h"
 #include "agent.h"
 class SimpleBroker:public Agent
 {

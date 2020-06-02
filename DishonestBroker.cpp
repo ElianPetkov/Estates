@@ -15,28 +15,31 @@ DishonestBroker::DishonestBroker(RealEstates listOfEstates,const char* name,doub
     this->percentage=percentage;
     this->listOfEstates=listOfEstates;
     this->listOfEstates.NewPrice(percentage);
-
 }
+
 void DishonestBroker::Copy(const DishonestBroker & x)
 {
     this->name=new char[strlen(x.name)+1];
     strcpy(this->name,x.name);
     this->percentage=x.percentage;
     this->listOfEstates=x.listOfEstates;
-
 }
+
 DishonestBroker::DishonestBroker(const DishonestBroker & x)
 {
     Copy(x);
 }
+
 void DishonestBroker::Erase()
 {
     delete [] name;
 }
+
 DishonestBroker::~DishonestBroker()
 {
     Erase();
 }
+
 DishonestBroker &DishonestBroker:: operator=(const DishonestBroker & x)
 {
     if(this!=&x)
@@ -46,6 +49,7 @@ DishonestBroker &DishonestBroker:: operator=(const DishonestBroker & x)
     }
     return *this;
 }
+
 void DishonestBroker::print() const
 {
     std::cout<<"Dishonest Broker:"<<std::endl;
@@ -54,6 +58,7 @@ void DishonestBroker::print() const
     listOfEstates.print();
     std::cout<<std::endl;
 }
+
 void DishonestBroker::PrintHousesFromLowestPrice()
 {
     std::cout<<"Dishonest Broker:"<<std::endl;
@@ -62,6 +67,7 @@ void DishonestBroker::PrintHousesFromLowestPrice()
     listOfEstates.PrintHousesFromLowestPrice();
     std::cout<<std::endl;
 }
+
 void DishonestBroker::PrintFlatsFromLowestPrice()
 {
     std::cout<<"Dishonest Broker:"<<std::endl;
@@ -70,6 +76,7 @@ void DishonestBroker::PrintFlatsFromLowestPrice()
     listOfEstates.PrintFlatsFromLowestPrice();
     std::cout<<std::endl;
 }
+
 void DishonestBroker::PrintEstatesFromLowestPrice()
 {
     std::cout<<"Dishonest Broker:"<<std::endl;
@@ -87,6 +94,7 @@ void DishonestBroker::PrintHouses()
     listOfEstates.PrintHouses();
     std::cout<<std::endl;
 }
+
 void DishonestBroker::PrintFlats()
 {
     std::cout<<"Dishonest Broker:"<<std::endl;
@@ -95,6 +103,7 @@ void DishonestBroker::PrintFlats()
     listOfEstates.PrintFlats();
     std::cout<<std::endl;
 }
+
 void DishonestBroker::PrintByPriceRange(double fromPrice,double toPrice)
 {
     if(toPrice - fromPrice < 0){

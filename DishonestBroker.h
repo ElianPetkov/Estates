@@ -1,7 +1,6 @@
 #ifndef DISHONESTBROKER_H_DISHONESTBROKER
 #define DISHONESTBROKER_H_DISHONESTBROKER
 #include <iostream>
-#include "RegImot.h"
 #include "agent.h"
 class DishonestBroker:public Agent
 {
@@ -11,7 +10,6 @@ class DishonestBroker:public Agent
     void Copy(const DishonestBroker &x);
     void Erase();
     RealEstates listOfEstates;
-
 
     public:
     DishonestBroker();
@@ -29,7 +27,5 @@ class DishonestBroker:public Agent
     virtual void PrintByPriceRange(double ,double);
     virtual void PrintEstatesByTown(char* townName);
     virtual void PrintBySpaceRange(double ,double );
-
-
 };
 #endif

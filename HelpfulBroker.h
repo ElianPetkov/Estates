@@ -1,7 +1,6 @@
 #ifndef HelpfulBroker_H_HelpfulBroker
 #define HelpfulBroker_H_HelpfulBroker
 #include <iostream>
-#include "RegImot.h"
 #include "agent.h"
 class HelpfulBroker: public Agent
 {
@@ -29,6 +28,5 @@ class HelpfulBroker: public Agent
     virtual void PrintByPriceRange(double, double );
     virtual void PrintEstatesByTown(char *Town);
     virtual void PrintBySpaceRange(double, double );
-
 };
 #endif

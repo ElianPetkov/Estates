@@ -2,7 +2,6 @@
 #include "RegImot.h"
 #include <string.h>
 #include "SimpleBroker.h"
-#include "MyAssert.h"
 #include <cassert>
 SimpleBroker::SimpleBroker():listOfEstates(),name('\0'),percentage(0) {}
 SimpleBroker::SimpleBroker(RealEstates listOfEstates,const char* name,double percentage)
@@ -16,6 +15,7 @@ SimpleBroker::SimpleBroker(RealEstates listOfEstates,const char* name,double per
     this->listOfEstates=listOfEstates;
     this->listOfEstates.NewPrice(percentage);
 }
+
 void SimpleBroker::Copy(const SimpleBroker &x)
 {
     this->name=new char[strlen(x.name)+1];
@@ -24,18 +24,22 @@ void SimpleBroker::Copy(const SimpleBroker &x)
     this->listOfEstates=x.listOfEstates;
 
 }
+
 SimpleBroker::SimpleBroker(const SimpleBroker &x)
 {
     Copy(x);
 }
+
 void SimpleBroker::Erase()
 {
     delete [] name;
 }
+
 SimpleBroker::~SimpleBroker()
 {
     Erase();
 }
+
 SimpleBroker& SimpleBroker::operator=(const SimpleBroker &x)
 {
     if(this!=&x)
@@ -45,6 +49,7 @@ SimpleBroker& SimpleBroker::operator=(const SimpleBroker &x)
     }
     return *this;
 }
+
 void SimpleBroker::print()const
 {
     std::cout<<"Simple Broker:"<<std::endl;
@@ -62,6 +67,7 @@ void SimpleBroker::PrintHousesFromLowestPrice()
     listOfEstates.PrintHousesFromLowestPrice();
     std::cout<<std::endl;
 }
+
 void SimpleBroker::PrintFlatsFromLowestPrice()
 {
     std::cout<<"Simple Broker:"<<std::endl;
@@ -70,6 +76,7 @@ void SimpleBroker::PrintFlatsFromLowestPrice()
     listOfEstates.PrintFlatsFromLowestPrice();
     std::cout<<std::endl;
 }
+
 void SimpleBroker::PrintEstatesFromLowestPrice()
 {
     std::cout<<"Simple Broker:"<<std::endl;
@@ -87,6 +94,7 @@ void SimpleBroker::PrintHouses()
     listOfEstates.PrintHouses();
     std::cout<<std::endl;
 }
+
 void SimpleBroker::PrintFlats()
 {
     std::cout<<"Simple Broker:"<<std::endl;
@@ -95,6 +103,7 @@ void SimpleBroker::PrintFlats()
     listOfEstates.PrintFlats();
     std::cout<<std::endl;
 }
+
 void SimpleBroker::PrintByPriceRange(double fromPrice, double toPrice)
 {
     if(toPrice - fromPrice < 0){
