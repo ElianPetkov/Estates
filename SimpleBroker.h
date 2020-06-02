@@ -15,21 +15,20 @@ class SimpleBroker:public Agent
 
     public:
     SimpleBroker();
-    SimpleBroker(RealEstates listOfEstates,const char* name,double percentage);
+    SimpleBroker(RealEstates listOfEstates, const char* name, double percentage);
     SimpleBroker(const SimpleBroker &x);
     virtual ~SimpleBroker();
-    SimpleBroker& operator=(const SimpleBroker & x);
 
+    SimpleBroker& operator=(const SimpleBroker &x);
     virtual void print()const;
-    //virtual Agent * Clone()const;
     virtual void PrintHousesFromLowestPrice();
     virtual void PrintFlatsFromLowestPrice();
     virtual void PrintEstatesFromLowestPrice();
     virtual void PrintHouses();
     virtual void PrintFlats();
-    virtual void PrintByPriceRange(double price1,double price2);
-    virtual void PrintEstatesByTown(char * Town);
-    virtual void PrintBySpaceRange(double size1,double size2);
+    virtual void PrintByPriceRange(double fromPrice, double toPrice);
+    virtual void PrintEstatesByTown(char *Town);
+    virtual void PrintBySpaceRange(double fromSize, double toSize);
 };
 #endif
 

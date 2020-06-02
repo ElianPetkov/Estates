@@ -8,10 +8,11 @@ class Estate
     char *TypeOfEstate;
     char* addr;
     char* owner;
+    double price;
     double space;
+
     void Copy(const Estate & x);
     void Erase();
-    double price;
 
     public:
     virtual void print()const;
@@ -21,8 +22,6 @@ class Estate
     Estate(const Estate & x);
     virtual ~Estate();
     Estate & operator=(const Estate & x);
-    //friend std::ostream & operator<<(std::ostream & os,const Estate & x);
-    //friend std::istream &operator>>(std::istream & is,Estate &x);
     const char * getAddr()const;
     const char * getOwner()const;
 

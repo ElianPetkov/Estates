@@ -10,6 +10,7 @@
 #include "DishonestBroker.h"
 #include "SimpleBroker.h"
 #include "agent.h"
+#include <cassert>
 using namespace std;
 int RegisterEstates(RealEstates &listOfEstates)
 {
@@ -149,13 +150,14 @@ int main()
     RegisterEstates(denislavListWithEstates);
     RegisterEstates(ivanListWithEstates);
 
+
     DishonestBroker Georgi(georgiListWithEstates,"Georgi Dimitrov",5.0);
     Georgi.print();
 
     HelpfulBroker Denislav(denislavListWithEstates,"Denislav Dimitrov",3.0);
     Denislav.Print();
 
-    SimpleBroker Ivan(ivanListWithEstates,"Ivan Dimitrov",3.0);
+    SimpleBroker Ivan(ivanListWithEstates,"Ivan Dimitrov",4.5);
     Ivan.print();
 
     Agent *listOfAgents[3];

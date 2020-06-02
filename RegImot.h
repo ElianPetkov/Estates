@@ -38,7 +38,7 @@ public:
     virtual void PrintBySpaceRange(double size1,double size2)const;
     void NewPrice(double x);
 
-    virtual void ByVip()const;
+    virtual void PrintHousesFromLowestPriceByVip()const;
     virtual void PrintFlatsFromLowestPriceByVip()const;
     virtual void PrintEstatesFromLowestPriceByVip()const;
     virtual void PrintHousesByVip()const;

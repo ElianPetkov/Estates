@@ -2,27 +2,29 @@
 #include "RegImot.h"
 #include <string.h>
 #include "SimpleBroker.h"
+#include "MyAssert.h"
 #include <cassert>
-SimpleBroker::SimpleBroker():listOfEstates(),name(nullptr),percentage(0) {}
+SimpleBroker::SimpleBroker():listOfEstates(),name('\0'),percentage(0) {}
 SimpleBroker::SimpleBroker(RealEstates listOfEstates,const char* name,double percentage)
 {
+    assert(name != nullptr && "name: requires non-null argument");
+    assert(percentage > 0 && "percentages: requires value > 0");
+
     this->name=new char[strlen(name)+1];
-    assert(this->name!=nullptr);
     strcpy(this->name,name);
     this->percentage=percentage;
     this->listOfEstates=listOfEstates;
     this->listOfEstates.NewPrice(percentage);
 }
-void SimpleBroker::Copy(const SimpleBroker & x)
+void SimpleBroker::Copy(const SimpleBroker &x)
 {
     this->name=new char[strlen(x.name)+1];
-    assert(this->name!=nullptr);
     strcpy(this->name,x.name);
     this->percentage=x.percentage;
     this->listOfEstates=x.listOfEstates;
 
 }
-SimpleBroker::SimpleBroker(const SimpleBroker & x)
+SimpleBroker::SimpleBroker(const SimpleBroker &x)
 {
     Copy(x);
 }
@@ -34,7 +36,7 @@ SimpleBroker::~SimpleBroker()
 {
     Erase();
 }
-SimpleBroker& SimpleBroker::operator=(const SimpleBroker & x)
+SimpleBroker& SimpleBroker::operator=(const SimpleBroker &x)
 {
     if(this!=&x)
     {
@@ -52,11 +54,6 @@ void SimpleBroker::print()const
     std::cout<<std::endl;
 }
 
-
-/*Agent* SimpleBroker::Clone()const
-{
-    return new SimpleBroker(*this);
-}*/
 void SimpleBroker::PrintHousesFromLowestPrice()
 {
     std::cout<<"Simple Broker:"<<std::endl;
@@ -98,17 +95,23 @@ void SimpleBroker::PrintFlats()
     listOfEstates.PrintFlats();
     std::cout<<std::endl;
 }
-void SimpleBroker::PrintByPriceRange(double price1,double price2)
+void SimpleBroker::PrintByPriceRange(double fromPrice, double toPrice)
 {
+    if(toPrice - fromPrice < 0)
+        throw std::invalid_argument ("difference between fromPrice and toPrice must be > 0");
+
     std::cout<<"Simple Broker:"<<std::endl;
     std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
     std::cout<<"Estates:";
-    listOfEstates.PrintByPriceRange(price1,price2);
+    listOfEstates.PrintByPriceRange(fromPrice,toPrice);
     std::cout<<std::endl;
 }
 
-void SimpleBroker::PrintEstatesByTown(char * Town)
+void SimpleBroker::PrintEstatesByTown(char *Town)
 {
+    if(Town = " ")
+        throw std::invalid_argument ("Town shouldn't be empty name");
+
     std::cout<<"Simple Broker:"<<std::endl;
     std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
     std::cout<<"Estates:";
@@ -116,11 +119,14 @@ void SimpleBroker::PrintEstatesByTown(char * Town)
     std::cout<<std::endl;
 }
 
-void SimpleBroker::PrintBySpaceRange(double size1,double size2)
+void SimpleBroker::PrintBySpaceRange(double fromSize,double toSize)
 {
+    if(toSize - fromSize < 0)
+        throw std::invalid_argument ("difference between fromSize and toSize must be > 0");
+
     std::cout<<"Simple Broker:"<<std::endl;
     std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
     std::cout<<"Estates:";
-    listOfEstates.PrintBySpaceRange(size1,size2);
+    listOfEstates.PrintBySpaceRange(fromSize, toSize);
     std::cout<<std::endl;
 }

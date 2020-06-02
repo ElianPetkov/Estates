@@ -349,7 +349,7 @@ void RealEstates::PrintByVip()const
 
 }
 
-void RealEstates::ByVip()const
+void RealEstates::PrintHousesFromLowestPriceByVip()const
 {
     if(Current==0)
     {

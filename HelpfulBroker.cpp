@@ -69,7 +69,7 @@ void HelpfulBroker::PrintHousesFromLowestPrice()
     std::cout<<"Helpful Broker:"<<std::endl;
     std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
     std::cout<<"Estates:";
-    listOfEstates.ByVip();
+    listOfEstates.PrintHousesFromLowestPriceByVip();
     std::cout<<std::endl;
 }
 

@@ -108,11 +108,11 @@
 	<string.h>
 	"DishonestBroker.h"
 
-1590959350 d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\regimot.h
+1591089682 d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\regimot.h
 	<iostream>
 	"Imot.h"
 
-1591007119 d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\imot.h
+1591089417 d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\imot.h
 	<iostream>
 
 1591004925 d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\dishonestbroker.h
@@ -120,7 +120,7 @@
 	"RegImot.h"
 	"agent.h"
 
-1591005316 source:d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\helpfulbroker.cpp
+1591089698 source:d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\helpfulbroker.cpp
 	<iostream>
 	"RegImot.h"
 	<string.h>
@@ -149,21 +149,22 @@
 	<iostream>
 	"Imot.h"
 
-1590959412 source:d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\regimot.cpp
+1591089709 source:d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\regimot.cpp
 	<string.h>
 	<iostream>
 	"RegImot.h"
 	"Imot.h"
 	<cassert>
 
-1591003685 source:d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\simplebroker.cpp
+1591093033 source:d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\simplebroker.cpp
 	<iostream>
 	"RegImot.h"
 	<string.h>
 	"SimpleBroker.h"
+	"MyAssert.h"
 	<cassert>
 
-1591003598 d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\simplebroker.h
+1591090426 d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\simplebroker.h
 	<iostream>
 	"RegImot.h"
 	"agent.h"
@@ -186,7 +187,7 @@
 	"flat.h"
 	<cassert>
 
-1591007582 source:d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\main.cpp
+1591091692 source:d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\main.cpp
 	<iostream>
 	<string.h>
 	"Imot.h"
@@ -199,6 +200,7 @@
 	"DishonestBroker.h"
 	"SimpleBroker.h"
 	"agent.h"
+	<cassert>
 
 1591003699 d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\agent.h
 	<iostream>
@@ -209,4 +211,10 @@
 	<string.h>
 	"agent.h"
 	"RegImot.h"
+
+1591090163 source:d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\myassert.cpp
+	<iostream>
+
+1591090221 d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\myassert.h
+	<iostream>
 
