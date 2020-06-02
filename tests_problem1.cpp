@@ -59,21 +59,21 @@ TEST_CASE("Test validation and constructor in Flat class")
     CHECK(strcpy(flat.getTown(),"Plovdiv"));
     CHECK(strcpy(flat.getTypeOfEstate(),"Vip"));
 }
-TEST_CASE("Test Simple Broker Constructor")
+TEST_CASE("Test Simple Broker Constructor and validations")
 {
     SimpleBroker ivan(nullptr,"Ivan Dimitrov",4.5);
 	CHECK(strcpy(ivan.getName(),"Ivan Dimitrov"));
 	CHECK(ivan.getPercentages()==4.5);
 }
 
-TEST_CASE("Test Helpful Broker Constructor")
+TEST_CASE("Test Helpful Broker Constructor and validations")
 {
     HelpfulBroker ivan(nullptr,"Ivan Dimitrov",4.5);
 	CHECK(strcpy(ivan.getName(),"Ivan Dimitrov"));
 	CHECK(ivan.getPercentages()==4.5);
 }
 
-TEST_CASE("Test Dishonest Broker Constructor")
+TEST_CASE("Test Dishonest Broker Constructor and validations")
 {
     DishonestBroker ivan(nullptr,"Ivan Dimitrov",4.5);
 	CHECK(strcpy(ivan.getName(),"Ivan Dimitrov"));

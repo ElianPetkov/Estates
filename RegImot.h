@@ -25,7 +25,6 @@ public:
     void add(Estate*);
     void remove(Estate*);
     int getCurrent();
-    void newPrice(int);
     virtual void PrintByVip()const;
     virtual RealEstates* Clone()const;
     virtual void printHousesFromLowestPrice()const;

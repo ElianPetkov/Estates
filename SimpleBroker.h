@@ -22,6 +22,8 @@ class SimpleBroker:public Agent
     double getPercentages()const{return percentage;}
     SimpleBroker& operator=(const SimpleBroker &broker);
     virtual void print()const;
+
+    protected:
     virtual void printHousesFromLowestPrice();
     virtual void printFlatsFromLowestPrice();
     virtual void printEstatesFromLowestPrice();

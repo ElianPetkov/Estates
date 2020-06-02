@@ -118,13 +118,6 @@ RealEstates* RealEstates::Clone()const
 {
     return new RealEstates(*this);
 }
-void RealEstates::newPrice(int estate)
-{
-    for(int i=0; i<current; i++)
-    {
-        estates[i]->Estate::setPrice(estates[i]->getPrice()+(estates[i]->getPrice()*estate)/100);
-    }
-}
 void RealEstates::printHousesFromLowestPrice()const
 {
     if(current==0)

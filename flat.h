@@ -10,10 +10,11 @@ class Flat:public Estate
     void Copy(const Flat &flat);
 
     public:
-    virtual void  print() const;
-    virtual void addCharacteristicsToEstate();
     Flat();
     Flat(const char* town, const char* TypeOfEstate, const char* addr, const char* owner, double price, double space, int rooms, int floor);
+
+    virtual void  print() const;
+    virtual void addCharacteristicsToEstate();
     void setRooms(int room);
     void setFloors(int floor);
     int getRooms()const;

@@ -21,6 +21,8 @@ class DishonestBroker:public Agent
     char* getName()const;
     double getPercentages()const;
     virtual void print()const;
+
+    protected:
     virtual void printHousesFromLowestPrice();
     virtual void printFlatsFromLowestPrice();
     virtual void printEstatesFromLowestPrice();
