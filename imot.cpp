@@ -1,11 +1,9 @@
 #include <string.h>
 #include<iostream>
 #include"RegImot.h"
-#include "Imot.h"
-#include"flat.h"
 #include<cassert>
 Estate::Estate():town(nullptr),TypeOfEstate(nullptr),addr(nullptr),owner(nullptr),space(0),price(0) {}
-Estate::Estate(const char *town,const char *TypeOfEstate,const char*addr,const char *owner,double pprice,double sspace):price(pprice),space(sspace)
+Estate::Estate(const char *town,const char *TypeOfEstate,const char*addr,const char*owner,double price,double space):price(price),space(space)
 {
     this->town=new char[strlen(town)+1];
     assert(this->town!=nullptr);
@@ -74,7 +72,6 @@ Estate & Estate::operator =(const Estate & x)
 }
 void Estate::print()const
 {
-
     std::cout<<"Town:"<<" "<<town<<std::endl;
     std::cout<<"Type of the Offert:"<<" "<<TypeOfEstate<<std::endl;
     std::cout<<"Addres:"<<" "<<addr<<std::endl;
@@ -93,8 +90,10 @@ void Estate::addCharacteristicsToEstate()
     strcpy(this->town,buffer);
 
     std::cout<<"Vip or Classic estate:"<<" ";
-    do{
-    std::cin.getline(buffer,1024);}
+    do
+    {
+        std::cin.getline(buffer,1024);
+    }
     while(strcmp(buffer,"Vip")&&strcmp(buffer,"Classic"));
     this->TypeOfEstate=new char[strlen(buffer)+1];
     assert(this->TypeOfEstate!=nullptr);
@@ -120,11 +119,11 @@ void Estate::addCharacteristicsToEstate()
 
     std::cin.ignore();
 }
-const char *Estate::getAddr() const
+const char* Estate::getAddr() const
 {
     return addr;
 }
-const char *Estate::getOwner() const
+const char* Estate::getOwner() const
 {
     return owner;
 }
@@ -142,7 +141,7 @@ Estate* Estate::Clone ()const
 {
     return new Estate(*this);
 }
-char *Estate::getTown()const
+char* Estate::getTown()const
 {
     return town;
 }
@@ -150,7 +149,7 @@ double Estate::getSpace()const
 {
     return space;
 }
-char * Estate::GetTypeOfEstate()const
+char* Estate::GetTypeOfEstate()const
 {
     return TypeOfEstate;
 }
