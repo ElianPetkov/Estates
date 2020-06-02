@@ -120,11 +120,12 @@
 	"RegImot.h"
 	"agent.h"
 
-1591093760 source:d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\helpfulbroker.cpp
+1591094006 source:d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\helpfulbroker.cpp
 	<iostream>
 	"RegImot.h"
 	<string.h>
 	"HelpfulBroker.h"
+	<cassert>
 
 1591093782 d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\helpfulbroker.h
 	<iostream>

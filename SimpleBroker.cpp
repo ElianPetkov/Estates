@@ -97,8 +97,8 @@ void SimpleBroker::PrintFlats()
 }
 void SimpleBroker::PrintByPriceRange(double fromPrice, double toPrice)
 {
-    if(toPrice - fromPrice < 0)
-        throw std::invalid_argument ("difference between fromPrice and toPrice must be > 0");
+    if(toPrice - fromPrice < 0){
+        throw std::invalid_argument ("difference between fromPrice and toPrice must be > 0");}
 
     std::cout<<"Simple Broker:"<<std::endl;
     std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
@@ -107,22 +107,22 @@ void SimpleBroker::PrintByPriceRange(double fromPrice, double toPrice)
     std::cout<<std::endl;
 }
 
-void SimpleBroker::PrintEstatesByTown(char *Town)
+void SimpleBroker::PrintEstatesByTown(char *townName)
 {
-    if(Town = " ")
-        throw std::invalid_argument ("Town shouldn't be empty name");
+    if(townName = " "){
+        throw std::invalid_argument ("townName shouldn't be empty name");}
 
     std::cout<<"Simple Broker:"<<std::endl;
     std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
     std::cout<<"Estates:";
-    listOfEstates.PrintEstatesByTown(Town);
+    listOfEstates.PrintEstatesByTown(townName);
     std::cout<<std::endl;
 }
 
 void SimpleBroker::PrintBySpaceRange(double fromSize,double toSize)
 {
-    if(toSize - fromSize < 0)
-        throw std::invalid_argument ("difference between fromSize and toSize must be > 0");
+    if(toSize - fromSize < 0){
+        throw std::invalid_argument ("difference between fromSize and toSize must be > 0");}
 
     std::cout<<"Simple Broker:"<<std::endl;
     std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
