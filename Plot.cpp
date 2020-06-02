@@ -7,101 +7,106 @@ Plot::Plot():Estate()
 {
     for(int i=0; i<5; i++)
     {
-        a[i]=0;
+        comunnications[i]=0;
     }
 }
 Plot::Plot(const char *town,const char *TypeOfEstate,const char*addr,const char*owner,double price,double space):Estate(town,TypeOfEstate,addr,owner,price,space)
 {
     for(int i=0; i<5; i++)
     {
-        a[i]=0;
+        comunnications[i]=0;
     }
 }
 void Plot::addCharacteristicsToEstate()
 {
     Estate::addCharacteristicsToEstate();
-    cout<<"Are the following comunnications included in the plot:"<<" ";
-    cout<<"Type Yes or No"<<endl;
-    char b[20];
-
-    cout<<"Water"<<" ";
+    cout<<"Are the following comunnications included in the plot:"<<endl;
+    char answer[20];
     do
     {
-        cin.getline(b,20);
+        cout<<"Does the plot has water"<<". Answer with Yes or No "<<endl;
+        cout<<"Type your answer: ";
+        cin.getline(answer,20);
     }
-    while(strcmp(b,"Yes") && strcmp(b,"No"));
-    if(!strcmp(b,"Yes"))
+    while(strcmp(answer,"Yes") && strcmp(answer,"No"));
+    if(!strcmp(answer,"Yes"))
     {
-        this->a[0]=1;
+        this->comunnications[0]=1;
     }
     else
     {
-        this->a[0]=0;
+        this->comunnications[0]=0;
     }
-    cout<<"electicity"<<" ";
 
     do
     {
-        cin.getline(b,20);
+        cout<<"Does the plot has an electicity"<<". Answer with Yes or No "<<endl;
+        cout<<"Type your answer: ";
+        cin.getline(answer,20);
     }
-    while(strcmp(b,"Yes") && strcmp(b,"No"));
-    if(!strcmp(b,"Yes"))
+    while(strcmp(answer,"Yes") && strcmp(answer,"No"));
+    if(!strcmp(answer,"Yes"))
     {
-        this->a[1]=1;
+        this->comunnications[1]=1;
     }
     else
     {
-        this->a[1]=0;
+        this->comunnications[1]=0;
     }
 
-    cout<<"telephone"<<" ";
     do
     {
-        cin.getline(b,20);
+        cout<<"Does the plot has a telephone"<<". Answer with Yes or No "<<endl;
+        cout<<"Type your answer: ";
+        cin.getline(answer,20);
     }
-    while(strcmp(b,"Yes") && strcmp(b,"No"));
-    if(!strcmp(b,"Yes"))
+    while(strcmp(answer,"Yes") && strcmp(answer,"No"));
+    if(!strcmp(answer,"Yes"))
     {
-        this->a[2]=1;
+        this->comunnications[2]=1;
     }
     else
     {
-        this->a[2]=0;
-    }
-    cout<<"nearRoad"<<" ";
-    do
-    {
-        cin.getline(b,20);
-    }
-    while(strcmp(b,"Yes") && strcmp(b,"No"));
-    if(!strcmp(b,"Yes"))
-    {
-        this->a[3]=1;
-    }
-    else
-    {
-        this->a[3]=0;
+        this->comunnications[2]=0;
     }
 
-    cout<<"sewerage"<<" ";
     do
     {
-        cin.getline(b,20);
+        cout<<"Does the plot is near a road"<<". Answer with Yes or No "<<endl;
+        cout<<"Type your answer: ";
+        cin.getline(answer,20);
     }
-    while(strcmp(b,"Yes") && strcmp(b,"No"));
-    if(!strcmp(b,"Yes"))
+    while(strcmp(answer,"Yes") && strcmp(answer,"No"));
+    if(!strcmp(answer,"Yes"))
     {
-        this->a[4]=1;
+        this->comunnications[3]=1;
     }
     else
     {
-        this->a[4]=0;
+        this->comunnications[3]=0;
+    }
+
+    do
+    {
+        cout<<"Does the plot has a sewerage"<<". Answer with Yes or No "<<endl;
+        cout<<"Type your answer: ";
+        cin.getline(answer,20);
+    }
+    while(strcmp(answer,"Yes") && strcmp(answer,"No"));
+    if(!strcmp(answer,"Yes"))
+    {
+        this->comunnications[4]=1;
+    }
+    else
+    {
+        this->comunnications[4]=0;
     }
 }
+
 void Plot::print()const
 {
     Estate::print();
-    if(a[0]==0)
+    if(comunnications[0]==0)
     {
         cout<<"No water"<<endl;
     }
@@ -110,7 +115,7 @@ void Plot::print()const
         cout<<"Have water"<<endl;
     }
 
-    if(a[1]==0)
+    if(comunnications[1]==0)
     {
         cout<<"No electricity"<<endl;
     }
@@ -118,7 +123,7 @@ void Plot::print()const
     {
         cout<<"Have electricity:"<<endl;
     }
-    if(a[2]==0)
+    if(comunnications[2]==0)
     {
         cout<<"Isn't near road"<<endl;
     }
@@ -126,7 +131,7 @@ void Plot::print()const
     {
         cout<<"Is near road"<<endl;
     }
-    if(a[3]==0)
+    if(comunnications[3]==0)
     {
         cout<<"No water"<<endl;
     }
@@ -134,7 +139,7 @@ void Plot::print()const
     {
         cout<<"Have water"<<endl;
     }
-    if(a[4]==0)
+    if(comunnications[4]==0)
     {
         cout<<"No sewerage"<<endl;
     }
@@ -144,19 +149,20 @@ void Plot::print()const
     }
 }
 
-
-void Plot::Copy(const Plot & x)
+void Plot::Copy(const Plot &plot)
 {
     for(int i=0; i<5; i++)
     {
-        a[i]=x.a[i];
+        comunnications[i]=plot.comunnications[i];
     }
 }
+
 Plot::Plot(const Plot &x):Estate(x)
 {
-    Copy (x);
+    Copy(x);
 }
-Plot * Plot::Clone()const
+
+Plot* Plot::Clone()const
 {
     return new Plot(*this);
 }
