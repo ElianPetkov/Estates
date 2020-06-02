@@ -3,7 +3,7 @@
 #include <string.h>
 #include "HelpfulBroker.h"
 HelpfulBroker::HelpfulBroker():name(nullptr),percentage(0),listOfEstates() {}
-HelpfulBroker::HelpfulBroker(RealEstates listOfEstates,const char * name,double percentage)
+HelpfulBroker::HelpfulBroker(RealEstates listOfEstates, const char * name, double percentage)
 {
     this->name=new char[strlen(name)+1];
     strcpy(this->name,name);
@@ -48,11 +48,6 @@ void HelpfulBroker::Print()const
     listOfEstates.print();
     std::cout<<std::endl;
 }
-
-//HelpfulBroker * HelpfulBroker:: Clone()const
-//{
-   // return new HelpfulBroker(*this);
-//}
 
 void HelpfulBroker::print()const
 {
@@ -106,28 +101,28 @@ void HelpfulBroker::PrintFlats()
     listOfEstates.PrintFlatsByVip();
     std::cout<<std::endl;
 }
-void HelpfulBroker::PrintByPriceRange(double price1,double price2)
+void HelpfulBroker::PrintByPriceRange(double fromPrice, double toPrice)
 {
     std::cout<<"Helpful Broker:"<<std::endl;
     std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
     std::cout<<"Estates:";
-    listOfEstates.PrintByPriceRangeByVip(price1,price2);
+    listOfEstates.PrintByPriceRangeByVip(fromPrice,toPrice);
     std::cout<<std::endl;
 }
-void HelpfulBroker::PrintEstatesByTown(char * Town)
+void HelpfulBroker::PrintEstatesByTown(char *townName)
         {
     std::cout<<"Helpful Broker:"<<std::endl;
     std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
     std::cout<<"Estates:";
-    listOfEstates.PrintEstatesByTownByVip(Town);
+    listOfEstates.PrintEstatesByTownByVip(townName);
     std::cout<<std::endl;
 }
-void HelpfulBroker::PrintBySpaceRange(double size1,double size2)
+void HelpfulBroker::PrintBySpaceRange(double fromSize, double toSize)
 {
     std::cout<<"Helpful Broker:"<<std::endl;
     std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
     std::cout<<"Estates:";
-    listOfEstates.PrintBySpaceRangeByVip(size1,size2);
+    listOfEstates.PrintBySpaceRangeByVip(fromSize,toSize);
     std::cout<<std::endl;
 }
 
