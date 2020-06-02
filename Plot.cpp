@@ -17,9 +17,9 @@ Plot::Plot(const char *town,const char *TypeOfEstate,const char*addr,const char*
         a[i]=0;
     }
 }
-void Plot::AddCharacteristicsToEstate()
+void Plot::addCharacteristicsToEstate()
 {
-    Estate::AddCharacteristicsToEstate();
+    Estate::addCharacteristicsToEstate();
     cout<<"Are the following comunnications included in the plot:"<<" ";
     cout<<"Type Yes or No"<<endl;
     char b[20];
