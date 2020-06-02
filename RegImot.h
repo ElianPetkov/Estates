@@ -16,25 +16,25 @@ protected:
 
 public:
     RealEstates();
-    RealEstates(Estate ** estates);
-    RealEstates(const RealEstates & x);
+    RealEstates(Estate** estates);
+    RealEstates(const RealEstates &estate);
     virtual ~RealEstates();
-    RealEstates & operator=(const RealEstates &x);
+    RealEstates & operator=(const RealEstates &estate);
 
     virtual void print()const;
-    void add(Estate* );
+    void add(Estate*);
     void remove(Estate *);
     int getCurrent();
     void newPrice(int);
     virtual void PrintByVip()const;
-    virtual RealEstates * Clone()const;
+    virtual RealEstates* Clone()const;
     virtual void printHousesFromLowestPrice()const;
     virtual void printFlatsFromLowestPrice()const;
     virtual void printEstatesFromLowestPrice()const;
     virtual void printHouses()const;
     virtual void printByPriceRange(double,double)const;
     virtual void printFlats()const;
-    virtual void printEstatesByTown(char * Town)const;
+    virtual void printEstatesByTown(char* Town)const;
     virtual void printBySpaceRange(double,double)const;
     void newPrice(double);
 
