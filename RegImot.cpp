@@ -74,23 +74,23 @@ void RealEstates::resize()
 
 
 }
-void RealEstates::add(Estate * x)
+void RealEstates::add(Estate* estate)
 {
     if(current==capacity)
     {
         resize();
     }
-    estates[current]=x;
+    estates[current]=estate;
     current++;
 
 }
-void RealEstates::remove(Estate x)
+void RealEstates::remove(Estate *estate)
 {
 
     int index=-1;
     for(int i = 0; i < current; ++i)
     {
-        if(!strcmp(estates[i]->getOwner(),x.getOwner()) && !strcmp(estates[i]->getAddr(),x.getAddr()) )
+        if(!strcmp(estates[i]->getOwner(),estate->getOwner()) && !strcmp(estates[i]->getAddr(),estate->getAddr()) )
         {
             index=i;
             break;
@@ -120,11 +120,11 @@ RealEstates * RealEstates::Clone()const
 {
     return new RealEstates(*this);
 }
-void RealEstates::newPrice(int x)
+void RealEstates::newPrice(int estate)
 {
     for(int i=0; i<current; i++)
     {
-        estates[i]->Estate::setPrice(estates[i]->getPrice()+(estates[i]->getPrice()*x)/100);
+        estates[i]->Estate::setPrice(estates[i]->getPrice()+(estates[i]->getPrice()*estate)/100);
     }
 }
 void RealEstates::printHousesFromLowestPrice()const
