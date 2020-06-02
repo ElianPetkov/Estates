@@ -19,6 +19,7 @@ class SimpleBroker:public Agent
     virtual ~SimpleBroker();
 
     char* getName()const{return name;}
+    double getPercentages()const{return percentage;}
     SimpleBroker& operator=(const SimpleBroker &x);
     virtual void print()const;
     virtual void printHousesFromLowestPrice();

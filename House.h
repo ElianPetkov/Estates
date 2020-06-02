@@ -15,6 +15,9 @@ class House:public Estate
     House(const House &x);
     House & operator=(const House &x);
 
+    int getRooms()const;
+    int getFloor()const;
+    double getyard()const;
     House* Clone()const;
     virtual void print()const;
     virtual void addCharacteristicsToEstate();

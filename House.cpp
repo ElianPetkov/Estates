@@ -3,14 +3,14 @@
 #include "House.h"
 #include <cassert>
 House::House():Estate(),rooms(1),floors(1),yard(1) {}
-House::House(const char *town,const char *TypeOfEstate,const char*addr,const char*owner,double price,double space,int rooms,int floor):Estate(town,TypeOfEstate,addr,owner,price,space)
+House::House(const char *town,const char *TypeOfEstate,const char*addr,const char*owner,double price,double space,int rooms,int floors):Estate(town,TypeOfEstate,addr,owner,price,space)
 {
-    assert(rooms > 0 && "rooms should be more than 0");
+    assert(rooms> 0 && "rooms should be more than 0");
     this->rooms=rooms;
-    assert(floors > 0 && "floors should be more than 0");
+    assert(floors> 0 && "floors should be more than 0");
     this->floors=floors;
-    assert(yard > 0 && "yard should be more than 0 square metters");
-    this->yard=yard;
+    assert(space > 0 && "yard should be more than 0 square metters");
+    this->yard=space;
 }
 
 void House::Copy(const House & x)
@@ -79,3 +79,17 @@ House * House::Clone()const
 {
     return new House(*this);
 }
+
+int House::getRooms()const
+{
+    return rooms;
+}
+int House::getFloor()const
+{
+    return floors;
+}
+double House::getyard()const
+{
+    return this->yard;
+}
+

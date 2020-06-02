@@ -18,6 +18,8 @@ class HelpfulBroker: public Agent
     ~HelpfulBroker();
     HelpfulBroker & operator=(const HelpfulBroker &x);
 
+    char* getName()const{return name;}
+    double getPercentages()const{return percentage;}
     virtual void print()const;
     virtual void printHousesFromLowestPrice();
     virtual void printFlatsFromLowestPrice();

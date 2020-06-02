@@ -22,7 +22,7 @@ public:
     RealEstates & operator=(const RealEstates &x);
 
     virtual void print()const;
-    void add(Estate * x);
+    void add(Estate* x);
     void remove(Estate x);
     int GetCurrent();
     void NewPrice(int x);

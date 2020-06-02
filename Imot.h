@@ -21,9 +21,9 @@ public:
     virtual ~Estate();
     Estate & operator=(const Estate & x);
 
-    char *GetTypeOfEstate()const;
-    const char * getAddr()const;
-    const char * getOwner()const;
+    char* getTypeOfEstate()const;
+    char* getAddr()const;
+    char* getOwner()const;
     void setPrice(double x);
     double getPrice()const;
     double getSpace()const;

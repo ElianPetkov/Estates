@@ -18,6 +18,8 @@ class DishonestBroker:public Agent
     virtual ~DishonestBroker();
     DishonestBroker& operator=(const DishonestBroker &x);
 
+    char* getName()const{return name;}
+    double getPercentages()const{return percentage;}
     virtual void print()const;
     virtual void printHousesFromLowestPrice();
     virtual void printFlatsFromLowestPrice();

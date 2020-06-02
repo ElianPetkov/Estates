@@ -295,14 +295,14 @@
 	"DishonestBroker.h"
 	<cassert>
 
-1591100150 d:\uni\kpk\test\regimot.h
+1591114100 d:\uni\kpk\test\regimot.h
 	<iostream>
 	"Imot.h"
 
-1591097162 d:\uni\kpk\test\imot.h
+1591116691 d:\uni\kpk\test\imot.h
 	<iostream>
 
-1591100149 d:\uni\kpk\test\dishonestbroker.h
+1591114714 d:\uni\kpk\test\dishonestbroker.h
 	<iostream>
 	"agent.h"
 
@@ -326,26 +326,26 @@
 	"HelpfulBroker.h"
 	<cassert>
 
-1591100358 d:\uni\kpk\test\helpfulbroker.h
+1591114712 d:\uni\kpk\test\helpfulbroker.h
 	<iostream>
 	"agent.h"
 
-1591099736 source:d:\uni\kpk\test\house.cpp
+1591116034 source:d:\uni\kpk\test\house.cpp
 	<string.h>
 	<iostream>
 	"House.h"
 	<cassert>
 
-1591095246 d:\uni\kpk\test\house.h
+1591115037 d:\uni\kpk\test\house.h
 	"Imot.h"
 
-1591099580 source:d:\uni\kpk\test\imot.cpp
+1591116697 source:d:\uni\kpk\test\imot.cpp
 	<string.h>
 	<iostream>
 	"RegImot.h"
 	<cassert>
 
-1591111162 source:d:\uni\kpk\test\main.cpp
+1591112790 source:d:\uni\kpk\test\main.cpp
 	<iostream>
 	<string.h>
 	"Imot.h"
@@ -364,13 +364,22 @@
 	<iostream>
 	"Imot.h"
 
-1591111559 d:\uni\kpk\test\simplebroker.h
+1591113954 d:\uni\kpk\test\simplebroker.h
 	<iostream>
 	"agent.h"
 
-1591111669 d:\uni\kpk\test\tests_problem1.cpp
+1591116711 d:\uni\kpk\test\tests_problem1.cpp
 	"doctest.h"
+	"Imot.h"
+	"flat.h"
+	"House.h"
+	"Plot.h"
+	"RegImot.h"
+	"agent.h"
+	"HelpfulBroker.h"
+	"DishonestBroker.h"
 	"SimpleBroker.h"
+	"agent.h"
 
 1591109179 d:\uni\kpk\test\doctest.h
 	<iosfwd>

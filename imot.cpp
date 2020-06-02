@@ -150,11 +150,11 @@ void Estate::addCharacteristicsToEstate()
 
     std::cin.ignore();
 }
-const char* Estate::getAddr() const
+char* Estate::getAddr() const
 {
     return addr;
 }
-const char* Estate::getOwner() const
+char* Estate::getOwner() const
 {
     return owner;
 }
@@ -179,7 +179,7 @@ double Estate::getSpace()const
 {
     return space;
 }
-char* Estate::GetTypeOfEstate()const
+char* Estate::getTypeOfEstate()const
 {
     return TypeOfEstate;
 }
