@@ -55,8 +55,3 @@ House * House::Clone()const
 {
     return new House(*this);
 }
-
-/*double House::GetYard()const
-{
-    return yard;
-}*/
