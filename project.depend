@@ -177,13 +177,12 @@
 	<iostream>
 	"Imot.h"
 
-1591098907 source:d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\imot.cpp
+1591099607 source:d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\imot.cpp
 	<string.h>
 	<iostream>
 	"RegImot.h"
-	"Imot.h"
-	"flat.h"
 	<cassert>
+	"verification.cpp"
 
 1591098445 source:d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\main.cpp
 	<iostream>
@@ -213,5 +212,8 @@
 	<iostream>
 
 1591090221 d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\myassert.h
+	<iostream>
+
+1591099808 d:\uni\c++\struck.cpp\hederi\opitb.a\projet estate\verification.cpp
 	<iostream>
 

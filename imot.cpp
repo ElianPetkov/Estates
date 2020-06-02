@@ -1,24 +1,28 @@
 #include <string.h>
-#include<iostream>
-#include"RegImot.h"
-#include<cassert>
+#include <iostream>
+#include "RegImot.h"
+#include <cassert>
 Estate::Estate():town(nullptr),TypeOfEstate(nullptr),addr(nullptr),owner(nullptr),space(0),price(0) {}
 Estate::Estate(const char *town,const char *TypeOfEstate,const char*addr,const char*owner,double price,double space):price(price),space(space)
 {
+    assert(town != nullptr && "town is nullptr");
+    assert(town[0] != '\0' && "town is empty string");
     this->town=new char[strlen(town)+1];
-    assert(this->town!=nullptr);
     strcpy(this->town,town);
 
+    assert(TypeOfEstate != nullptr && "TypeOfEstate is nullptr");
+    assert(TypeOfEstate[0] != '\0' && "TypeOfEstate is an empty string");
     this->TypeOfEstate=new char[strlen(TypeOfEstate)+1];
-    assert(this->TypeOfEstate!=nullptr);
     strcpy(this->TypeOfEstate,TypeOfEstate);
 
+    assert(addr != nullptr && "addr is nullptr");
+    assert(addr[0] != '\0' && "addr is empty string");
     this->addr=new char[strlen(addr)+1];
-    assert(this->addr!=nullptr);
     strcpy(this->addr,addr);
 
+    assert(owner != nullptr && "owner is nullptr");
+    assert(owner[0] != '\0' && "owner is an empty string");
     this->owner=new char[strlen(owner)+1];
-    assert(this->owner!=nullptr);
     strcpy(this->owner,owner);
 
 }
@@ -81,12 +85,16 @@ void Estate::print()const
 }
 void Estate::addCharacteristicsToEstate()
 {
-    char buffer[1024];
-
     std::cout<<"Town:"<<" ";
+    char buffer[1024];
     std::cin.getline(buffer,1024);
+    if(town == nullptr){
+        throw std::invalid_argument ("town is nullptr");
+    }
+    if(TypeOfEstate[0] == '\0'){
+        throw std::invalid_argument ("town does not have a value");
+    }
     this->town=new char[strlen(buffer)+1];
-    assert(this->town!=nullptr);
     strcpy(this->town,buffer);
 
     std::cout<<"Vip or Classic estate:"<<" ";
@@ -96,19 +104,34 @@ void Estate::addCharacteristicsToEstate()
     }
     while(strcmp(buffer,"Vip")&&strcmp(buffer,"Classic"));
     this->TypeOfEstate=new char[strlen(buffer)+1];
-    assert(this->TypeOfEstate!=nullptr);
+    if(TypeOfEstate == nullptr){
+        throw std::invalid_argument ("TypeOfEstate is nullptr");
+    }
+    if(TypeOfEstate[0] == '\0'){
+        throw std::invalid_argument ("TypeOfEstate does not have a value");
+    }
     strcpy(this->TypeOfEstate,buffer);
 
     std::cout<<"addres of the estate:"<<" ";
     std::cin.getline(buffer,1024);
     this->addr=new char[strlen(buffer)+1];
-    assert(this->addr!=nullptr);
+    if(addr == nullptr){
+        throw std::invalid_argument ("addr is nullptr");
+    }
+    if(addr[0] == '\0'){
+        throw std::invalid_argument ("addr does not have a value");
+    }
     strcpy(this->addr,buffer);
 
     std::cout<<"Name of the owner"<<" ";
     std::cin.getline(buffer,1024);
     this->owner=new char[strlen(buffer)+1];
-    assert(this->owner!=nullptr);
+    if(owner == nullptr){
+        throw std::invalid_argument ("owner is nullptr");
+    }
+    if(owner[0] == '\0'){
+        throw std::invalid_argument ("owner does not have a name");
+    }
     strcpy(this->owner,buffer);
 
     std::cout<<"Price of the estate:"<<" ";
@@ -129,7 +152,6 @@ const char* Estate::getOwner() const
 }
 void Estate::setPrice(double x)
 {
-
     this->price=this->price+(this->price*x)/100.0;
 }
 double Estate::getPrice()const
