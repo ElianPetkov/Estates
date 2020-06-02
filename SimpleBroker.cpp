@@ -59,52 +59,52 @@ void SimpleBroker::print()const
     std::cout<<std::endl;
 }
 
-void SimpleBroker::PrintHousesFromLowestPrice()
+void SimpleBroker::printHousesFromLowestPrice()
 {
     std::cout<<"Simple Broker:"<<std::endl;
     std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
     std::cout<<"Estates:";
-    listOfEstates.PrintHousesFromLowestPrice();
+    listOfEstates.printHousesFromLowestPrice();
     std::cout<<std::endl;
 }
 
-void SimpleBroker::PrintFlatsFromLowestPrice()
+void SimpleBroker::printFlatsFromLowestPrice()
 {
     std::cout<<"Simple Broker:"<<std::endl;
     std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
     std::cout<<"Estates:";
-    listOfEstates.PrintFlatsFromLowestPrice();
+    listOfEstates.printFlatsFromLowestPrice();
     std::cout<<std::endl;
 }
 
-void SimpleBroker::PrintEstatesFromLowestPrice()
+void SimpleBroker::printEstatesFromLowestPrice()
 {
     std::cout<<"Simple Broker:"<<std::endl;
     std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
     std::cout<<"Estates:";
-    listOfEstates.PrintEstatesFromLowestPrice();
+    listOfEstates.printEstatesFromLowestPrice();
     std::cout<<std::endl;
 }
 
-void SimpleBroker::PrintHouses()
+void SimpleBroker::printHouses()
 {
     std::cout<<"Simple Broker:"<<std::endl;
     std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
     std::cout<<"Estates:";
-    listOfEstates.PrintHouses();
+    listOfEstates.printHouses();
     std::cout<<std::endl;
 }
 
-void SimpleBroker::PrintFlats()
+void SimpleBroker::printFlats()
 {
     std::cout<<"Simple Broker:"<<std::endl;
     std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
     std::cout<<"Estates:";
-    listOfEstates.PrintFlats();
+    listOfEstates.printFlats();
     std::cout<<std::endl;
 }
 
-void SimpleBroker::PrintByPriceRange(double fromPrice, double toPrice)
+void SimpleBroker::printByPriceRange(double fromPrice, double toPrice)
 {
     if(toPrice - fromPrice < 0){
         throw std::invalid_argument ("difference between fromPrice and toPrice must be > 0");
@@ -113,11 +113,11 @@ void SimpleBroker::PrintByPriceRange(double fromPrice, double toPrice)
     std::cout<<"Simple Broker:"<<std::endl;
     std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
     std::cout<<"Estates:";
-    listOfEstates.PrintByPriceRange(fromPrice,toPrice);
+    listOfEstates.printByPriceRange(fromPrice,toPrice);
     std::cout<<std::endl;
 }
 
-void SimpleBroker::PrintEstatesByTown(char *townName)
+void SimpleBroker::printEstatesByTown(char *townName)
 {
     if(townName[0] == '\0'){
         throw std::invalid_argument ("townName shouldn't be empty name");
@@ -126,11 +126,11 @@ void SimpleBroker::PrintEstatesByTown(char *townName)
     std::cout<<"Simple Broker:"<<std::endl;
     std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
     std::cout<<"Estates:";
-    listOfEstates.PrintEstatesByTown(townName);
+    listOfEstates.printEstatesByTown(townName);
     std::cout<<std::endl;
 }
 
-void SimpleBroker::PrintBySpaceRange(double fromSize,double toSize)
+void SimpleBroker::printBySpaceRange(double fromSize,double toSize)
 {
     if(toSize - fromSize < 0){
         throw std::invalid_argument ("difference between fromSize and toSize must be > 0");
@@ -139,6 +139,6 @@ void SimpleBroker::PrintBySpaceRange(double fromSize,double toSize)
     std::cout<<"Simple Broker:"<<std::endl;
     std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
     std::cout<<"Estates:";
-    listOfEstates.PrintBySpaceRange(fromSize, toSize);
+    listOfEstates.printBySpaceRange(fromSize, toSize);
     std::cout<<std::endl;
 }

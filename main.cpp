@@ -20,7 +20,7 @@ int RegisterEstates(RealEstates &listOfEstates)
     {
         cin>>NumberOfEstates;
     }
-    while(NumberOfEstates<0);
+    while(NumberOfEstates<0 );
     cin.ignore();
 
     Estate **estates=new Estate*[NumberOfEstates];
@@ -100,12 +100,12 @@ void SearchEstates(Agent *listOfAgents[3])
 
             if(!strcmp(typeOfEstates,"House"))
             {
-                listOfAgents[chosenAngen-1]->PrintHousesFromLowestPrice();
+                listOfAgents[chosenAngen-1]->printHousesFromLowestPrice();
             }
 
             if(!strcmp(typeOfEstates,"Flat"))
             {
-                listOfAgents[chosenAngen-1]->PrintFlatsFromLowestPrice();
+                listOfAgents[chosenAngen-1]->printFlatsFromLowestPrice();
             }
             break;
 
@@ -114,18 +114,18 @@ void SearchEstates(Agent *listOfAgents[3])
             double fromPrice,toPrice;
             cin>>fromPrice>>toPrice;
             cin.ignore();
-            listOfAgents[chosenAngen-1]->PrintByPriceRange(fromPrice,toPrice);
+            listOfAgents[chosenAngen-1]->printByPriceRange(fromPrice,toPrice);
             break;
 
         case 3:
-            listOfAgents[chosenAngen-1]->PrintEstatesFromLowestPrice();
+            listOfAgents[chosenAngen-1]->printEstatesFromLowestPrice();
             break;
 
         case 4:
             cout<<"Type Town you want to search by:"<<" ";
             char townName[30];
             cin.getline(townName,30);
-            listOfAgents[chosenAngen-1]->PrintEstatesByTown(townName);
+            listOfAgents[chosenAngen-1]->printEstatesByTown(townName);
             break;
 
         case 5:
@@ -134,7 +134,7 @@ void SearchEstates(Agent *listOfAgents[3])
             int toSpace;
             cin>>fromSpace>>toSpace;
             cin.ignore();
-            listOfAgents[chosenAngen-1]->PrintBySpaceRange(fromSpace,toSpace);
+            listOfAgents[chosenAngen-1]->printBySpaceRange(fromSpace,toSpace);
             break;
         }
     }

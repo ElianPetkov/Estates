@@ -20,13 +20,13 @@ class HelpfulBroker: public Agent
     virtual void Print()const;
 
     virtual void print()const;
-    virtual void PrintHousesFromLowestPrice();
-    virtual void PrintFlatsFromLowestPrice();
-    virtual void PrintEstatesFromLowestPrice();
-    virtual void PrintHouses();
-    virtual void PrintFlats();
-    virtual void PrintByPriceRange(double, double );
-    virtual void PrintEstatesByTown(char *Town);
-    virtual void PrintBySpaceRange(double, double );
+    virtual void printHousesFromLowestPrice();
+    virtual void printFlatsFromLowestPrice();
+    virtual void printEstatesFromLowestPrice();
+    virtual void printHouses();
+    virtual void printFlats();
+    virtual void printByPriceRange(double, double );
+    virtual void printEstatesByTown(char *Town);
+    virtual void printBySpaceRange(double, double );
 };
 #endif
