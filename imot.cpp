@@ -88,10 +88,12 @@ void Estate::addCharacteristicsToEstate()
     std::cout<<"Town:"<<" ";
     char buffer[1024];
     std::cin.getline(buffer,1024);
-    if(town == nullptr){
+    if(buffer == nullptr)
+    {
         throw std::invalid_argument ("town is nullptr");
     }
-    if(TypeOfEstate[0] == '\0'){
+    if(buffer[0] == '\0')
+    {
         throw std::invalid_argument ("town does not have a value");
     }
     this->town=new char[strlen(buffer)+1];
@@ -104,10 +106,12 @@ void Estate::addCharacteristicsToEstate()
     }
     while(strcmp(buffer,"Vip")&&strcmp(buffer,"Classic"));
     this->TypeOfEstate=new char[strlen(buffer)+1];
-    if(TypeOfEstate == nullptr){
+    if(buffer == nullptr)
+    {
         throw std::invalid_argument ("TypeOfEstate is nullptr");
     }
-    if(TypeOfEstate[0] == '\0'){
+    if(buffer[0] == '\0')
+    {
         throw std::invalid_argument ("TypeOfEstate does not have a value");
     }
     strcpy(this->TypeOfEstate,buffer);
@@ -115,23 +119,27 @@ void Estate::addCharacteristicsToEstate()
     std::cout<<"addres of the estate:"<<" ";
     std::cin.getline(buffer,1024);
     this->addr=new char[strlen(buffer)+1];
-    if(addr == nullptr){
+    if(buffer == nullptr)
+    {
         throw std::invalid_argument ("addr is nullptr");
     }
-    if(addr[0] == '\0'){
+    if(buffer[0] == '\0')
+    {
         throw std::invalid_argument ("addr does not have a value");
     }
     strcpy(this->addr,buffer);
 
     std::cout<<"Name of the owner"<<" ";
     std::cin.getline(buffer,1024);
-    this->owner=new char[strlen(buffer)+1];
-    if(owner == nullptr){
+    if(buffer == nullptr)
+    {
         throw std::invalid_argument ("owner is nullptr");
     }
-    if(owner[0] == '\0'){
+    if(buffer[0] == '\0')
+    {
         throw std::invalid_argument ("owner does not have a name");
     }
+    this->owner=new char[strlen(buffer)+1];
     strcpy(this->owner,buffer);
 
     std::cout<<"Price of the estate:"<<" ";
