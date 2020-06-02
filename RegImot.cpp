@@ -136,7 +136,7 @@ void RealEstates::PrintHousesFromLowestPrice()const
 
     for (int i = 0; i < Current ; i++)
     {
-        if(estates[i]->GetYard()>0)
+        if(estates[i]->getYard()>0)
         {
             for (int j = i + 1; j < Current; j++)
             {
@@ -155,7 +155,7 @@ void RealEstates::PrintHousesFromLowestPrice()const
     }
     for(int i=0; i<Current; i++)
     {
-        if(estates[i]->GetYard()>0)
+        if(estates[i]->getYard()>0)
         {
             cout<<"Information about the estate:"<<endl;
             estates[i]->print();
@@ -180,11 +180,11 @@ void RealEstates::PrintFlatsFromLowestPrice()const
 
     for (int i = 0; i < Current ; i++)
     {
-        if(estates[i]->GetFloor()>0)
+        if(estates[i]->getFloor()>0)
         {
             for (int j = i + 1; j < Current; j++)
             {
-                if(estates[j]->GetFloor()>0)
+                if(estates[j]->getFloor()>0)
                 {
 
                     if(estates[i]->getPrice()>estates[j]->getPrice())
@@ -200,7 +200,7 @@ void RealEstates::PrintFlatsFromLowestPrice()const
     }
     for(int i=0; i<Current; i++)
     {
-        if(estates[i]->GetFloor()>0)
+        if(estates[i]->getFloor()>0)
         {
             cout<<"Information about the estate:"<<endl;
             estates[i]->print();
@@ -247,7 +247,7 @@ void RealEstates::PrintHouses()const
 
     for(int i=0; i<Current; i++)
     {
-        if(estates[i]->GetYard()>0)
+        if(estates[i]->getYard()>0)
         {
             cout<<"Information about the estate:"<<endl;
             estates[i]->print();
@@ -261,7 +261,7 @@ void RealEstates::PrintFlats()const
 
     for(int i=0; i<Current; i++)
     {
-        if(estates[i]->GetYard()>0)
+        if(estates[i]->getYard()>0)
         {
             cout<<"Information about the estate:"<<endl;
             estates[i]->print();
@@ -297,7 +297,7 @@ void RealEstates::PrintEstatesByTown(char * Town)const
 
     for(int i=0; i<Current; i++)
     {
-        if(!strcmp(estates[i]->GetTown(),Town))
+        if(!strcmp(estates[i]->getTown(),Town))
         {
 
             cout<<"Information about the estate:"<<endl;
@@ -315,7 +315,7 @@ void RealEstates::PrintBySpaceRange(double size1,double size2)const
 
     for(int i=0; i<Current; i++)
     {
-        if(estates[i]->GetSpace()>size1&&estates[i]->GetSpace()<size2)
+        if(estates[i]->getSpace()>size1&&estates[i]->getSpace()<size2)
         {
 
             cout<<"Information about the estate:"<<endl;
@@ -361,7 +361,7 @@ void RealEstates::PrintHousesFromLowestPriceByVip()const
         if(!strcmp(estates[i]->GetTypeOfEstate(),"vip")||!strcmp(estates[i]->GetTypeOfEstate(),"Vip"))
         {
             cout<<"Information about the estate:"<<endl;
-            if(estates[i]->GetYard()>0)
+            if(estates[i]->getYard()>0)
             {
                 cout<<"Information about the estate:"<<endl;
                 estates[i]->print();
@@ -373,7 +373,7 @@ void RealEstates::PrintHousesFromLowestPriceByVip()const
     {
         if(strcmp(estates[i]->GetTypeOfEstate(),"Vip"))
         {
-            if(estates[i]->GetYard()>0)
+            if(estates[i]->getYard()>0)
             {
                 cout<<"Information about the estate:"<<endl;
                 estates[i]->print();
@@ -394,7 +394,7 @@ void RealEstates::PrintFlatsFromLowestPriceByVip()const
         if(!strcmp(estates[i]->GetTypeOfEstate(),"vip")||!strcmp(estates[i]->GetTypeOfEstate(),"Vip"))
         {
             cout<<"Information about the estate:"<<endl;
-            if(estates[i]->GetFloor()>0)
+            if(estates[i]->getFloor()>0)
             {
                 cout<<"Information about the estate:"<<endl;
                 estates[i]->print();
@@ -406,7 +406,7 @@ void RealEstates::PrintFlatsFromLowestPriceByVip()const
     {
         if(strcmp(estates[i]->GetTypeOfEstate(),"Vip"))
         {
-            if(estates[i]->GetFloor()>0)
+            if(estates[i]->getFloor()>0)
             {
                 cout<<"Information about the estate:"<<endl;
                 estates[i]->print();
@@ -464,7 +464,7 @@ void RealEstates::PrintHousesByVip()const
     {
         if(!strcmp(estates[i]->GetTypeOfEstate(),"vip")||!strcmp(estates[i]->GetTypeOfEstate(),"Vip"))
         {
-            if(estates[i]->GetYard()>0)
+            if(estates[i]->getYard()>0)
             {
                 cout<<"Information about the estate:"<<endl;
                 estates[i]->print();
@@ -475,7 +475,7 @@ void RealEstates::PrintHousesByVip()const
     {
         if(strcmp(estates[i]->GetTypeOfEstate(),"Vip"))
         {
-            if(estates[i]->GetYard()>0)
+            if(estates[i]->getYard()>0)
             {
                 cout<<"Information about the estate:"<<endl;
                 estates[i]->print();
@@ -492,7 +492,7 @@ void RealEstates::PrintFlatsByVip()const
     {
         if(!strcmp(estates[i]->GetTypeOfEstate(),"vip")||!strcmp(estates[i]->GetTypeOfEstate(),"Vip"))
         {
-            if(estates[i]->GetFloor()>0)
+            if(estates[i]->getFloor()>0)
             {
                 cout<<"Information about the estate:"<<endl;
                 estates[i]->print();
@@ -503,7 +503,7 @@ void RealEstates::PrintFlatsByVip()const
     {
         if(strcmp(estates[i]->GetTypeOfEstate(),"Vip"))
         {
-            if(estates[i]->GetFloor()>0)
+            if(estates[i]->getFloor()>0)
             {
                 cout<<"Information about the estate:"<<endl;
                 estates[i]->print();
@@ -555,7 +555,7 @@ void RealEstates::PrintEstatesByTownByVip(char * Town)const
     {
         if(!strcmp(estates[i]->GetTypeOfEstate(),"vip")||!strcmp(estates[i]->GetTypeOfEstate(),"Vip"))
         {
-            if(!strcmp(estates[i]->GetTown(),Town))
+            if(!strcmp(estates[i]->getTown(),Town))
             {
 
                 cout<<"Information about the estate:"<<endl;
@@ -567,7 +567,7 @@ void RealEstates::PrintEstatesByTownByVip(char * Town)const
     {
         if(strcmp(estates[i]->GetTypeOfEstate(),"Vip"))
         {
-            if(!strcmp(estates[i]->GetTown(),Town))
+            if(!strcmp(estates[i]->getTown(),Town))
             {
 
                 cout<<"Information about the estate:"<<endl;
@@ -589,7 +589,7 @@ void RealEstates::PrintBySpaceRangeByVip(double size1,double size2)const
     {
         if(!strcmp(estates[i]->GetTypeOfEstate(),"vip")||!strcmp(estates[i]->GetTypeOfEstate(),"Vip"))
         {
-            if(estates[i]->GetSpace()>size1&&estates[i]->GetSpace()<size2)
+            if(estates[i]->getSpace()>size1&&estates[i]->getSpace()<size2)
             {
 
                 cout<<"Information about the estate:"<<endl;
@@ -601,7 +601,7 @@ void RealEstates::PrintBySpaceRangeByVip(double size1,double size2)const
     {
         if(strcmp(estates[i]->GetTypeOfEstate(),"Vip"))
         {
-            if(estates[i]->GetSpace()>size1&&estates[i]->GetSpace()<size2)
+            if(estates[i]->getSpace()>size1&&estates[i]->getSpace()<size2)
             {
 
                 cout<<"Information about the estate:"<<endl;

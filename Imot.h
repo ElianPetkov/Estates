@@ -26,12 +26,12 @@ class Estate
     const char * getOwner()const;
     void setPrice(double x);
     double getPrice()const;
-    double GetSpace()const;
+    double getSpace()const;
 
     virtual Estate* Clone() const;
-    virtual double GetYard()const{return 0;}
-    virtual int GetFloor()const{return 0;};
-    virtual char *GetTown()const;
+    virtual double getYard()const{return 0;}
+    virtual int getFloor()const{return 0;};
+    virtual char* getTown()const;
     virtual void print()const;
     virtual void addCharacteristicsToEstate();
 };

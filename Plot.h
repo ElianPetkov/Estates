@@ -9,12 +9,12 @@ class Plot:public Estate
     void Copy(const Plot &x);
     public:
     Plot();
-    Plot(const char *town,const char *TypeOfEstate,const char*addr,const char*owner,double price,double space);
-    Plot(const Plot & x);
+    Plot(const char* town, const char* TypeOfEstate, const char* addr, const char* owner, double price, double space);
+    Plot(const Plot &x);
     enum Comunnication{water,electicity,telephone,nearRoad,sewerage};
 
 
-    Plot * Clone()const;
+    Plot* Clone()const;
     virtual void addCharacteristicsToEstate();
     virtual void print()const;
 

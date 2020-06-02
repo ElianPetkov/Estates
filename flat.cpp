@@ -43,11 +43,11 @@ void Flat::setFloors(int floor)
 {
     this->floor=floor;
 }
-int Flat::GetFloor()const
+int Flat::getFloor()const
 {
     return floor;
 }
-int Flat::GetRooms()const
+int Flat::getRooms()const
 {
     return rooms;
 }

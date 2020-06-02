@@ -142,11 +142,11 @@ Estate* Estate::Clone ()const
 {
     return new Estate(*this);
 }
-char *Estate::GetTown()const
+char *Estate::getTown()const
 {
     return town;
 }
-double Estate::GetSpace()const
+double Estate::getSpace()const
 {
     return space;
 }
