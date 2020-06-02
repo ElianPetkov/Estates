@@ -40,13 +40,13 @@ void House::print()const
     Estate::print();
     std::cout<<"Rooms of the estate:"<<" "<<rooms<<std::endl;
     std::cout<<"Number of floors:"<<" "<<floors<<std::endl;
-    std::cout<<"square meters of the yard:"<<" "<<yard<<std::endl;
+    std::cout<<"Square meters of the yard:"<<" "<<yard<<std::endl;
 }
 
 void House::addCharacteristicsToEstate()
 {
     Estate::addCharacteristicsToEstate();
-    std::cout<<"square meters of the yard:"<<" ";
+    std::cout<<"Square meters of the yard:"<<" ";
     int yard;
     std::cin>>yard;
     if(yard <= 0)
@@ -64,7 +64,7 @@ void House::addCharacteristicsToEstate()
     }
     this->rooms=rooms;
 
-    std::cout<<"Number of floors of the estate"<<" ";
+    std::cout<<"Number of floors of the estate:"<<" ";
     int floors;
     std::cin>>floors;
     if(floors <= 0)

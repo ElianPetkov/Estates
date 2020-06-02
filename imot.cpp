@@ -116,7 +116,7 @@ void Estate::addCharacteristicsToEstate()
     }
     strcpy(this->TypeOfEstate,buffer);
 
-    std::cout<<"addres of the estate:"<<" ";
+    std::cout<<"Addres of the estate:"<<" ";
     std::cin.getline(buffer,1024);
     this->addr=new char[strlen(buffer)+1];
     if(buffer == nullptr)
@@ -129,7 +129,7 @@ void Estate::addCharacteristicsToEstate()
     }
     strcpy(this->addr,buffer);
 
-    std::cout<<"Name of the owner"<<" ";
+    std::cout<<"Name of the owner:"<<" ";
     std::cin.getline(buffer,1024);
     if(buffer == nullptr)
     {
@@ -145,7 +145,7 @@ void Estate::addCharacteristicsToEstate()
     std::cout<<"Price of the estate:"<<" ";
     std::cin>>price;
 
-    std::cout<<"square meters of the estate:"<<" ";
+    std::cout<<"Square meters of the estate:"<<" ";
     std::cin>>space;
 
     std::cin.ignore();

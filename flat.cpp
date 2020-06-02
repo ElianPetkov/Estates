@@ -27,7 +27,7 @@ void Flat::addCharacteristicsToEstate()
 {
     Estate::addCharacteristicsToEstate();
 
-    std::cout<<"Number of Rooms "<<" ";
+    std::cout<<"Number of Rooms:"<<" ";
     int rooms;
     std::cin>>rooms;
     if(rooms <= 0)
@@ -36,7 +36,7 @@ void Flat::addCharacteristicsToEstate()
     }
     this->rooms = rooms;
 
-    std::cout<<"Floor of the estate"<<" ";
+    std::cout<<"Floor of the estate:"<<" ";
     int floor;
     std::cin>>floor;
     if(floor <= 0)
