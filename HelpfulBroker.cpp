@@ -13,7 +13,7 @@ HelpfulBroker::HelpfulBroker(RealEstates listOfEstates, const char * name, doubl
     strcpy(this->name,name);
     this->percentage=percentage;
     this->listOfEstates=listOfEstates;
-    this->listOfEstates.NewPrice(percentage);
+    this->listOfEstates.newPrice(percentage);
 }
 
 void HelpfulBroker::Copy(const HelpfulBroker & x)

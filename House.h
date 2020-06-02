@@ -17,7 +17,7 @@ class House:public Estate
 
     int getRooms()const;
     int getFloor()const;
-    double getyard()const;
+    double getYard()const;
     House* Clone()const;
     virtual void print()const;
     virtual void addCharacteristicsToEstate();

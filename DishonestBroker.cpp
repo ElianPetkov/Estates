@@ -14,7 +14,7 @@ DishonestBroker::DishonestBroker(RealEstates listOfEstates,const char* name,doub
     strcpy(this->name,name);
     this->percentage=percentage;
     this->listOfEstates=listOfEstates;
-    this->listOfEstates.NewPrice(percentage);
+    this->listOfEstates.newPrice(percentage);
 }
 
 void DishonestBroker::Copy(const DishonestBroker & x)

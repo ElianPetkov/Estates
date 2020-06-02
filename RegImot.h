@@ -10,8 +10,8 @@ private:
     void Copy(const RealEstates & x);
     void resize();
 protected:
-    int Capacity;
-    int Current;
+    int capacity;
+    int current;
     Estate **estates;
 
 public:
@@ -24,8 +24,8 @@ public:
     virtual void print()const;
     void add(Estate* x);
     void remove(Estate x);
-    int GetCurrent();
-    void NewPrice(int x);
+    int getCurrent();
+    void newPrice(int x);
     virtual void PrintByVip()const;
     virtual RealEstates * Clone()const;
     virtual void printHousesFromLowestPrice()const;
@@ -36,7 +36,7 @@ public:
     virtual void printFlats()const;
     virtual void printEstatesByTown(char * Town)const;
     virtual void printBySpaceRange(double size1,double size2)const;
-    void NewPrice(double x);
+    void newPrice(double x);
 
     virtual void printHousesFromLowestPriceByVip()const;
     virtual void printFlatsFromLowestPriceByVip()const;

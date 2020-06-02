@@ -14,16 +14,38 @@
 #include "SimpleBroker.h"
 #include "agent.h"
 
+TEST_CASE("Register function for estates")
+{
+    RealEstates listOfEstates;
+    Estate **estates = new Estate*[2];
+    estates[0]=new House("Plovdiv","Classic","bul. Dunav 1","Olga Petkov",130000,60,8,2);
+    estates[1]=new Flat("Plovdiv","Vip","bul. Dunav 1","Veslin Petkov",120000,65,4,4);
+    listOfEstates.add(estates[0]);
+    listOfEstates.add(estates[1]);
+}
 TEST_CASE("Test validation and constructor in House class")
 {
-    House house("Plovdiv","Classic","bul. Dunav 1","Olga Petkov",130000,120,8,2);
+    House house("Plovdiv","Classic","bul. Dunav 1","Olga Petkov",130000,60,8,2);
     CHECK(house.getRooms()==8);
+    CHECK(house.getYard()==60);
     CHECK(house.getFloor()==2);
     CHECK(house.getPrice()==130000);
     CHECK(strcpy(house.getOwner(),"Olga Petkova"));
     CHECK(strcpy(house.getAddr(),"bul. Dunav 1"));
     CHECK(strcpy(house.getTown(),"Plovdiv"));
     CHECK(strcpy(house.getTypeOfEstate(),"Classic"));
+}
+TEST_CASE("Test validation and constructor in Flat class")
+{
+    Flat flat("Plovdiv","Vip","bul. Dunav 1","Veslin Petkov",120000,65,4,4);
+    CHECK(flat.getRooms()==4);
+    CHECK(flat.getFloor()==4);
+    CHECK(flat.getSpace()==65);
+    CHECK(flat.getPrice()==120000);
+    CHECK(strcpy(flat.getOwner(),"Veselin Petkova"));
+    CHECK(strcpy(flat.getAddr(),"bul. Dunav 1"));
+    CHECK(strcpy(flat.getTown(),"Plovdiv"));
+    CHECK(strcpy(flat.getTypeOfEstate(),"Vip"));
 }
 TEST_CASE("Test Simple Broker Constructor")
 {

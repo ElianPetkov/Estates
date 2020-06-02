@@ -88,7 +88,7 @@ int House::getFloor()const
 {
     return floors;
 }
-double House::getyard()const
+double House::getYard()const
 {
     return this->yard;
 }

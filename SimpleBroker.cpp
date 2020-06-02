@@ -13,7 +13,7 @@ SimpleBroker::SimpleBroker(RealEstates listOfEstates,const char* name,double per
     strcpy(this->name,name);
     this->percentage=percentage;
     this->listOfEstates=listOfEstates;
-    this->listOfEstates.NewPrice(percentage);
+    this->listOfEstates.newPrice(percentage);
 }
 
 void SimpleBroker::Copy(const SimpleBroker &x)
