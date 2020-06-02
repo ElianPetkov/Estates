@@ -155,7 +155,7 @@ int main()
     Georgi.print();
 
     HelpfulBroker Denislav(denislavListWithEstates,"Denislav Dimitrov",3.0);
-    Denislav.Print();
+    Denislav.print();
 
     SimpleBroker Ivan(ivanListWithEstates,"Ivan Dimitrov",4.5);
     Ivan.print();

@@ -49,15 +49,6 @@ HelpfulBroker & HelpfulBroker:: operator=(const HelpfulBroker & x)
     return *this;
 }
 
-void HelpfulBroker::Print()const
-{
-    std::cout<<"Helpful Broker:"<<std::endl;
-    std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
-    std::cout<<"Estates:";
-    listOfEstates.print();
-    std::cout<<std::endl;
-}
-
 void HelpfulBroker::print()const
 {
     std::cout<<"Helpful Broker:"<<std::endl;

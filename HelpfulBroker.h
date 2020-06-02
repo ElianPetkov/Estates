@@ -17,7 +17,6 @@ class HelpfulBroker: public Agent
     HelpfulBroker(const HelpfulBroker &x);
     ~HelpfulBroker();
     HelpfulBroker & operator=(const HelpfulBroker &x);
-    virtual void Print()const;
 
     virtual void print()const;
     virtual void printHousesFromLowestPrice();
