@@ -288,58 +288,58 @@
 
 1526819378 source:d:\uni\kpk\project\thoughfulbroker.cpp
 
-1591118270 source:d:\uni\kpk\test\dishonestbroker.cpp
+1591121287 source:d:\uni\kpk\test\dishonestbroker.cpp
 	<iostream>
 	"RegImot.h"
 	<string.h>
 	"DishonestBroker.h"
 	<cassert>
 
-1591119975 d:\uni\kpk\test\regimot.h
+1591120571 d:\uni\kpk\test\regimot.h
 	<iostream>
 	"Imot.h"
 
-1591116691 d:\uni\kpk\test\imot.h
+1591121542 d:\uni\kpk\test\imot.h
 	<iostream>
 
-1591114714 d:\uni\kpk\test\dishonestbroker.h
+1591121366 d:\uni\kpk\test\dishonestbroker.h
 	<iostream>
 	"agent.h"
 
-1591100150 d:\uni\kpk\test\agent.h
+1591121029 d:\uni\kpk\test\agent.h
 	<iostream>
 
-1591099627 source:d:\uni\kpk\test\flat.cpp
+1591121440 source:d:\uni\kpk\test\flat.cpp
 	<string.h>
 	<iostream>
 	"flat.h"
 	<cassert>
 
-1591095306 d:\uni\kpk\test\flat.h
+1591121411 d:\uni\kpk\test\flat.h
 	<iostream>
 	"Imot.h"
 
-1591118268 source:d:\uni\kpk\test\helpfulbroker.cpp
+1591121222 source:d:\uni\kpk\test\helpfulbroker.cpp
 	<iostream>
 	"RegImot.h"
 	<string.h>
 	"HelpfulBroker.h"
 	<cassert>
 
-1591114712 d:\uni\kpk\test\helpfulbroker.h
+1591121378 d:\uni\kpk\test\helpfulbroker.h
 	<iostream>
 	"agent.h"
 
-1591117165 source:d:\uni\kpk\test\house.cpp
+1591121501 source:d:\uni\kpk\test\house.cpp
 	<string.h>
 	<iostream>
 	"House.h"
 	<cassert>
 
-1591117159 d:\uni\kpk\test\house.h
+1591121459 d:\uni\kpk\test\house.h
 	"Imot.h"
 
-1591116697 source:d:\uni\kpk\test\imot.cpp
+1591121744 source:d:\uni\kpk\test\imot.cpp
 	<string.h>
 	<iostream>
 	"RegImot.h"
@@ -360,15 +360,15 @@
 	"agent.h"
 	"tests_problem1.cpp"
 
-1591098985 d:\uni\kpk\test\plot.h
+1591121764 d:\uni\kpk\test\plot.h
 	<iostream>
 	"Imot.h"
 
-1591113954 d:\uni\kpk\test\simplebroker.h
+1591121393 d:\uni\kpk\test\simplebroker.h
 	<iostream>
 	"agent.h"
 
-1591119798 d:\uni\kpk\test\tests_problem1.cpp
+1591120578 d:\uni\kpk\test\tests_problem1.cpp
 	"doctest.h"
 	"Imot.h"
 	"flat.h"
@@ -423,20 +423,20 @@
 	<sys/time.h>
 	<unistd.h>
 
-1591099475 source:d:\uni\kpk\test\plot.cpp
+1591121799 source:d:\uni\kpk\test\plot.cpp
 	<iostream>
 	<string.h>
 	"Plot.h"
 	"Imot.h"
 
-1591118849 source:d:\uni\kpk\test\regimot.cpp
+1591120388 source:d:\uni\kpk\test\regimot.cpp
 	<string.h>
 	<iostream>
 	"RegImot.h"
 	"Imot.h"
 	<cassert>
 
-1591118267 source:d:\uni\kpk\test\simplebroker.cpp
+1591121338 source:d:\uni\kpk\test\simplebroker.cpp
 	<iostream>
 	"RegImot.h"
 	<string.h>

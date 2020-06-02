@@ -4,7 +4,7 @@
 #include "HelpfulBroker.h"
 #include <cassert>
 HelpfulBroker::HelpfulBroker():name(nullptr),percentage(0),listOfEstates() {}
-HelpfulBroker::HelpfulBroker(RealEstates listOfEstates, const char * name, double percentage)
+HelpfulBroker::HelpfulBroker(RealEstates listOfEstates, const char* name, double percentage)
 {
     assert(name != nullptr && "name: requires non-null argument");
     assert(percentage > 0 && "percentages: requires value > 0");
@@ -16,17 +16,17 @@ HelpfulBroker::HelpfulBroker(RealEstates listOfEstates, const char * name, doubl
     this->listOfEstates.newPrice(percentage);
 }
 
-void HelpfulBroker::Copy(const HelpfulBroker & x)
+void HelpfulBroker::Copy(const HelpfulBroker& broker)
 {
-    this->name=new char[strlen(x.name)+1];
-    strcpy(this->name,x.name);
-    this->percentage=x.percentage;
-    this->listOfEstates=x.listOfEstates;
+    this->name=new char[strlen(broker.name)+1];
+    strcpy(this->name,broker.name);
+    this->percentage=broker.percentage;
+    this->listOfEstates=broker.listOfEstates;
 }
 
-HelpfulBroker::HelpfulBroker(const HelpfulBroker & x)
+HelpfulBroker::HelpfulBroker(const HelpfulBroker& broker)
 {
-    Copy(x);
+    Copy(broker);
 }
 
 void HelpfulBroker::Erase()
@@ -39,12 +39,12 @@ HelpfulBroker::~HelpfulBroker()
     Erase();
 }
 
-HelpfulBroker & HelpfulBroker:: operator=(const HelpfulBroker & x)
+HelpfulBroker& HelpfulBroker:: operator=(const HelpfulBroker& broker)
 {
-    if(this!=&x)
+    if(this!=&broker)
     {
         Erase();
-        Copy(x);
+        Copy(broker);
     }
     return *this;
 }
@@ -106,9 +106,10 @@ void HelpfulBroker::printFlats()
 
 void HelpfulBroker::printByPriceRange(double fromPrice, double toPrice)
 {
-     if(toPrice - fromPrice < 0){
+    if(toPrice-fromPrice<0)
+    {
         throw std::invalid_argument ("difference between fromPrice and toPrice must be > 0");
-        }
+    }
 
     std::cout<<"Helpful Broker:"<<std::endl;
     std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
@@ -117,8 +118,10 @@ void HelpfulBroker::printByPriceRange(double fromPrice, double toPrice)
     std::cout<<std::endl;
 }
 
-void HelpfulBroker::printEstatesByTown(char *townName){
-    if(townName[0] == '\0'){
+void HelpfulBroker::printEstatesByTown(char *townName)
+{
+    if(townName[0] == '\0')
+    {
         throw std::invalid_argument ("townName shouldn't be empty name");
     }
 
@@ -131,7 +134,8 @@ void HelpfulBroker::printEstatesByTown(char *townName){
 
 void HelpfulBroker::printBySpaceRange(double fromSize, double toSize)
 {
-    if(toSize - fromSize < 0){
+    if(toSize-fromSize<0)
+    {
         throw std::invalid_argument ("difference between fromSize and toSize must be > 0");
     }
 
@@ -140,4 +144,13 @@ void HelpfulBroker::printBySpaceRange(double fromSize, double toSize)
     std::cout<<"Estates:";
     listOfEstates.printBySpaceRangeByVip(fromSize,toSize);
     std::cout<<std::endl;
+}
+
+char* HelpfulBroker::getName()const
+{
+    return this->name;
+}
+double HelpfulBroker::getPercentages()const
+{
+    return this->percentage;
 }

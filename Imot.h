@@ -11,32 +11,26 @@ private:
     double price;
     double space;
 
-    void Copy(const Estate & x);
+    void Copy(const Estate &estate);
     void Erase();
 
 public:
     Estate();
-    Estate(const char *town,const char *TypeOfEstate,const char*addr,const char*owner,double price,double space);
-    Estate(const Estate & x);
+    Estate(const char *town,const char *TypeOfEstate,const char* addr,const char* owner,double price,double space);
+    Estate(const Estate &estate);
     virtual ~Estate();
-    Estate & operator=(const Estate & x);
+    Estate& operator=(const Estate &estate);
 
     char* getTypeOfEstate()const;
     char* getAddr()const;
     char* getOwner()const;
-    void setPrice(double x);
+    void setPrice(double);
     double getPrice()const;
     double getSpace()const;
 
     virtual Estate* Clone() const;
-    virtual double getYard()const
-    {
-        return 0;
-    }
-    virtual int getFloor()const
-    {
-        return 0;
-    };
+    virtual double getYard()const{}
+    virtual int getFloor()const{}
     virtual char* getTown()const;
     virtual void print()const;
     virtual void addCharacteristicsToEstate();

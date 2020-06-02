@@ -26,31 +26,31 @@ Estate::Estate(const char *town,const char *TypeOfEstate,const char*addr,const c
     strcpy(this->owner,owner);
 
 }
-void Estate::Copy(const Estate&x)
+void Estate::Copy(const Estate &estate)
 {
-    this->town=new char[strlen(x.town)+1];
-    assert(this->town!=nullptr);
-    strcpy(this->town,x.town);
+    this->town=new char[strlen(estate.town)+1];
+    assert(this->town != nullptr);
+    strcpy(this->town,estate.town);
 
 
-    this->TypeOfEstate=new char[strlen(x.TypeOfEstate)+1];
-    assert(this->TypeOfEstate!=nullptr);
-    strcpy(this->TypeOfEstate,x.TypeOfEstate);
+    this->TypeOfEstate=new char[strlen(estate.TypeOfEstate)+1];
+    assert(this->TypeOfEstate != nullptr);
+    strcpy(this->TypeOfEstate,estate.TypeOfEstate);
 
-    this->addr=new char[strlen(x.addr)+1];
-    assert(this->addr!=nullptr);
-    strcpy(this->addr,x.addr);
+    this->addr=new char[strlen(estate.addr)+1];
+    assert(this->addr != nullptr);
+    strcpy(this->addr,estate.addr);
 
-    this->owner=new char[strlen(x.owner)+1];
-    assert(this->owner!=nullptr);
-    strcpy(this->owner,x.owner);
+    this->owner=new char[strlen(estate.owner)+1];
+    assert(this->owner != nullptr);
+    strcpy(this->owner,estate.owner);
 
-    price=x.price;
-    space=x.space;
+    price=estate.price;
+    space=estate.space;
 }
-Estate::Estate(const Estate &x)
+Estate::Estate(const Estate &estate)
 {
-    Copy(x);
+    Copy(estate);
 }
 void Estate::Erase()
 {
@@ -65,12 +65,12 @@ Estate::~Estate()
 {
     Erase();
 }
-Estate & Estate::operator =(const Estate & x)
+Estate & Estate::operator =(const Estate &estate)
 {
-    if(this!=&x)
+    if(this != &estate)
     {
         Erase();
-        Copy(x);
+        Copy(estate);
     }
     return *this;
 }
@@ -150,17 +150,20 @@ void Estate::addCharacteristicsToEstate()
 
     std::cin.ignore();
 }
+
 char* Estate::getAddr() const
 {
     return addr;
 }
+
 char* Estate::getOwner() const
 {
     return owner;
 }
-void Estate::setPrice(double x)
+
+void Estate::setPrice(double price)
 {
-    this->price=this->price+(this->price*x)/100.0;
+    this->price=this->price+(this->price*price)/100.0;
 }
 double Estate::getPrice()const
 {
@@ -171,14 +174,17 @@ Estate* Estate::Clone ()const
 {
     return new Estate(*this);
 }
+
 char* Estate::getTown()const
 {
     return town;
 }
+
 double Estate::getSpace()const
 {
     return space;
 }
+
 char* Estate::getTypeOfEstate()const
 {
     return TypeOfEstate;

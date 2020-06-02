@@ -8,13 +8,13 @@ RealEstates::RealEstates():capacity(10),current(0),estates(nullptr)
 {
     this->estates=new Estate*[capacity];
 }
-RealEstates::RealEstates(Estate **estates)
+RealEstates::RealEstates(Estate** estates)
 {
 
     capacity=10;
     current=0;
     this->estates=new Estate*[capacity];
-    assert(this->estates!=nullptr);
+    assert(this->estates != nullptr);
 }
 void RealEstates::Copy(const RealEstates &estate)
 {
@@ -36,9 +36,9 @@ void RealEstates::Erase()
 {
     delete [] estates;
 }
-RealEstates&  RealEstates::operator=(const RealEstates &estate)
+RealEstates &RealEstates::operator=(const RealEstates &estate)
 {
-    if(this!=&estate)
+    if(this != &estate)
     {
         Erase();
         Copy(estate);
@@ -61,19 +61,17 @@ void RealEstates::print()const
 }
 void RealEstates::resize()
 {
-
-    Estate **tmp=estates;
+    Estate** temporaryEstate=estates;
     capacity*=2;
     estates=new Estate*[capacity];
     assert(this->estates!=nullptr);
     for(int i=0; i<current; i++)
     {
-        estates[i]=tmp[i];
+        estates[i]=temporaryEstate[i];
     }
-    delete [] tmp;
-
-
+    delete [] temporaryEstate;
 }
+
 void RealEstates::add(Estate* estate)
 {
     if(current==capacity)
@@ -143,10 +141,9 @@ void RealEstates::printHousesFromLowestPrice()const
                 {
                     if(estates[i]->getPrice()>estates[j]->getPrice())
                     {
-                        Estate *estate;
-                        estate=estates[i]->Clone();
+                        Estate* temporaryEstate=estates[i]->Clone();
                         estates[i]=estates[j]->Clone();
-                        estates[j]=estate->Clone();
+                        estates[j]=temporaryEstate->Clone();
                     }
                 }
             }
@@ -187,10 +184,9 @@ void RealEstates::printFlatsFromLowestPrice()const
                 {
                     if(estates[i]->getPrice()>estates[j]->getPrice())
                     {
-                        Estate *estate;
-                        estate=estates[i]->Clone();
+                        Estate* temporaryEstate=estates[i]->Clone();
                         estates[i]=estates[j]->Clone();
-                        estates[j]=estate->Clone();
+                        estates[j]=temporaryEstate->Clone();
                     }
                 }
             }
@@ -218,10 +214,9 @@ void RealEstates::printEstatesFromLowestPrice()const
         {
             if(estates[i]->getPrice()>estates[j]->getPrice())
             {
-                Estate *estate;
-                estate=estates[i]->Clone();
+                Estate *temporaryEstate=estates[i]->Clone();
                 estates[i]=estates[j]->Clone();
-                estates[j]=estate->Clone();
+                estates[j]=temporaryEstate->Clone();
             }
         }
     }
@@ -409,10 +404,9 @@ void RealEstates::printEstatesFromLowestPriceByVip()const
         {
             if(estates[i]->getPrice()>estates[j]->getPrice())
             {
-                Estate *estate;
-                estate=estates[i]->Clone();
+                Estate *temporaryEstate=estates[i]->Clone();
                 estates[i]=estates[j]->Clone();
-                estates[j]=estate->Clone();
+                estates[j]=temporaryEstate->Clone();
             }
         }
     }

@@ -16,18 +16,18 @@ SimpleBroker::SimpleBroker(RealEstates listOfEstates,const char* name,double per
     this->listOfEstates.newPrice(percentage);
 }
 
-void SimpleBroker::Copy(const SimpleBroker &x)
+void SimpleBroker::Copy(const SimpleBroker &broker)
 {
-    this->name=new char[strlen(x.name)+1];
-    strcpy(this->name,x.name);
-    this->percentage=x.percentage;
-    this->listOfEstates=x.listOfEstates;
+    this->name=new char[strlen(broker.name)+1];
+    strcpy(this->name,broker.name);
+    this->percentage=broker.percentage;
+    this->listOfEstates=broker.listOfEstates;
 
 }
 
-SimpleBroker::SimpleBroker(const SimpleBroker &x)
+SimpleBroker::SimpleBroker(const SimpleBroker &broker)
 {
-    Copy(x);
+    Copy(broker);
 }
 
 void SimpleBroker::Erase()
@@ -40,12 +40,12 @@ SimpleBroker::~SimpleBroker()
     Erase();
 }
 
-SimpleBroker& SimpleBroker::operator=(const SimpleBroker &x)
+SimpleBroker& SimpleBroker::operator=(const SimpleBroker &broker)
 {
-    if(this!=&x)
+    if(this != &broker)
     {
         Erase();
-        Copy(x);
+        Copy(broker);
     }
     return *this;
 }
@@ -106,7 +106,7 @@ void SimpleBroker::printFlats()
 
 void SimpleBroker::printByPriceRange(double fromPrice, double toPrice)
 {
-    if(toPrice - fromPrice < 0){
+    if(toPrice-fromPrice<0){
         throw std::invalid_argument ("difference between fromPrice and toPrice must be > 0");
     }
 
@@ -132,7 +132,7 @@ void SimpleBroker::printEstatesByTown(char *townName)
 
 void SimpleBroker::printBySpaceRange(double fromSize,double toSize)
 {
-    if(toSize - fromSize < 0){
+    if(toSize-fromSize<0){
         throw std::invalid_argument ("difference between fromSize and toSize must be > 0");
     }
 

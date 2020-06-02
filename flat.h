@@ -7,7 +7,7 @@ class Flat:public Estate
     private:
     int rooms;
     int floor;
-    void Copy(const Flat &x);
+    void Copy(const Flat &flat);
 
     public:
     virtual void  print() const;

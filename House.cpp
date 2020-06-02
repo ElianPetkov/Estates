@@ -13,24 +13,24 @@ House::House(const char *town,const char *TypeOfEstate,const char*addr,const cha
     this->yard=space;
 }
 
-void House::Copy(const House & x)
+void House::Copy(const House &house)
 {
-    this->rooms=x.rooms;
-    this->floors=x.floors;
-    this->yard=x.yard;
+    this->rooms=house.rooms;
+    this->floors=house.floors;
+    this->yard=house.yard;
 }
 
-House::House(const House & x):Estate(x)
+House::House(const House &house):Estate(house)
 {
-    Copy(x);
+    Copy(house);
 }
 
-House & House::operator=(const House & x)
+House & House::operator=(const House &house)
 {
-    if(this!=&x)
+    if(this != &house)
     {
-        Estate::operator=(x);
-        Copy(x);
+        Estate::operator=(house);
+        Copy(house);
     }
     return *this;
 }
@@ -75,19 +75,21 @@ void House::addCharacteristicsToEstate()
     this->floors=floors;
 }
 
-House * House::Clone()const
+House* House::Clone()const
 {
     return new House(*this);
 }
 
 int House::getRooms()const
 {
-    return rooms;
+    return this->rooms;
 }
+
 int House::getFloor()const
 {
-    return floors;
+    return this->floors;
 }
+
 double House::getYard()const
 {
     return this->yard;

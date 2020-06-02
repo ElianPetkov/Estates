@@ -10,10 +10,10 @@ Flat::Flat(const char *town,const char *TypeOfEstate,const char*addr,const char*
     assert(floor > 0 && "floor should be bigger than 0");
     this->floor=floor;
 }
-void Flat::Copy(const Flat &x)
+void Flat::Copy(const Flat &flat)
 {
-    this->rooms=x.rooms;
-    this->floor=x.floor;
+    this->rooms=flat.rooms;
+    this->floor=flat.floor;
 }
 
 void Flat::print()const
@@ -52,20 +52,23 @@ void Flat::setRooms(int room)
 {
     this->rooms=room;
 }
+
 void Flat::setFloors(int floor)
 {
     this->floor=floor;
 }
+
 int Flat::getFloor()const
 {
     return floor;
 }
+
 int Flat::getRooms()const
 {
     return rooms;
 }
 
-Flat * Flat::Clone()const
+Flat* Flat::Clone()const
 {
     return new Flat(*this);
 }

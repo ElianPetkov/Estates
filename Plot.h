@@ -6,11 +6,11 @@ class Plot:public Estate
 {
 private:
     int comunnications[5];
-    void Copy(const Plot &x);
+    void Copy(const Plot &plot);
 public:
     Plot();
     Plot(const char* town, const char* TypeOfEstate, const char* addr, const char* owner, double price, double space);
-    Plot(const Plot &x);
+    Plot(const Plot &plot);
 
     Plot* Clone()const;
     virtual void addCharacteristicsToEstate();

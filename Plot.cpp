@@ -157,9 +157,9 @@ void Plot::Copy(const Plot &plot)
     }
 }
 
-Plot::Plot(const Plot &x):Estate(x)
+Plot::Plot(const Plot &plot):Estate(plot)
 {
-    Copy(x);
+    Copy(plot);
 }
 
 Plot* Plot::Clone()const

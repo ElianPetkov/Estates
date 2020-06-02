@@ -10,8 +10,8 @@ class Agent
     virtual void printEstatesFromLowestPrice()=0;
     virtual void printHouses()=0;
     virtual void printFlats()=0;
-    virtual void printByPriceRange(double ,double)=0;
+    virtual void printByPriceRange(double,double)=0;
     virtual void printEstatesByTown(char* Town)=0;
-    virtual void printBySpaceRange(double ,double)=0;
+    virtual void printBySpaceRange(double,double)=0;
 };
 #endif

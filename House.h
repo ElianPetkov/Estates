@@ -7,13 +7,13 @@ class House:public Estate
     int rooms;
     int floors;
     double yard;
-    void Copy(const House &x);
+    void Copy(const House &house);
 
     public:
     House();
     House(const char* town, const char* TypeOfEstate, const char* addr, const char* owner, double price, double space, int rooms, int floor);
-    House(const House &x);
-    House & operator=(const House &x);
+    House(const House &house);
+    House& operator=(const House &house);
 
     int getRooms()const;
     int getFloor()const;

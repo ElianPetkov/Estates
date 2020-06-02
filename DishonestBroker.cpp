@@ -17,17 +17,17 @@ DishonestBroker::DishonestBroker(RealEstates listOfEstates,const char* name,doub
     this->listOfEstates.newPrice(percentage);
 }
 
-void DishonestBroker::Copy(const DishonestBroker & x)
+void DishonestBroker::Copy(const DishonestBroker& broker)
 {
-    this->name=new char[strlen(x.name)+1];
-    strcpy(this->name,x.name);
-    this->percentage=x.percentage;
-    this->listOfEstates=x.listOfEstates;
+    this->name=new char[strlen(broker.name)+1];
+    strcpy(this->name,broker.name);
+    this->percentage=broker.percentage;
+    this->listOfEstates=broker.listOfEstates;
 }
 
-DishonestBroker::DishonestBroker(const DishonestBroker & x)
+DishonestBroker::DishonestBroker(const DishonestBroker& broker)
 {
-    Copy(x);
+    Copy(broker);
 }
 
 void DishonestBroker::Erase()
@@ -40,12 +40,12 @@ DishonestBroker::~DishonestBroker()
     Erase();
 }
 
-DishonestBroker &DishonestBroker:: operator=(const DishonestBroker & x)
+DishonestBroker &DishonestBroker:: operator=(const DishonestBroker & broker)
 {
-    if(this!=&x)
+    if(this != &broker)
     {
         Erase();
-        Copy(x);
+        Copy(broker);
     }
     return *this;
 }
@@ -106,7 +106,8 @@ void DishonestBroker::printFlats()
 
 void DishonestBroker::printByPriceRange(double fromPrice,double toPrice)
 {
-    if(toPrice - fromPrice < 0){
+    if(toPrice-fromPrice<0)
+    {
         throw std::invalid_argument ("difference between fromPrice and toPrice must be > 0");
     }
 
@@ -117,9 +118,10 @@ void DishonestBroker::printByPriceRange(double fromPrice,double toPrice)
     std::cout<<std::endl;
 }
 
-void DishonestBroker::printEstatesByTown(char *townName)
+void DishonestBroker::printEstatesByTown(char* townName)
 {
-    if(townName[0] == '\0'){
+    if(townName[0] == '\0')
+    {
         throw std::invalid_argument ("townName shouldn't be empty name");
     }
 
@@ -132,7 +134,8 @@ void DishonestBroker::printEstatesByTown(char *townName)
 
 void DishonestBroker::printBySpaceRange(double fromSize,double toSize)
 {
-    if(toSize - fromSize < 0){
+    if(toSize-fromSize<0)
+    {
         throw std::invalid_argument ("difference between fromSize and toSize must be > 0");
     }
 
@@ -141,4 +144,12 @@ void DishonestBroker::printBySpaceRange(double fromSize,double toSize)
     std::cout<<"Estates:";
     listOfEstates.printBySpaceRange(fromSize,toSize);
     std::cout<<std::endl;
+}
+char* DishonestBroker:: getName()const
+{
+    return name;
+}
+double DishonestBroker::getPercentages()const
+{
+    return percentage;
 }

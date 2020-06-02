@@ -7,7 +7,7 @@ class RealEstates
 {
 private:
     void Erase();
-    void Copy(const RealEstates & x);
+    void Copy(const RealEstates& x);
     void resize();
 protected:
     int capacity;
@@ -23,7 +23,7 @@ public:
 
     virtual void print()const;
     void add(Estate*);
-    void remove(Estate *);
+    void remove(Estate*);
     int getCurrent();
     void newPrice(int);
     virtual void PrintByVip()const;
