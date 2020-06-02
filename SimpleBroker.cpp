@@ -119,7 +119,7 @@ void SimpleBroker::PrintByPriceRange(double fromPrice, double toPrice)
 
 void SimpleBroker::PrintEstatesByTown(char *townName)
 {
-    if(townName = " "){
+    if(townName[0] == '\0'){
         throw std::invalid_argument ("townName shouldn't be empty name");
     }
 
