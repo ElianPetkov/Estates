@@ -1,0 +1,438 @@
+# depslib dependency file v1.0
+1591112500 source:c:\users\hp omen\desktop\new folder (2)\test\main.cpp
+	<iostream>
+
+1591110503 source:c:\users\hp omen\desktop\opa\test\main.cpp
+	<iostream>
+	<string.h>
+	"Imot.h"
+	"flat.h"
+	"House.h"
+	"Plot.h"
+	"RegImot.h"
+	"agent.h"
+	"HelpfulBroker.h"
+	"DishonestBroker.h"
+	"SimpleBroker.h"
+	"agent.h"
+	"tests_problem1.cpp"
+
+1573129613 c:\users\hp omen\desktop\opa\test\tests_problem1.cpp
+	"doctest.h"
+
+1591109179 c:\users\hp omen\desktop\opa\test\doctest.h
+	<iosfwd>
+	<cstddef>
+	<ostream>
+	<ciso646>
+	<type_traits>
+	"doctest_fwd.h"
+	<ctime>
+	<cmath>
+	<climits>
+	<math.h>
+	<new>
+	<cstdio>
+	<cstdlib>
+	<cstring>
+	<limits>
+	<utility>
+	<fstream>
+	<sstream>
+	<iostream>
+	<algorithm>
+	<iomanip>
+	<vector>
+	<atomic>
+	<mutex>
+	<set>
+	<map>
+	<exception>
+	<stdexcept>
+	<csignal>
+	<cfloat>
+	<cctype>
+	<cstdint>
+	<sys/types.h>
+	<unistd.h>
+	<sys/sysctl.h>
+	<AfxWin.h>
+	<Windows.h>
+	<io.h>
+	<sys/time.h>
+	<unistd.h>
+
+1591097162 c:\users\hp omen\desktop\opa\test\imot.h
+	<iostream>
+
+1591095306 c:\users\hp omen\desktop\opa\test\flat.h
+	<iostream>
+	"Imot.h"
+
+1591095246 c:\users\hp omen\desktop\opa\test\house.h
+	"Imot.h"
+
+1591098985 c:\users\hp omen\desktop\opa\test\plot.h
+	<iostream>
+	"Imot.h"
+
+1591100150 c:\users\hp omen\desktop\opa\test\regimot.h
+	<iostream>
+	"Imot.h"
+
+1591100150 c:\users\hp omen\desktop\opa\test\agent.h
+	<iostream>
+
+1591100358 c:\users\hp omen\desktop\opa\test\helpfulbroker.h
+	<iostream>
+	"agent.h"
+
+1591100149 c:\users\hp omen\desktop\opa\test\dishonestbroker.h
+	<iostream>
+	"agent.h"
+
+1591100150 c:\users\hp omen\desktop\opa\test\simplebroker.h
+	<iostream>
+	"agent.h"
+
+1591100149 source:c:\users\hp omen\desktop\opa\test\dishonestbroker.cpp
+	<iostream>
+	"RegImot.h"
+	<string.h>
+	"DishonestBroker.h"
+	<cassert>
+
+1591099627 source:c:\users\hp omen\desktop\opa\test\flat.cpp
+	<string.h>
+	<iostream>
+	"flat.h"
+	<cassert>
+
+1591100354 source:c:\users\hp omen\desktop\opa\test\helpfulbroker.cpp
+	<iostream>
+	"RegImot.h"
+	<string.h>
+	"HelpfulBroker.h"
+	<cassert>
+
+1591099736 source:c:\users\hp omen\desktop\opa\test\house.cpp
+	<string.h>
+	<iostream>
+	"House.h"
+	<cassert>
+
+1591099580 source:c:\users\hp omen\desktop\opa\test\imot.cpp
+	<string.h>
+	<iostream>
+	"RegImot.h"
+	<cassert>
+
+1591099475 source:c:\users\hp omen\desktop\opa\test\plot.cpp
+	<iostream>
+	<string.h>
+	"Plot.h"
+	"Imot.h"
+
+1591100149 source:c:\users\hp omen\desktop\opa\test\regimot.cpp
+	<string.h>
+	<iostream>
+	"RegImot.h"
+	"Imot.h"
+	<cassert>
+
+1591100149 source:d:\uni\kpk\project\dishonestbroker.cpp
+	<iostream>
+	"RegImot.h"
+	<string.h>
+	"DishonestBroker.h"
+	<cassert>
+
+1591100150 d:\uni\kpk\project\regimot.h
+	<iostream>
+	"Imot.h"
+
+1591097162 d:\uni\kpk\project\imot.h
+	<iostream>
+
+1591100149 d:\uni\kpk\project\dishonestbroker.h
+	<iostream>
+	"agent.h"
+
+1591100150 d:\uni\kpk\project\agent.h
+	<iostream>
+
+1591099627 source:d:\uni\kpk\project\flat.cpp
+	<string.h>
+	<iostream>
+	"flat.h"
+	<cassert>
+
+1591095306 d:\uni\kpk\project\flat.h
+	<iostream>
+	"Imot.h"
+
+1591100354 source:d:\uni\kpk\project\helpfulbroker.cpp
+	<iostream>
+	"RegImot.h"
+	<string.h>
+	"HelpfulBroker.h"
+	<cassert>
+
+1591100358 d:\uni\kpk\project\helpfulbroker.h
+	<iostream>
+	"agent.h"
+
+1591099736 source:d:\uni\kpk\project\house.cpp
+	<string.h>
+	<iostream>
+	"House.h"
+	<cassert>
+
+1591095246 d:\uni\kpk\project\house.h
+	"Imot.h"
+
+1591099580 source:d:\uni\kpk\project\imot.cpp
+	<string.h>
+	<iostream>
+	"RegImot.h"
+	<cassert>
+
+1591111162 source:d:\uni\kpk\project\main.cpp
+	<iostream>
+	<string.h>
+	"Imot.h"
+	"flat.h"
+	"House.h"
+	"Plot.h"
+	"RegImot.h"
+	"agent.h"
+	"HelpfulBroker.h"
+	"DishonestBroker.h"
+	"SimpleBroker.h"
+	"agent.h"
+	"tests_problem1.cpp"
+
+1591098985 d:\uni\kpk\project\plot.h
+	<iostream>
+	"Imot.h"
+
+1591111559 d:\uni\kpk\project\simplebroker.h
+	<iostream>
+	"agent.h"
+
+1591111669 d:\uni\kpk\project\tests_problem1.cpp
+	"doctest.h"
+	"SimpleBroker.h"
+
+1591109179 d:\uni\kpk\project\doctest.h
+	<iosfwd>
+	<cstddef>
+	<ostream>
+	<ciso646>
+	<type_traits>
+	"doctest_fwd.h"
+	<ctime>
+	<cmath>
+	<climits>
+	<math.h>
+	<new>
+	<cstdio>
+	<cstdlib>
+	<cstring>
+	<limits>
+	<utility>
+	<fstream>
+	<sstream>
+	<iostream>
+	<algorithm>
+	<iomanip>
+	<vector>
+	<atomic>
+	<mutex>
+	<set>
+	<map>
+	<exception>
+	<stdexcept>
+	<csignal>
+	<cfloat>
+	<cctype>
+	<cstdint>
+	<sys/types.h>
+	<unistd.h>
+	<sys/sysctl.h>
+	<AfxWin.h>
+	<Windows.h>
+	<io.h>
+	<sys/time.h>
+	<unistd.h>
+
+1591099475 source:d:\uni\kpk\project\plot.cpp
+	<iostream>
+	<string.h>
+	"Plot.h"
+	"Imot.h"
+
+1591100149 source:d:\uni\kpk\project\regimot.cpp
+	<string.h>
+	<iostream>
+	"RegImot.h"
+	"Imot.h"
+	<cassert>
+
+1591110697 source:d:\uni\kpk\project\simplebroker.cpp
+	<iostream>
+	"RegImot.h"
+	<string.h>
+	"SimpleBroker.h"
+	<cassert>
+
+1526819378 source:d:\uni\kpk\project\thoughfulbroker.cpp
+
+1591100149 source:d:\uni\kpk\test\dishonestbroker.cpp
+	<iostream>
+	"RegImot.h"
+	<string.h>
+	"DishonestBroker.h"
+	<cassert>
+
+1591100150 d:\uni\kpk\test\regimot.h
+	<iostream>
+	"Imot.h"
+
+1591097162 d:\uni\kpk\test\imot.h
+	<iostream>
+
+1591100149 d:\uni\kpk\test\dishonestbroker.h
+	<iostream>
+	"agent.h"
+
+1591100150 d:\uni\kpk\test\agent.h
+	<iostream>
+
+1591099627 source:d:\uni\kpk\test\flat.cpp
+	<string.h>
+	<iostream>
+	"flat.h"
+	<cassert>
+
+1591095306 d:\uni\kpk\test\flat.h
+	<iostream>
+	"Imot.h"
+
+1591100354 source:d:\uni\kpk\test\helpfulbroker.cpp
+	<iostream>
+	"RegImot.h"
+	<string.h>
+	"HelpfulBroker.h"
+	<cassert>
+
+1591100358 d:\uni\kpk\test\helpfulbroker.h
+	<iostream>
+	"agent.h"
+
+1591099736 source:d:\uni\kpk\test\house.cpp
+	<string.h>
+	<iostream>
+	"House.h"
+	<cassert>
+
+1591095246 d:\uni\kpk\test\house.h
+	"Imot.h"
+
+1591099580 source:d:\uni\kpk\test\imot.cpp
+	<string.h>
+	<iostream>
+	"RegImot.h"
+	<cassert>
+
+1591111162 source:d:\uni\kpk\test\main.cpp
+	<iostream>
+	<string.h>
+	"Imot.h"
+	"flat.h"
+	"House.h"
+	"Plot.h"
+	"RegImot.h"
+	"agent.h"
+	"HelpfulBroker.h"
+	"DishonestBroker.h"
+	"SimpleBroker.h"
+	"agent.h"
+	"tests_problem1.cpp"
+
+1591098985 d:\uni\kpk\test\plot.h
+	<iostream>
+	"Imot.h"
+
+1591111559 d:\uni\kpk\test\simplebroker.h
+	<iostream>
+	"agent.h"
+
+1591111669 d:\uni\kpk\test\tests_problem1.cpp
+	"doctest.h"
+	"SimpleBroker.h"
+
+1591109179 d:\uni\kpk\test\doctest.h
+	<iosfwd>
+	<cstddef>
+	<ostream>
+	<ciso646>
+	<type_traits>
+	"doctest_fwd.h"
+	<ctime>
+	<cmath>
+	<climits>
+	<math.h>
+	<new>
+	<cstdio>
+	<cstdlib>
+	<cstring>
+	<limits>
+	<utility>
+	<fstream>
+	<sstream>
+	<iostream>
+	<algorithm>
+	<iomanip>
+	<vector>
+	<atomic>
+	<mutex>
+	<set>
+	<map>
+	<exception>
+	<stdexcept>
+	<csignal>
+	<cfloat>
+	<cctype>
+	<cstdint>
+	<sys/types.h>
+	<unistd.h>
+	<sys/sysctl.h>
+	<AfxWin.h>
+	<Windows.h>
+	<io.h>
+	<sys/time.h>
+	<unistd.h>
+
+1591099475 source:d:\uni\kpk\test\plot.cpp
+	<iostream>
+	<string.h>
+	"Plot.h"
+	"Imot.h"
+
+1591100149 source:d:\uni\kpk\test\regimot.cpp
+	<string.h>
+	<iostream>
+	"RegImot.h"
+	"Imot.h"
+	<cassert>
+
+1591110697 source:d:\uni\kpk\test\simplebroker.cpp
+	<iostream>
+	"RegImot.h"
+	<string.h>
+	"SimpleBroker.h"
+	<cassert>
+
+1526819378 source:d:\uni\kpk\test\thoughfulbroker.cpp
+

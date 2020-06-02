@@ -3,7 +3,7 @@
 #include <string.h>
 #include "SimpleBroker.h"
 #include <cassert>
-SimpleBroker::SimpleBroker():listOfEstates(),name('\0'),percentage(0) {}
+SimpleBroker::SimpleBroker():listOfEstates(),name(nullptr),percentage(0) {}
 SimpleBroker::SimpleBroker(RealEstates listOfEstates,const char* name,double percentage)
 {
     assert(name != nullptr && "name: requires non-null argument");

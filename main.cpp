@@ -10,7 +10,6 @@
 #include "DishonestBroker.h"
 #include "SimpleBroker.h"
 #include "agent.h"
-#include <cassert>
 using namespace std;
 int RegisterEstates(RealEstates &listOfEstates)
 {
@@ -140,8 +139,13 @@ void SearchEstates(Agent *listOfAgents[3])
     }
     while(option!=0);
 }
-int main()
+#include "tests_problem1.cpp"
+using namespace std;
+int main ()
 {
+    // пускане на тестовете
+    doctest::Context().run();
+
     RealEstates georgiListWithEstates;
     RealEstates denislavListWithEstates;
     RealEstates ivanListWithEstates;
@@ -167,8 +171,5 @@ int main()
 
     SearchEstates(listOfAgents);
 }
-
-
-
 
 
