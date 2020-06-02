@@ -6,7 +6,7 @@
 class DishonestBroker:public Agent
 {
     private:
-    char * name;
+    char* name;
     double percentage;
     void Copy(const DishonestBroker &x);
     void Erase();
@@ -15,21 +15,20 @@ class DishonestBroker:public Agent
 
     public:
     DishonestBroker();
-    DishonestBroker(RealEstates listOfEstates,const char* name,double percentage);
+    DishonestBroker(RealEstates listOfEstates, const char* name, double percentage);
     DishonestBroker(const DishonestBroker &x);
     virtual ~DishonestBroker();
-    DishonestBroker& operator=(const DishonestBroker & x);
+    DishonestBroker& operator=(const DishonestBroker &x);
 
     virtual void print()const;
-    //virtual DishonestBroker * Clone()const;
     virtual void PrintHousesFromLowestPrice();
     virtual void PrintFlatsFromLowestPrice();
     virtual void PrintEstatesFromLowestPrice();
     virtual void PrintHouses();
     virtual void PrintFlats();
-    virtual void PrintByPriceRange(double price1,double price2);
-    virtual void PrintEstatesByTown(char * Town);
-    virtual void PrintBySpaceRange(double size1,double size2);
+    virtual void PrintByPriceRange(double ,double);
+    virtual void PrintEstatesByTown(char* townName);
+    virtual void PrintBySpaceRange(double ,double );
 
 
 };

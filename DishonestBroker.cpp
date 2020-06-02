@@ -2,10 +2,14 @@
 #include "RegImot.h"
 #include <string.h>
 #include "DishonestBroker.h"
+#include <cassert>
 using namespace std;
 DishonestBroker::DishonestBroker():listOfEstates(),name(nullptr),percentage(0) {}
 DishonestBroker::DishonestBroker(RealEstates listOfEstates,const char* name,double percentage)
 {
+    assert(name != nullptr && "name: requires non-null argument");
+    assert(percentage > 0 && "percentages: requires value > 0");
+
     this->name=new char[strlen(name)+1];
     strcpy(this->name,name);
     this->percentage=percentage;
@@ -50,10 +54,6 @@ void DishonestBroker::print() const
     listOfEstates.print();
     std::cout<<std::endl;
 }
-//DishonestBroker * DishonestBroker:: Clone()const
-//{
- //   return new DishonestBroker(*this);
-//}
 void DishonestBroker::PrintHousesFromLowestPrice()
 {
     std::cout<<"Dishonest Broker:"<<std::endl;
@@ -95,29 +95,41 @@ void DishonestBroker::PrintFlats()
     listOfEstates.PrintFlats();
     std::cout<<std::endl;
 }
-void DishonestBroker::PrintByPriceRange(double price1,double price2)
+void DishonestBroker::PrintByPriceRange(double fromPrice,double toPrice)
 {
+    if(toPrice - fromPrice < 0){
+        throw std::invalid_argument ("difference between fromPrice and toPrice must be > 0");
+    }
+
     std::cout<<"Dishonest Broker:"<<std::endl;
     std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
     std::cout<<"Estates:";
-    listOfEstates.PrintByPriceRange(price1,price2);
+    listOfEstates.PrintByPriceRange(fromPrice,toPrice);
     std::cout<<std::endl;
 }
 
-void DishonestBroker::PrintEstatesByTown(char * Town)
+void DishonestBroker::PrintEstatesByTown(char *townName)
 {
+    if(townName = " "){
+        throw std::invalid_argument ("townName shouldn't be empty name");
+    }
+
     std::cout<<"Dishonest Broker:"<<std::endl;
     std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
     std::cout<<"Estates:";
-    listOfEstates.PrintEstatesByTown(Town);
+    listOfEstates.PrintEstatesByTown(townName);
     std::cout<<std::endl;
 }
 
-void DishonestBroker::PrintBySpaceRange(double size1,double size2)
+void DishonestBroker::PrintBySpaceRange(double fromSize,double toSize)
 {
+    if(toSize - fromSize < 0){
+        throw std::invalid_argument ("difference between fromSize and toSize must be > 0");
+    }
+
     std::cout<<"Dishonest Broker:"<<std::endl;
     std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
     std::cout<<"Estates:";
-    listOfEstates.PrintBySpaceRange(size1,size2);
+    listOfEstates.PrintBySpaceRange(fromSize,toSize);
     std::cout<<std::endl;
 }
