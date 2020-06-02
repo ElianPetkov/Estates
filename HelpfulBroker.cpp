@@ -2,9 +2,13 @@
 #include "RegImot.h"
 #include <string.h>
 #include "HelpfulBroker.h"
+#include <cassert>
 HelpfulBroker::HelpfulBroker():name(nullptr),percentage(0),listOfEstates() {}
 HelpfulBroker::HelpfulBroker(RealEstates listOfEstates, const char * name, double percentage)
 {
+    assert(name != nullptr && "name: requires non-null argument");
+    assert(percentage > 0 && "percentages: requires value > 0");
+
     this->name=new char[strlen(name)+1];
     strcpy(this->name,name);
     this->percentage=percentage;
@@ -103,14 +107,19 @@ void HelpfulBroker::PrintFlats()
 }
 void HelpfulBroker::PrintByPriceRange(double fromPrice, double toPrice)
 {
+     if(toPrice - fromPrice < 0){
+        throw std::invalid_argument ("difference between fromPrice and toPrice must be > 0");}
+
     std::cout<<"Helpful Broker:"<<std::endl;
     std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
     std::cout<<"Estates:";
     listOfEstates.PrintByPriceRangeByVip(fromPrice,toPrice);
     std::cout<<std::endl;
 }
-void HelpfulBroker::PrintEstatesByTown(char *townName)
-        {
+void HelpfulBroker::PrintEstatesByTown(char *townName){
+    if(townName = " "){
+        throw std::invalid_argument ("townName shouldn't be empty name");}
+
     std::cout<<"Helpful Broker:"<<std::endl;
     std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
     std::cout<<"Estates:";
@@ -119,6 +128,9 @@ void HelpfulBroker::PrintEstatesByTown(char *townName)
 }
 void HelpfulBroker::PrintBySpaceRange(double fromSize, double toSize)
 {
+    if(toSize - fromSize < 0){
+        throw std::invalid_argument ("difference between fromSize and toSize must be > 0");}
+
     std::cout<<"Helpful Broker:"<<std::endl;
     std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
     std::cout<<"Estates:";
