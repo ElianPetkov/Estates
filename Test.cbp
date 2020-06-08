@@ -45,7 +45,6 @@
 		<Unit filename="RegImot.h" />
 		<Unit filename="SimpleBroker.cpp" />
 		<Unit filename="SimpleBroker.h" />
-		<Unit filename="ThoughfulBroker.cpp" />
 		<Unit filename="agent.h" />
 		<Unit filename="doctest.h" />
 		<Unit filename="flat.cpp" />
