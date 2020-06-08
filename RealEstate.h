@@ -1,7 +1,7 @@
 #ifndef REGIMOT_H_REGIMOT
 #define REGIMOT_H_REGIMOT
 #include<iostream>
-#include "Imot.h"
+#include "Estate.h"
 using namespace std;
 class RealEstates
 {

@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string.h>
 #include "Plot.h"
-#include "Imot.h"
+#include "Estate.h"
 using namespace std;
 Plot::Plot():Estate()
 {

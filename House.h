@@ -1,6 +1,6 @@
 #ifndef HOUSE_H_HOUSE
 #define HOUSE_H_HOUSE
-#include "Imot.h"
+#include "Estate.h"
 class House:public Estate
 {
     private:

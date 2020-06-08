@@ -1,7 +1,7 @@
 #include <string.h>
 #include<iostream>
-#include"RegImot.h"
-#include "Imot.h"
+#include"RealEstate.h"
+#include "Estate.h"
 #include <cassert>
 using namespace std;
 RealEstates::RealEstates():capacity(10),current(0),estates(nullptr)

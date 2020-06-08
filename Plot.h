@@ -1,7 +1,7 @@
 #ifndef PLOT_H_PLOT
 #define PLOT_H_PLOT
 #include <iostream>
-#include "Imot.h"
+#include "Estate.h"
 class Plot:public Estate
 {
 private:

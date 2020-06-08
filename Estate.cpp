@@ -1,6 +1,6 @@
 #include <string.h>
 #include <iostream>
-#include "RegImot.h"
+#include "RealEstate.h"
 #include <cassert>
 Estate::Estate():town(nullptr),TypeOfEstate(nullptr),addr(nullptr),owner(nullptr),space(0),price(0) {}
 Estate::Estate(const char *town,const char *TypeOfEstate,const char*addr,const char*owner,double price,double space):price(price),space(space)

@@ -1,7 +1,7 @@
 #ifndef FLAT_H_FLAT
 #define FLAT_H_FLAT
 #include <iostream>
-#include "Imot.h"
+#include "Estate.h"
 class Flat:public Estate
 {
     private:
