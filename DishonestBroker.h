@@ -1,34 +1,35 @@
 #ifndef DISHONESTBROKER_H_DISHONESTBROKER
 #define DISHONESTBROKER_H_DISHONESTBROKER
 #include <iostream>
-#include "RegImot.h"
-class DishonestBroker:public RealEstates
+#include "agent.h"
+class DishonestBroker:public Agent
 {
     private:
-    char * name;
+    char* name;
     double percentage;
-    void Copy(const DishonestBroker &x);
+    void Copy(const DishonestBroker &broker);
     void Erase();
-    RealEstates y;
-
+    RealEstates listOfEstates;
 
     public:
     DishonestBroker();
-    DishonestBroker(Estate **estates,RealEstates y,const char* name,double percentage);
-    DishonestBroker(const DishonestBroker &x);
-    ~DishonestBroker();
-    DishonestBroker& operator=(const DishonestBroker & x);
-    virtual void print();
-    virtual DishonestBroker * Clone()const;
-    virtual void LowestPrintHouse();
-    virtual void LowestPrintFlat();
-    virtual void LowestPrint();
-    virtual void PrintHouse();
-    virtual void PrintFlat();
-    virtual void PrintByPrice(double name1,double name2);
-    virtual void PrintTown(char * Town);
-    virtual void PrintBySpace(double size1,double size2);
+    DishonestBroker(RealEstates listOfEstates, const char* name, double percentage);
+    DishonestBroker(const DishonestBroker &broker);
+    virtual ~DishonestBroker();
+    DishonestBroker& operator=(const DishonestBroker &broker);
 
+    char* getName()const;
+    double getPercentages()const;
+    virtual void print()const;
 
+    protected:
+    virtual void printHousesFromLowestPrice();
+    virtual void printFlatsFromLowestPrice();
+    virtual void printEstatesFromLowestPrice();
+    virtual void printHouses();
+    virtual void printFlats();
+    virtual void printByPriceRange(double,double);
+    virtual void printEstatesByTown(char* townName);
+    virtual void printBySpaceRange(double,double );
 };
 #endif

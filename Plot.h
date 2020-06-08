@@ -1,25 +1,19 @@
 #ifndef PLOT_H_PLOT
 #define PLOT_H_PLOT
 #include <iostream>
-#include "Imot.h"
+#include "Estate.h"
 class Plot:public Estate
 {
-    private:
-    int a[5];
-    void Copy(const Plot &x);
-    public:
+private:
+    int comunnications[5];
+    void Copy(const Plot &plot);
+public:
     Plot();
-    Plot(const char *town,const char *TypeOfEstate,const char*addr,const char*owner,double price,double space);
-    Plot(const Plot & x);
-    enum Comunnication{water,electicity,telephone,nearRoad,sewerage};
+    Plot(const char* town, const char* TypeOfEstate, const char* addr, const char* owner, double price, double space);
+    Plot(const Plot &plot);
 
-
-    Plot * Clone()const;
-    virtual void read();
+    Plot* Clone()const;
+    virtual void addCharacteristicsToEstate();
     virtual void print()const;
-
-
-
-
 };
 #endif

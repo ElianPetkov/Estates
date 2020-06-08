@@ -1,34 +1,37 @@
 #ifndef SimpleBroker_H_SimpleBroker
 #define SimpleBroker_H_SimpleBroker
 #include <iostream>
-#include "RegImot.h"
-class SimpleBroker:public RealEstates
+#include "agent.h"
+class SimpleBroker:public Agent
 {
     private:
-    char * name;
+    char* name;
     double percentage;
-    RealEstates y;
+    RealEstates listOfEstates;
 
-    void Copy(const SimpleBroker &x);
+    void Copy(const SimpleBroker &broker);
     void Erase();
 
     public:
     SimpleBroker();
-    SimpleBroker(Estate **estates,RealEstates y,const char* name,double percentage);
-    SimpleBroker(const SimpleBroker &x);
+    SimpleBroker(RealEstates listOfEstates, const char* name, double percentage);
+    SimpleBroker(const SimpleBroker &broker);
     virtual ~SimpleBroker();
-    SimpleBroker& operator=(const SimpleBroker & x);
 
+    char* getName()const{return name;}
+    double getPercentages()const{return percentage;}
+    SimpleBroker& operator=(const SimpleBroker &broker);
     virtual void print()const;
-    virtual SimpleBroker * Clone()const;
-    virtual void LowestPrintHouse();
-    virtual void LowestPrintFlat();
-    virtual void LowestPrint();
-    virtual void PrintHouse();
-    virtual void PrintFlat();
-    virtual void PrintByPrice(double name1,double name2);
-    virtual void PrintTown(char * Town);
-    virtual void PrintBySpace(double size1,double size2);
+
+    protected:
+    virtual void printHousesFromLowestPrice();
+    virtual void printFlatsFromLowestPrice();
+    virtual void printEstatesFromLowestPrice();
+    virtual void printHouses();
+    virtual void printFlats();
+    virtual void printByPriceRange(double fromPrice, double toPrice);
+    virtual void printEstatesByTown(char* Town);
+    virtual void printBySpaceRange(double fromSize, double toSize);
 };
 #endif
 

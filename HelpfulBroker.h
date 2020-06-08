@@ -1,36 +1,35 @@
 #ifndef HelpfulBroker_H_HelpfulBroker
 #define HelpfulBroker_H_HelpfulBroker
 #include <iostream>
-#include "RegImot.h"
-class HelpfulBroker:public RealEstates
+#include "agent.h"
+class HelpfulBroker: public Agent
 {
-
-
     private:
-    char * name;
+    char* name;
     double percentage;
-    void Copy(const HelpfulBroker &x);
+    void Copy(const HelpfulBroker &broker);
     void Erase();
-    RealEstates y;
+    RealEstates listOfEstates;
 
     public:
     HelpfulBroker();
-    HelpfulBroker(Estate **estates,RealEstates y,const char* name,double percentage);
-    HelpfulBroker(const HelpfulBroker &x);
+    HelpfulBroker(RealEstates listOfEstates, const char* name, double percentage);
+    HelpfulBroker(const HelpfulBroker &broker);
     ~HelpfulBroker();
-    HelpfulBroker & operator=(const HelpfulBroker & x);
+    HelpfulBroker & operator=(const HelpfulBroker &broker);
+
+    char* getName()const;
+    double getPercentages()const;
     virtual void print()const;
-    virtual void PrintByVip()const;
-    virtual HelpfulBroker*Clone()const;
 
-    virtual void LowestPrintHouseByVip()const;
-    virtual void LowestPrintFlatByVip()const;
-    virtual void LowestPrintByVip()const;
-    virtual void PrintHouseByVip()const;
-    virtual void PrintFlatByVip()const;
-    virtual void PrintByPriceByVip(double price1,double price2)const;
-    virtual void PrintTownByVip(char * Town)const;
-    virtual void PrintBySpaceByVip(double size1,double size2)const;
-
+    protected:
+    virtual void printHousesFromLowestPrice();
+    virtual void printFlatsFromLowestPrice();
+    virtual void printEstatesFromLowestPrice();
+    virtual void printHouses();
+    virtual void printFlats();
+    virtual void printByPriceRange(double,double);
+    virtual void printEstatesByTown(char* Town);
+    virtual void printBySpaceRange(double,double);
 };
 #endif

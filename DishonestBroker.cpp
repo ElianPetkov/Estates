@@ -1,124 +1,155 @@
 #include <iostream>
-#include "RegImot.h"
+#include "RealEstate.h"
 #include <string.h>
 #include "DishonestBroker.h"
+#include <cassert>
 using namespace std;
-DishonestBroker::DishonestBroker():RealEstates(),y(),name(nullptr),percentage(0) {}
-DishonestBroker::DishonestBroker(Estate **estates,RealEstates y,const char* name,double percentage):RealEstates(estates)
+DishonestBroker::DishonestBroker():listOfEstates(),name(nullptr),percentage(0) {}
+DishonestBroker::DishonestBroker(RealEstates listOfEstates,const char* name,double percentage)
 {
+    assert(name != nullptr && "name: requires non-null argument");
+    assert(percentage > 0 && "percentages: requires value > 0");
+
     this->name=new char[strlen(name)+1];
     strcpy(this->name,name);
     this->percentage=percentage;
-    this->y=y;
-    this->y.NewPrice(percentage);
+    this->listOfEstates=listOfEstates;
+    this->listOfEstates.newPrice(percentage);
+}
 
-}
-void DishonestBroker::Copy(const DishonestBroker & x)
+void DishonestBroker::Copy(const DishonestBroker& broker)
 {
-    this->name=new char[strlen(x.name)+1];
-    strcpy(this->name,x.name);
-    this->percentage=x.percentage;
-    this->y=x;
+    this->name=new char[strlen(broker.name)+1];
+    strcpy(this->name,broker.name);
+    this->percentage=broker.percentage;
+    this->listOfEstates=broker.listOfEstates;
+}
 
-}
-DishonestBroker::DishonestBroker(const DishonestBroker & x):RealEstates(x)
+DishonestBroker::DishonestBroker(const DishonestBroker& broker)
 {
-    Copy(x);
+    Copy(broker);
 }
+
 void DishonestBroker::Erase()
 {
     delete [] name;
 }
+
 DishonestBroker::~DishonestBroker()
 {
     Erase();
 }
-DishonestBroker &DishonestBroker:: operator=(const DishonestBroker & x)
+
+DishonestBroker &DishonestBroker:: operator=(const DishonestBroker & broker)
 {
-    if(this!=&x)
+    if(this != &broker)
     {
-        RealEstates::operator=(x);
         Erase();
-        Copy(x);
+        Copy(broker);
     }
     return *this;
 }
-void DishonestBroker::print()
+
+void DishonestBroker::print() const
 {
     std::cout<<"Dishonest Broker:"<<std::endl;
     std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
     std::cout<<"Estates:";
-    y.print();
-    std::cout<<std::endl;
-}
-DishonestBroker * DishonestBroker:: Clone()const
-{
-    return new DishonestBroker(*this);
-}
-void DishonestBroker::LowestPrintHouse()
-{
-    std::cout<<"Dishonest Broker:"<<std::endl;
-    std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
-    std::cout<<"Estates:";
-    y.LowestPrintHouse();
-    std::cout<<std::endl;
-}
-void DishonestBroker::LowestPrintFlat()
-{
-    std::cout<<"Dishonest Broker:"<<std::endl;
-    std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
-    std::cout<<"Estates:";
-    y.LowestPrintFlat();
-    std::cout<<std::endl;
-}
-void DishonestBroker::LowestPrint()
-{
-    std::cout<<"Dishonest Broker:"<<std::endl;
-    std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
-    std::cout<<"Estates:";
-    y.LowestPrint();
+    listOfEstates.print();
     std::cout<<std::endl;
 }
 
-void DishonestBroker::PrintHouse()
+void DishonestBroker::printHousesFromLowestPrice()
 {
     std::cout<<"Dishonest Broker:"<<std::endl;
     std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
     std::cout<<"Estates:";
-    y.PrintHouse();
-    std::cout<<std::endl;
-}
-void DishonestBroker::PrintFlat()
-{
-    std::cout<<"Dishonest Broker:"<<std::endl;
-    std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
-    std::cout<<"Estates:";
-    y.PrintFlat();
-    std::cout<<std::endl;
-}
-void DishonestBroker::PrintByPrice(double price1,double price2)
-{
-    std::cout<<"Dishonest Broker:"<<std::endl;
-    std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
-    std::cout<<"Estates:";
-    y.PrintByPrice(price1,price2);
+    listOfEstates.printHousesFromLowestPrice();
     std::cout<<std::endl;
 }
 
-void DishonestBroker::PrintTown(char * Town)
+void DishonestBroker::printFlatsFromLowestPrice()
 {
     std::cout<<"Dishonest Broker:"<<std::endl;
     std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
     std::cout<<"Estates:";
-    y.PrintTown(Town);
+    listOfEstates.printFlatsFromLowestPrice();
     std::cout<<std::endl;
 }
 
-void DishonestBroker::PrintBySpace(double size1,double size2)
+void DishonestBroker::printEstatesFromLowestPrice()
 {
     std::cout<<"Dishonest Broker:"<<std::endl;
     std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
     std::cout<<"Estates:";
-    y.PrintBySpace(size1,size2);
+    listOfEstates.printEstatesFromLowestPrice();
     std::cout<<std::endl;
+}
+
+void DishonestBroker::printHouses()
+{
+    std::cout<<"Dishonest Broker:"<<std::endl;
+    std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
+    std::cout<<"Estates:";
+    listOfEstates.printHouses();
+    std::cout<<std::endl;
+}
+
+void DishonestBroker::printFlats()
+{
+    std::cout<<"Dishonest Broker:"<<std::endl;
+    std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
+    std::cout<<"Estates:";
+    listOfEstates.printFlats();
+    std::cout<<std::endl;
+}
+
+void DishonestBroker::printByPriceRange(double fromPrice,double toPrice)
+{
+    if(toPrice-fromPrice<0)
+    {
+        throw std::invalid_argument ("difference between fromPrice and toPrice must be > 0");
+    }
+
+    std::cout<<"Dishonest Broker:"<<std::endl;
+    std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
+    std::cout<<"Estates:";
+    listOfEstates.printByPriceRange(fromPrice,toPrice);
+    std::cout<<std::endl;
+}
+
+void DishonestBroker::printEstatesByTown(char* townName)
+{
+    if(townName[0] == '\0')
+    {
+        throw std::invalid_argument ("townName shouldn't be empty name");
+    }
+
+    std::cout<<"Dishonest Broker:"<<std::endl;
+    std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
+    std::cout<<"Estates:";
+    listOfEstates.printEstatesByTown(townName);
+    std::cout<<std::endl;
+}
+
+void DishonestBroker::printBySpaceRange(double fromSize,double toSize)
+{
+    if(toSize-fromSize<0)
+    {
+        throw std::invalid_argument ("difference between fromSize and toSize must be > 0");
+    }
+
+    std::cout<<"Dishonest Broker:"<<std::endl;
+    std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
+    std::cout<<"Estates:";
+    listOfEstates.printBySpaceRange(fromSize,toSize);
+    std::cout<<std::endl;
+}
+char* DishonestBroker:: getName()const
+{
+    return name;
+}
+double DishonestBroker::getPercentages()const
+{
+    return percentage;
 }

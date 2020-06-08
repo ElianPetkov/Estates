@@ -1,0 +1,16 @@
+#ifndef HOUSE_
+#define HOUSE_
+
+
+class House
+{
+    public:
+        House();
+        virtual ~House();
+
+    protected:
+
+    private:
+};
+
+#endif // HOUSE_

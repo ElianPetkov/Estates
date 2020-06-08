@@ -1,24 +1,25 @@
 #ifndef HOUSE_H_HOUSE
 #define HOUSE_H_HOUSE
-#include "Imot.h"
+#include "Estate.h"
 class House:public Estate
 {
     private:
     int rooms;
     int floors;
     double yard;
-    void Copy(const House& x);
+    void Copy(const House &house);
 
     public:
-    virtual void print()const;
-    virtual void read();
     House();
-    House(const char *town,const char *TypeOfEstate,const char*addr,const char*owner,double price,double space,int rooms,int floor);
-    House(const House & x);
-    House & operator=(const House & x);
-    House * Clone()const;
-    double GetYard()const;
-    int GetFloor()const {return 0;};
+    House(const char* town, const char* TypeOfEstate, const char* addr, const char* owner, double price, double space, int rooms, int floor);
+    House(const House &house);
+    House& operator=(const House &house);
 
+    int getRooms()const;
+    int getFloor()const;
+    double getYard()const;
+    House* Clone()const;
+    virtual void print()const;
+    virtual void addCharacteristicsToEstate();
 };
 #endif
