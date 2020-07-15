@@ -2,6 +2,8 @@
 #include <iostream>
 #include "House.h"
 #include <cassert>
+#include "Constants.h"
+
 House::House():Estate(),rooms(1),floors(1),yard(1) {}
 House::House(const char *town,const char *TypeOfEstate,const char*addr,const char*owner,double price,double space,int rooms,int floors):Estate(town,TypeOfEstate,addr,owner,price,space)
 {
@@ -38,8 +40,8 @@ House & House::operator=(const House &house)
 void House::print()const
 {
     Estate::print();
-    std::cout<<"Rooms of the estate:"<<" "<<rooms<<std::endl;
-    std::cout<<"Number of floors:"<<" "<<floors<<std::endl;
+    std::cout<<numberOfRooms<<" "<<rooms<<std::endl;
+    std::cout<<numberOfFloors<<" "<<floors<<std::endl;
     std::cout<<"Square meters of the yard:"<<" "<<yard<<std::endl;
 }
 
@@ -55,7 +57,7 @@ void House::addCharacteristicsToEstate()
     }
     this->yard=yard;
 
-    std::cout<<"Number of rooms of the estate:"<<" ";
+    std::cout<<numberOfRooms<<" ";
     int rooms;
     std::cin>>rooms;
     if(rooms <= 0)
@@ -64,7 +66,7 @@ void House::addCharacteristicsToEstate()
     }
     this->rooms=rooms;
 
-    std::cout<<"Number of floors of the estate:"<<" ";
+    std::cout<<numberOfFloors<<" ";
     int floors;
     std::cin>>floors;
     if(floors <= 0)

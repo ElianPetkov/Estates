@@ -3,6 +3,9 @@
 #include <string.h>
 #include "HelpfulBroker.h"
 #include <cassert>
+#include "Constants.h"
+
+
 HelpfulBroker::HelpfulBroker():name(nullptr),percentage(0),listOfEstates() {}
 HelpfulBroker::HelpfulBroker(RealEstates listOfEstates, const char* name, double percentage)
 {
@@ -51,9 +54,9 @@ HelpfulBroker& HelpfulBroker:: operator=(const HelpfulBroker& broker)
 
 void HelpfulBroker::print()const
 {
-    std::cout<<"Helpful Broker:"<<std::endl;
-    std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
-    std::cout<<"Estates:";
+    std::cout<<helpfulBroker<<std::endl;
+    std::cout<<brokerName<<name<<std::endl<<percentageForSales<<" "<<percentage<<std::endl;
+    std::cout<<brokerName;
     listOfEstates.printEstatesByVip();
     std::cout<<std::endl;
 }
@@ -61,45 +64,45 @@ void HelpfulBroker::print()const
 
 void HelpfulBroker::printHousesFromLowestPrice()
 {
-    std::cout<<"Helpful Broker:"<<std::endl;
-    std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
-    std::cout<<"Estates:";
+    std::cout<<helpfulBroker<<std::endl;
+    std::cout<<brokerName<<name<<std::endl<<percentageForSales<<" "<<percentage<<std::endl;
+    std::cout<<estates;
     listOfEstates.printHousesFromLowestPriceByVip();
     std::cout<<std::endl;
 }
 
 void HelpfulBroker::printFlatsFromLowestPrice()
 {
-    std::cout<<"Helpful Broker:"<<std::endl;
-    std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
-    std::cout<<"Estates:";
+    std::cout<<helpfulBroker<<std::endl;
+    std::cout<<brokerName<<name<<std::endl<<percentageForSales<<" "<<percentage<<std::endl;
+    std::cout<<estates;
     listOfEstates.printFlatsFromLowestPriceByVip();
     std::cout<<std::endl;
 }
 
 void HelpfulBroker::printEstatesFromLowestPrice()
 {
-    std::cout<<"Helpful Broker:"<<std::endl;
-    std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
-    std::cout<<"Estates:";
+    std::cout<<helpfulBroker<<std::endl;
+    std::cout<<brokerName<<name<<std::endl<<percentageForSales<<" "<<percentage<<std::endl;
+    std::cout<<estates;
     listOfEstates.printEstatesFromLowestPriceByVip();
     std::cout<<std::endl;
 }
 
 void HelpfulBroker::printHouses()
 {
-    std::cout<<"Helpful Broker:"<<std::endl;
-    std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
-    std::cout<<"Estates:";
+    std::cout<<helpfulBroker<<std::endl;
+    std::cout<<brokerName<<name<<std::endl<<percentageForSales<<" "<<percentage<<std::endl;
+    std::cout<<estates;
     listOfEstates.printHousesByVip();
     std::cout<<std::endl;
 }
 
 void HelpfulBroker::printFlats()
 {
-    std::cout<<"Helpful Broker:"<<std::endl;
-    std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
-    std::cout<<"Estates:";
+    std::cout<<helpfulBroker<<std::endl;
+    std::cout<<brokerName<<name<<std::endl<<percentageForSales<<" "<<percentage<<std::endl;
+    std::cout<<estates;
     listOfEstates.printFlatsByVip();
     std::cout<<std::endl;
 }
@@ -111,9 +114,9 @@ void HelpfulBroker::printByPriceRange(double fromPrice, double toPrice)
         throw std::invalid_argument ("difference between fromPrice and toPrice must be > 0");
     }
 
-    std::cout<<"Helpful Broker:"<<std::endl;
-    std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
-    std::cout<<"Estates:";
+    std::cout<<helpfulBroker<<std::endl;
+    std::cout<<brokerName<<name<<std::endl<<percentageForSales<<" "<<percentage<<std::endl;
+    std::cout<<estates;
     listOfEstates.printByPriceRangeByVip(fromPrice,toPrice);
     std::cout<<std::endl;
 }
@@ -122,12 +125,12 @@ void HelpfulBroker::printEstatesByTown(char *townName)
 {
     if(townName[0] == '\0')
     {
-        throw std::invalid_argument ("townName shouldn't be empty name");
+        throw std::invalid_argument (simpleBroker);
     }
 
-    std::cout<<"Helpful Broker:"<<std::endl;
-    std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
-    std::cout<<"Estates:";
+    std::cout<<helpfulBroker<<std::endl;
+    std::cout<<brokerName<<name<<std::endl<<percentageForSales<<" "<<percentage<<std::endl;
+    std::cout<<estates;
     listOfEstates.printEstatesByTownByVip(townName);
     std::cout<<std::endl;
 }
@@ -139,9 +142,9 @@ void HelpfulBroker::printBySpaceRange(double fromSize, double toSize)
         throw std::invalid_argument ("difference between fromSize and toSize must be > 0");
     }
 
-    std::cout<<"Helpful Broker:"<<std::endl;
-    std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
-    std::cout<<"Estates:";
+    std::cout<<helpfulBroker<<std::endl;
+    std::cout<<brokerName<<name<<std::endl<<percentageForSales<<" "<<percentage<<std::endl;
+    std::cout<<estates;
     listOfEstates.printBySpaceRangeByVip(fromSize,toSize);
     std::cout<<std::endl;
 }

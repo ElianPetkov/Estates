@@ -1,7 +1,8 @@
 #include <string.h>
-#include<iostream>
-#include"flat.h"
-#include<cassert>
+#include <iostream>
+#include "flat.h"
+#include <cassert>
+#include "Constants.h"
 Flat::Flat():Estate(),rooms(1),floor(1) {}
 Flat::Flat(const char *town,const char *TypeOfEstate,const char*addr,const char*owner,double price,double space,int rooms,int floor):Estate(town,TypeOfEstate,addr,owner,price,space)
 {
@@ -19,15 +20,15 @@ void Flat::Copy(const Flat &flat)
 void Flat::print()const
 {
     Estate::print();
-    std::cout<<"Number of rooms:"<<" "<<rooms<<std::endl;
-    std::cout<<"Floor of the estate:"<<" "<<floor<<std::endl;
+    std::cout<<numberOfRooms<<" "<<rooms<<std::endl;
+    std::cout<<numberOfFloors<<" "<<floor<<std::endl;
 }
 
 void Flat::addCharacteristicsToEstate()
 {
     Estate::addCharacteristicsToEstate();
 
-    std::cout<<"Number of Rooms:"<<" ";
+    std::cout<<numberOfRooms<<" ";
     int rooms;
     std::cin>>rooms;
     if(rooms <= 0)

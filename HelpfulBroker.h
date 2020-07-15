@@ -2,6 +2,7 @@
 #define HelpfulBroker_H_HelpfulBroker
 #include <iostream>
 #include "agent.h"
+
 class HelpfulBroker: public Agent
 {
     private:
