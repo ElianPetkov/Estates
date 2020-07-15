@@ -19,10 +19,10 @@ TEST_CASE("Tests remove function in RealEstate class")
     Estate **estates = new Estate*[2];
     estates[0]=new House("Plovdiv","Classic","bul. Dunav 1","Olga Petkov",130000,60,8,2);
     estates[1]=new Flat("Plovdiv","Vip","bul. Dunav 1","Veslin Petkov",120000,65,4,4);
-    listOfEstates.add(estates[0]);
-    listOfEstates.add(estates[1]);
+    listOfEstates.addEstate(estates[0]);
+    listOfEstates.addEstate(estates[1]);
     CHECK(listOfEstates.getCurrent() == 2);
-    listOfEstates.remove(*&estates[1]);
+    listOfEstates.removeEstate(*&estates[1]);
     CHECK(listOfEstates.getCurrent()== 1);
 }
 TEST_CASE("Tests add function in RealEstate class")
@@ -31,8 +31,8 @@ TEST_CASE("Tests add function in RealEstate class")
     Estate **estates = new Estate*[2];
     estates[0]=new House("Plovdiv","Classic","bul. Dunav 1","Olga Petkov",130000,60,8,2);
     estates[1]=new Flat("Plovdiv","Vip","bul. Dunav 1","Veslin Petkov",120000,65,4,4);
-    listOfEstates.add(estates[0]);
-    listOfEstates.add(estates[1]);
+    listOfEstates.addEstate(estates[0]);
+    listOfEstates.addEstate(estates[1]);
     CHECK(listOfEstates.getCurrent() == 2);
 }
 TEST_CASE("Test validation and constructor in House class")

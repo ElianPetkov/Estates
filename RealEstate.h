@@ -22,10 +22,10 @@ public:
     RealEstates & operator=(const RealEstates &estate);
 
     virtual void print()const;
-    void add(Estate*);
-    void remove(Estate*);
+    void addEstate(Estate*);
+    void removeEstate(Estate*);
     int getCurrent();
-    virtual void PrintByVip()const;
+    virtual void printEstatesByVip()const;
     virtual RealEstates* Clone()const;
     virtual void printHousesFromLowestPrice()const;
     virtual void printFlatsFromLowestPrice()const;
@@ -33,7 +33,7 @@ public:
     virtual void printHouses()const;
     virtual void printByPriceRange(double,double)const;
     virtual void printFlats()const;
-    virtual void printEstatesByTown(char* Town)const;
+    virtual void printEstatesByTown(char* town)const;
     virtual void printBySpaceRange(double,double)const;
     void newPrice(double);
 
@@ -43,7 +43,7 @@ public:
     virtual void printHousesByVip()const;
     virtual void printFlatsByVip()const;
     virtual void printByPriceRangeByVip(double,double)const;
-    virtual void printEstatesByTownByVip(char* Town)const;
+    virtual void printEstatesByTownByVip(char* town)const;
     virtual void printBySpaceRangeByVip(double,double)const;
 };
 #endif

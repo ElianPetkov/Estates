@@ -49,7 +49,7 @@ int RegisterEstates(RealEstates &listOfEstates)
         }
 
         estates[i]->addCharacteristicsToEstate();
-        listOfEstates.add(estates[i]);
+        listOfEstates.addEstate(estates[i]);
         cout<<endl;
 
     }

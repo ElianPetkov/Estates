@@ -72,7 +72,7 @@ void RealEstates::resize()
     delete [] temporaryEstate;
 }
 
-void RealEstates::add(Estate* estate)
+void RealEstates::addEstate(Estate* estate)
 {
     if(current==capacity)
     {
@@ -82,7 +82,7 @@ void RealEstates::add(Estate* estate)
     current++;
 
 }
-void RealEstates::remove(Estate* estate)
+void RealEstates::removeEstate(Estate* estate)
 {
 
     int index=-1;
@@ -261,7 +261,7 @@ void RealEstates::printByPriceRange(double price1,double price2)const
     }
 }
 
-void RealEstates::printEstatesByTown(char * Town)const
+void RealEstates::printEstatesByTown(char * town)const
 {
     if(current==0)
     {
@@ -270,7 +270,7 @@ void RealEstates::printEstatesByTown(char * Town)const
 
     for(int i=0; i<current; i++)
     {
-        if(!strcmp(estates[i]->getTown(),Town))
+        if(!strcmp(estates[i]->getTown(),town))
         {
             cout<<"Information about the estate:"<<endl;
             estates[i]->print();
@@ -294,7 +294,7 @@ void RealEstates::printBySpaceRange(double fromSize,double toSize)const
         }
     }
 }
-void RealEstates::PrintByVip()const
+void RealEstates::printEstatesByVip()const
 {
     if(current==0)
     {
@@ -503,7 +503,7 @@ void RealEstates::printByPriceRangeByVip(double fromPrice,double toPrice)const
         }
     }
 }
-void RealEstates::printEstatesByTownByVip(char* Town)const
+void RealEstates::printEstatesByTownByVip(char* town)const
 {
     if(current==0)
     {
@@ -514,7 +514,7 @@ void RealEstates::printEstatesByTownByVip(char* Town)const
     {
         if(!strcmp(estates[i]->getTypeOfEstate(),"vip")||!strcmp(estates[i]->getTypeOfEstate(),"Vip"))
         {
-            if(!strcmp(estates[i]->getTown(),Town))
+            if(!strcmp(estates[i]->getTown(),town))
             {
                 cout<<"Information about the estate:"<<endl;
                 estates[i]->print();
@@ -525,7 +525,7 @@ void RealEstates::printEstatesByTownByVip(char* Town)const
     {
         if(strcmp(estates[i]->getTypeOfEstate(),"Vip"))
         {
-            if(!strcmp(estates[i]->getTown(),Town))
+            if(!strcmp(estates[i]->getTown(),town))
             {
                 cout<<"Information about the estate:"<<endl;
                 estates[i]->print();
