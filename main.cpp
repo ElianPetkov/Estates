@@ -10,6 +10,8 @@
 #include "DishonestBroker.h"
 #include "SimpleBroker.h"
 #include "agent.h"
+#include "Constants.h"
+
 using namespace std;
 int RegisterEstates(RealEstates &listOfEstates)
 {
@@ -31,25 +33,25 @@ int RegisterEstates(RealEstates &listOfEstates)
         {
             cin.getline(typeOfEstate,20);
         }
-        while(strcmp(typeOfEstate,"Flat")&& strcmp(typeOfEstate,"House")&& strcmp(typeOfEstate,"Plot"));
+        while(strcmp(typeOfEstate,flat)&& strcmp(typeOfEstate,house)&& strcmp(typeOfEstate,plot));
 
-        if(!strcmp(typeOfEstate,"Flat"))
+        if(!strcmp(typeOfEstate,flat))
         {
             estates[i]=new Flat();
         }
 
-        if(!strcmp(typeOfEstate,"House"))
+        if(!strcmp(typeOfEstate,house))
         {
             estates[i]=new House();
         }
 
-        if(!strcmp(typeOfEstate,"Plot"))
+        if(!strcmp(typeOfEstate,plot))
         {
             estates[i]=new Plot();
         }
 
         estates[i]->addCharacteristicsToEstate();
-        listOfEstates.add(estates[i]);
+        listOfEstates.addEstate(estates[i]);
         cout<<endl;
 
     }
@@ -95,14 +97,14 @@ void searchEstates(Agent *listOfAgents[3])
             {
                 cin.getline(typeOfEstates,20);
             }
-            while(strcmp(typeOfEstates,"Flat")&&strcmp(typeOfEstates,"House"));
+            while(strcmp(typeOfEstates,flat)&&strcmp(typeOfEstates,house));
 
-            if(!strcmp(typeOfEstates,"House"))
+            if(!strcmp(typeOfEstates,house))
             {
                 listOfAgents[chosenAgent-1]->printHousesFromLowestPrice();
             }
 
-            if(!strcmp(typeOfEstates,"Flat"))
+            if(!strcmp(typeOfEstates,flat))
             {
                 listOfAgents[chosenAgent-1]->printFlatsFromLowestPrice();
             }

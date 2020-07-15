@@ -3,6 +3,8 @@
 #include <string.h>
 #include "DishonestBroker.h"
 #include <cassert>
+#include "Constants.h"
+
 using namespace std;
 DishonestBroker::DishonestBroker():listOfEstates(),name(nullptr),percentage(0) {}
 DishonestBroker::DishonestBroker(RealEstates listOfEstates,const char* name,double percentage)
@@ -52,54 +54,54 @@ DishonestBroker &DishonestBroker:: operator=(const DishonestBroker & broker)
 
 void DishonestBroker::print() const
 {
-    std::cout<<"Dishonest Broker:"<<std::endl;
-    std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
-    std::cout<<"Estates:";
+    std::cout<<dishonestBroker<<std::endl;
+    std::cout<<brokerName<<name<<std::endl<<percentageForSales<<" "<<percentage<<std::endl;
+    std::cout<<estates;
     listOfEstates.print();
     std::cout<<std::endl;
 }
 
 void DishonestBroker::printHousesFromLowestPrice()
 {
-    std::cout<<"Dishonest Broker:"<<std::endl;
-    std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
-    std::cout<<"Estates:";
+    std::cout<<dishonestBroker<<std::endl;
+    std::cout<<brokerName<<name<<std::endl<<percentageForSales<<" "<<percentage<<std::endl;
+    std::cout<<estates;
     listOfEstates.printHousesFromLowestPrice();
     std::cout<<std::endl;
 }
 
 void DishonestBroker::printFlatsFromLowestPrice()
 {
-    std::cout<<"Dishonest Broker:"<<std::endl;
-    std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
-    std::cout<<"Estates:";
+    std::cout<<dishonestBroker<<std::endl;
+    std::cout<<brokerName<<name<<std::endl<<percentageForSales<<" "<<percentage<<std::endl;
+    std::cout<<estates;
     listOfEstates.printFlatsFromLowestPrice();
     std::cout<<std::endl;
 }
 
 void DishonestBroker::printEstatesFromLowestPrice()
 {
-    std::cout<<"Dishonest Broker:"<<std::endl;
-    std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
-    std::cout<<"Estates:";
+    std::cout<<dishonestBroker<<std::endl;
+    std::cout<<brokerName<<name<<std::endl<<percentageForSales<<" "<<percentage<<std::endl;
+    std::cout<<estates;
     listOfEstates.printEstatesFromLowestPrice();
     std::cout<<std::endl;
 }
 
 void DishonestBroker::printHouses()
 {
-    std::cout<<"Dishonest Broker:"<<std::endl;
-    std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
-    std::cout<<"Estates:";
+    std::cout<<dishonestBroker<<std::endl;
+    std::cout<<brokerName<<name<<std::endl<<percentageForSales<<" "<<percentage<<std::endl;
+    std::cout<<estates;
     listOfEstates.printHouses();
     std::cout<<std::endl;
 }
 
 void DishonestBroker::printFlats()
 {
-    std::cout<<"Dishonest Broker:"<<std::endl;
-    std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
-    std::cout<<"Estates:";
+    std::cout<<dishonestBroker<<std::endl;
+    std::cout<<brokerName<<name<<std::endl<<percentageForSales<<" "<<percentage<<std::endl;
+    std::cout<<estates;
     listOfEstates.printFlats();
     std::cout<<std::endl;
 }
@@ -111,9 +113,9 @@ void DishonestBroker::printByPriceRange(double fromPrice,double toPrice)
         throw std::invalid_argument ("difference between fromPrice and toPrice must be > 0");
     }
 
-    std::cout<<"Dishonest Broker:"<<std::endl;
-    std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
-    std::cout<<"Estates:";
+    std::cout<<dishonestBroker<<std::endl;
+    std::cout<<brokerName<<name<<std::endl<<percentageForSales<<" "<<percentage<<std::endl;
+    std::cout<<estates;
     listOfEstates.printByPriceRange(fromPrice,toPrice);
     std::cout<<std::endl;
 }
@@ -125,9 +127,9 @@ void DishonestBroker::printEstatesByTown(char* townName)
         throw std::invalid_argument ("townName shouldn't be empty name");
     }
 
-    std::cout<<"Dishonest Broker:"<<std::endl;
-    std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
-    std::cout<<"Estates:";
+    std::cout<<dishonestBroker<<std::endl;
+    std::cout<<brokerName<<name<<std::endl<<percentageForSales<<" "<<percentage<<std::endl;
+    std::cout<<estates;
     listOfEstates.printEstatesByTown(townName);
     std::cout<<std::endl;
 }
@@ -139,9 +141,9 @@ void DishonestBroker::printBySpaceRange(double fromSize,double toSize)
         throw std::invalid_argument ("difference between fromSize and toSize must be > 0");
     }
 
-    std::cout<<"Dishonest Broker:"<<std::endl;
-    std::cout<<"Broker's name:"<<name<<std::endl<<"Percentage for sales"<<" "<<percentage<<std::endl;
-    std::cout<<"Estates:";
+    std::cout<<dishonestBroker<<std::endl;
+    std::cout<<brokerName<<name<<std::endl<<percentageForSales<<" "<<percentage<<std::endl;
+    std::cout<<estates;
     listOfEstates.printBySpaceRange(fromSize,toSize);
     std::cout<<std::endl;
 }

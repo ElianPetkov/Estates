@@ -104,7 +104,7 @@ void Estate::addCharacteristicsToEstate()
     {
         std::cin.getline(buffer,1024);
     }
-    while(strcmp(buffer,"Vip")&&strcmp(buffer,"Classic"));
+    while(strcmp(buffer,vip)&&strcmp(buffer,"Classic"));
     this->TypeOfEstate=new char[strlen(buffer)+1];
     if(buffer == nullptr)
     {

@@ -288,12 +288,13 @@
 
 1526819378 source:d:\uni\kpk\project\thoughfulbroker.cpp
 
-1591636109 source:d:\uni\kpk\test\dishonestbroker.cpp
+1594830190 source:d:\uni\kpk\test\dishonestbroker.cpp
 	<iostream>
 	"RealEstate.h"
 	<string.h>
 	"DishonestBroker.h"
 	<cassert>
+	"Constants.h"
 
 1591122569 d:\uni\kpk\test\regimot.h
 	<iostream>
@@ -309,34 +310,37 @@
 1591635646 d:\uni\kpk\test\agent.h
 	<iostream>
 
-1591635646 source:d:\uni\kpk\test\flat.cpp
+1594830039 source:d:\uni\kpk\test\flat.cpp
 	<string.h>
 	<iostream>
 	"flat.h"
 	<cassert>
+	"Constants.h"
 
-1591636135 d:\uni\kpk\test\flat.h
+1591636335 d:\uni\kpk\test\flat.h
 	<iostream>
 	"Estate.h"
 
-1591636109 source:d:\uni\kpk\test\helpfulbroker.cpp
+1594829383 source:d:\uni\kpk\test\helpfulbroker.cpp
 	<iostream>
 	"RealEstate.h"
 	<string.h>
 	"HelpfulBroker.h"
 	<cassert>
+	"Constants.h"
 
-1591635646 d:\uni\kpk\test\helpfulbroker.h
+1594828878 d:\uni\kpk\test\helpfulbroker.h
 	<iostream>
 	"agent.h"
 
-1591635646 source:d:\uni\kpk\test\house.cpp
+1594830047 source:d:\uni\kpk\test\house.cpp
 	<string.h>
 	<iostream>
 	"House.h"
 	<cassert>
+	"Constants.h"
 
-1591636136 d:\uni\kpk\test\house.h
+1591636335 d:\uni\kpk\test\house.h
 	"Estate.h"
 
 1591121744 source:d:\uni\kpk\test\imot.cpp
@@ -345,7 +349,7 @@
 	"RegImot.h"
 	<cassert>
 
-1591636136 source:d:\uni\kpk\test\main.cpp
+1594830056 source:d:\uni\kpk\test\main.cpp
 	<iostream>
 	<string.h>
 	"Estate.h"
@@ -358,9 +362,10 @@
 	"DishonestBroker.h"
 	"SimpleBroker.h"
 	"agent.h"
+	"Constants.h"
 	"tests_problem1.cpp"
 
-1591636135 d:\uni\kpk\test\plot.h
+1591636335 d:\uni\kpk\test\plot.h
 	<iostream>
 	"Estate.h"
 
@@ -368,7 +373,7 @@
 	<iostream>
 	"agent.h"
 
-1591636156 d:\uni\kpk\test\tests_problem1.cpp
+1594827672 d:\uni\kpk\test\tests_problem1.cpp
 	"doctest.h"
 	"Estate.h"
 	"flat.h"
@@ -423,7 +428,7 @@
 	<sys/time.h>
 	<unistd.h>
 
-1591636136 source:d:\uni\kpk\test\plot.cpp
+1591636335 source:d:\uni\kpk\test\plot.cpp
 	<iostream>
 	<string.h>
 	"Plot.h"
@@ -436,32 +441,36 @@
 	"Imot.h"
 	<cassert>
 
-1591636109 source:d:\uni\kpk\test\simplebroker.cpp
+1594830069 source:d:\uni\kpk\test\simplebroker.cpp
 	<iostream>
 	"RealEstate.h"
 	<string.h>
 	"SimpleBroker.h"
 	<cassert>
+	"Constants.h"
 
 1526819378 source:d:\uni\kpk\test\thoughfulbroker.cpp
 
-1591635646 d:\uni\kpk\test\estate.h
+1591636335 d:\uni\kpk\test\estate.h
 	<iostream>
 
-1591636135 d:\uni\kpk\test\realestate.h
+1594827669 d:\uni\kpk\test\realestate.h
 	<iostream>
 	"Estate.h"
 
-1591636109 source:d:\uni\kpk\test\estate.cpp
+1591636335 source:d:\uni\kpk\test\estate.cpp
 	<string.h>
 	<iostream>
 	"RealEstate.h"
 	<cassert>
 
-1591636181 source:d:\uni\kpk\test\realestate.cpp
+1594827663 source:d:\uni\kpk\test\realestate.cpp
 	<string.h>
 	<iostream>
 	"RealEstate.h"
 	"Estate.h"
 	<cassert>
+
+1594829962 d:\uni\kpk\test\constants.h
+	<iostream>
 
