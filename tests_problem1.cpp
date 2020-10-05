@@ -35,58 +35,46 @@ TEST_CASE("Tests add function in RealEstate class")
     listOfEstates.addEstate(estates[1]);
     CHECK(listOfEstates.getCurrent() == 2);
 }
-TEST_CASE("Test the number of rooms that are initialize in House constructor")
-{
-    House house("Plovdiv","Classic","bul. Dunav 1","Olga Petkov",130000,60,8,2);
-    CHECK(house.getRooms()==8);
-}
-TEST_CASE("Test the yard field that is initialize in House constructor")
-{
-    House house("Plovdiv","Classic","bul. Dunav 1","Olga Petkov",130000,60,8,2);
-    CHECK(house.getYard()==60);
-}
-TEST_CASE("Test the floor field that is initialize in House constructor")
-{
-    House house("Plovdiv","Classic","bul. Dunav 1","Olga Petkov",130000,60,8,2);
-    CHECK(house.getFloor()==2);
-}
-TEST_CASE("Test the price field that is initialize in House constructor")
-{
-    House house("Plovdiv","Classic","bul. Dunav 1","Olga Petkov",130000,60,8,2);
-    CHECK(house.getPrice()==130000);
-}
-TEST_CASE("Test the owner field that is initialize in House constructor")
-{
-    House house("Plovdiv","Classic","bul. Dunav 1","Olga Petkov",130000,60,8,2);
-    CHECK(strcpy(house.getOwner(),"Olga Petkova"));
-}
-TEST_CASE("Test the address field that is initialize in House constructor")
-{
-    House house("Plovdiv","Classic","bul. Dunav 1","Olga Petkov",130000,60,8,2);
-    CHECK(strcpy(house.getAddr(),"bul. Dunav 1"));
-}
-TEST_CASE("Test the town field that is initialize in House constructor")
-{
-    House house("Plovdiv","Classic","bul. Dunav 1","Olga Petkov",130000,60,8,2);
-    CHECK(strcpy(house.getTown(),"Plovdiv"));
-}
-TEST_CASE("Test the estate type field that is initialize in House constructor")
-{
-    House house("Plovdiv","Classic","bul. Dunav 1","Olga Petkov",130000,60,8,2);
-    CHECK(strcpy(house.getTypeOfEstate(),"Classic"));
-}
 
 
-TEST_CASE("Test validation and constructor in Flat class")
+TEST_CASE("Test the number of rooms that are initialize in Flat constructor")
 {
     Flat flat("Plovdiv","Vip","bul. Dunav 1","Veslin Petkov",120000,65,4,4);
     CHECK(flat.getRooms()==4);
+}
+TEST_CASE("Test the floor field that is initialize in Flat constructor")
+{
+    Flat flat("Plovdiv","Vip","bul. Dunav 1","Veslin Petkov",120000,65,4,4);
     CHECK(flat.getFloor()==4);
+}
+TEST_CASE("Test the space field that is initialize in Flat constructor")
+{
+    Flat flat("Plovdiv","Vip","bul. Dunav 1","Veslin Petkov",120000,65,4,4);
     CHECK(flat.getSpace()==65);
+}
+TEST_CASE("Test the price field that is initialize in Flat constructor")
+{
+    Flat flat("Plovdiv","Vip","bul. Dunav 1","Veslin Petkov",120000,65,4,4);
     CHECK(flat.getPrice()==120000);
+}
+TEST_CASE("Test the owner field that is initialize in Flat constructor")
+{
+    Flat flat("Plovdiv","Vip","bul. Dunav 1","Veslin Petkov",120000,65,4,4);
     CHECK(strcpy(flat.getOwner(),"Veselin Petkova"));
+}
+TEST_CASE("Test the address field that is initialize in Flat constructor")
+{
+    Flat flat("Plovdiv","Vip","bul. Dunav 1","Veslin Petkov",120000,65,4,4);
     CHECK(strcpy(flat.getAddr(),"bul. Dunav 1"));
+}
+TEST_CASE("Test the town field that is initialize in Flat constructor")
+{
+    Flat flat("Plovdiv","Vip","bul. Dunav 1","Veslin Petkov",120000,65,4,4);
     CHECK(strcpy(flat.getTown(),"Plovdiv"));
+}
+TEST_CASE("Test the estate type field that is initialize in Flat constructor")
+{
+    Flat flat("Plovdiv","Vip","bul. Dunav 1","Veslin Petkov",120000,65,4,4);
     CHECK(strcpy(flat.getTypeOfEstate(),"Vip"));
 }
 TEST_CASE("Test Simple Broker Constructor and validations")

@@ -349,7 +349,7 @@
 	"RegImot.h"
 	<cassert>
 
-1595194855 source:d:\uni\kpk\test\main.cpp
+1601901187 source:d:\uni\kpk\test\main.cpp
 	<iostream>
 	<string.h>
 	"Estate.h"
@@ -364,6 +364,7 @@
 	"agent.h"
 	"Constants.h"
 	"tests_problem1.cpp"
+	"House_Test.cpp"
 
 1591636335 d:\uni\kpk\test\plot.h
 	<iostream>
@@ -373,7 +374,7 @@
 	<iostream>
 	"agent.h"
 
-1601900189 d:\uni\kpk\test\tests_problem1.cpp
+1601901175 d:\uni\kpk\test\tests_problem1.cpp
 	"doctest.h"
 	"Estate.h"
 	"flat.h"
@@ -475,4 +476,20 @@
 
 1595194340 d:\uni\kpk\test\constants.h
 	<iostream>
+
+1601900850 source:d:\uni\kpk\test\house_test.cpp
+	"doctest.h"
+	"Estate.h"
+	"flat.h"
+	"House.h"
+	"Plot.h"
+	"RealEstate.h"
+	"agent.h"
+	"HelpfulBroker.h"
+	"DishonestBroker.h"
+	"SimpleBroker.h"
+	"agent.h"
+
+1601901271 d:\uni\kpk\test\house_test.cpp
+	"House.h"
 

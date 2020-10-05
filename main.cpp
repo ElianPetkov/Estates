@@ -142,10 +142,10 @@ void searchEstates(Agent *listOfAgents[3])
     while(option!=0);
 }
 #include "tests_problem1.cpp"
+#include "House_Test.cpp"
 using namespace std;
 int main ()
 {
-    // пускане на тестовете
     doctest::Context().run();
 
     RealEstates georgiListWithEstates;
