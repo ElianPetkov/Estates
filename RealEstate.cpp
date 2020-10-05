@@ -3,6 +3,7 @@
 #include"RealEstate.h"
 #include "Estate.h"
 #include <cassert>
+#include "Constants.h"
 using namespace std;
 RealEstates::RealEstates():capacity(10),current(0),estates(nullptr)
 {
