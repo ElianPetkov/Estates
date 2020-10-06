@@ -161,7 +161,6 @@ int main ()
     RegisterEstates(denislavListWithEstates);
     RegisterEstates(ivanListWithEstates);
 
-
     DishonestBroker Georgi(georgiListWithEstates,"Georgi Dimitrov",5.0);
     Georgi.print();
 

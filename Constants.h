@@ -22,4 +22,6 @@ const char numberOfFloors[34] = "Number of floors of the estate:";
 const char vip[6] = "Vip";
 const char informationForEstate[32] = "Information about the estate:";
 const char empty[8] = "Empty";
+
+const char plovdiv[10]="Plovdiv";
 #endif

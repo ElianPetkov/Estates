@@ -82,7 +82,7 @@ void RealEstates::addEstate(Estate* estate)
     current++;
 
 }
-void RealEstates::removeEstate(Estate* estate)
+bool RealEstates::removeEstate(Estate* estate)
 {
 
     int index=-1;
@@ -103,7 +103,9 @@ void RealEstates::removeEstate(Estate* estate)
         delete estates[current-1] ;
         estates [current-1]=nullptr;
         current--;
+        return 1;
     }
+return 0;
 }
 
 RealEstates::~RealEstates()
@@ -154,9 +156,10 @@ void RealEstates::printHousesFromLowestPrice()const
 
 }
 
-Estate *RealEstates :: getEstateByPosition(int position)
+Estate* RealEstates :: getEstateByPosition(int position)
 {
-    return this->estates[position]->Clone();
+    Estate* estate = this->estates[position]->Clone();
+    return estate;
 }
 
 void RealEstates::newPrice(double newPrice)

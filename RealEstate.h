@@ -25,7 +25,7 @@ public:
 
     virtual void print()const;
     void addEstate(Estate*);
-    void removeEstate(Estate*);
+    bool removeEstate(Estate*);
     int getCurrent();
     virtual void printEstatesByVip()const;
     virtual RealEstates* Clone()const;
