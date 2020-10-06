@@ -32,12 +32,12 @@ TEST_CASE("Tests add function in RealEstate class")
 {
     RealEstates listOfEstates;
     Estate **estates = new Estate*[2];
-    estates[0]=new House("Plovdiv","Classic","bul. Dunav 1","Olga Petkov",130000,60,8,2);
+    estates[0]=new House("Plovdiv","Classic","bul. Dunav 1","Olga Petkova",130000,60,8,2);
     listOfEstates.addEstate(estates[0]);
     CHECK(listOfEstates.getCurrent() == 1);
     Estate* estate=listOfEstates.getEstateByPosition(0);
-    CHECK(strcpy(estate->getTown(),"Plovdiv"));
-    CHECK(strcpy(estate->getOwner(),"Olga Petkova"));
+    CHECK(!strcmp(estate->getTown(),"Plovdiv"));
+    CHECK(!strcmp(estate->getOwner(),"Olga Petkova"));
     CHECK(estate->getPrice() == 130000);
 }
 
