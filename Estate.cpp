@@ -164,7 +164,7 @@ char* Estate::getOwner() const
 
 void Estate::setPrice(double price)
 {
-    this->price=this->price+(this->price*price)/100.0;
+    this->price=price;
 }
 double Estate::getPrice()const
 {

@@ -35,8 +35,15 @@ TEST_CASE("test getPrice")
 
 TEST_CASE("test getSpace")
 {
-    Estate* house = new House("Plovdiv","Classic","bul. Dunav 1","Olga Petkova",130000,60,8,2);
-    CHECK(house->getSpace() == 60);
+    Estate estate("Plovdiv","Classic","bul. Dunav 1","Olga Petkova",130000,60);
+    CHECK(estate.getSpace() == 60);
+}
+
+TEST_CASE("test setPrice")
+{
+     Estate estate("Plovdiv","Classic","bul. Dunav 1","Olga Petkova",130000,60);
+     estate.setPrice(120000);
+     CHECK(estate.getPrice() == 120000);
 }
 
 #endif
