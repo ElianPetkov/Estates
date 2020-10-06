@@ -310,14 +310,14 @@
 1591635646 d:\uni\kpk\test\agent.h
 	<iostream>
 
-1601981830 source:d:\uni\kpk\test\flat.cpp
+1601988904 source:d:\uni\kpk\test\flat.cpp
 	<string.h>
 	<iostream>
 	"flat.h"
 	<cassert>
 	"Constants.h"
 
-1601981917 d:\uni\kpk\test\flat.h
+1601986304 d:\uni\kpk\test\flat.h
 	<iostream>
 	"Estate.h"
 
@@ -333,14 +333,14 @@
 	<iostream>
 	"agent.h"
 
-1594831062 source:d:\uni\kpk\test\house.cpp
+1601988913 source:d:\uni\kpk\test\house.cpp
 	<string.h>
 	<iostream>
 	"House.h"
 	<cassert>
 	"Constants.h"
 
-1591636335 d:\uni\kpk\test\house.h
+1601986312 d:\uni\kpk\test\house.h
 	"Estate.h"
 
 1591121744 source:d:\uni\kpk\test\imot.cpp
@@ -349,7 +349,7 @@
 	"RegImot.h"
 	<cassert>
 
-1601982019 source:d:\uni\kpk\test\main.cpp
+1601991127 source:d:\uni\kpk\test\main.cpp
 	<iostream>
 	<string.h>
 	"Estate.h"
@@ -372,7 +372,7 @@
 	"Real_Estate_Test.cpp"
 	"Estate_Test.cpp"
 
-1591636335 d:\uni\kpk\test\plot.h
+1601986759 d:\uni\kpk\test\plot.h
 	<iostream>
 	"Estate.h"
 
@@ -435,7 +435,7 @@
 	<sys/time.h>
 	<unistd.h>
 
-1591636335 source:d:\uni\kpk\test\plot.cpp
+1601988957 source:d:\uni\kpk\test\plot.cpp
 	<iostream>
 	<string.h>
 	"Plot.h"
@@ -458,21 +458,21 @@
 
 1526819378 source:d:\uni\kpk\test\thoughfulbroker.cpp
 
-1591636335 d:\uni\kpk\test\estate.h
+1601988823 d:\uni\kpk\test\estate.h
 	<iostream>
 
 1601981410 d:\uni\kpk\test\realestate.h
 	<iostream>
 	"Estate.h"
 
-1601983360 source:d:\uni\kpk\test\estate.cpp
+1601991372 source:d:\uni\kpk\test\estate.cpp
 	<string.h>
 	<iostream>
 	"RealEstate.h"
 	<cassert>
 	"Constants.h"
 
-1601981454 source:d:\uni\kpk\test\realestate.cpp
+1601991406 source:d:\uni\kpk\test\realestate.cpp
 	<string.h>
 	<iostream>
 	"RealEstate.h"
@@ -480,7 +480,7 @@
 	<cassert>
 	"Constants.h"
 
-1601980928 d:\uni\kpk\test\constants.h
+1601984037 d:\uni\kpk\test\constants.h
 	<iostream>
 
 1601900850 source:d:\uni\kpk\test\house_test.cpp
@@ -496,7 +496,7 @@
 	"SimpleBroker.h"
 	"agent.h"
 
-1601982733 d:\uni\kpk\test\house_test.cpp
+1601987024 d:\uni\kpk\test\house_test.cpp
 	"House.h"
 
 1601982675 d:\uni\kpk\test\simple_broker_test.cpp
@@ -505,7 +505,7 @@
 
 1601982629 d:\uni\kpk\test\dishonest_broker_test.cpp
 
-1601982748 d:\uni\kpk\test\real_estate_test.cpp
+1601986410 d:\uni\kpk\test\real_estate_test.cpp
 
-1601983259 d:\uni\kpk\test\estate_test.cpp
+1601986730 d:\uni\kpk\test\estate_test.cpp
 

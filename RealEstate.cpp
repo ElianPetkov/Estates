@@ -131,22 +131,28 @@ void RealEstates::printHousesFromLowestPrice()const
 
     for (int i = 0; i < current ; i++)
     {
-        for (int j = i + 1; j < current; j++)
+        if(!strcmp(estates[i]->getTypeOfEstate(),house))
         {
+            for (int j = i + 1; j < current; j++)
             {
-                if(estates[i]->getPrice()>estates[j]->getPrice())
                 {
-                    Estate* temporaryEstate=estates[i]->Clone();
-                    estates[i]=estates[j]->Clone();
-                    estates[j]=temporaryEstate->Clone();
+                    if(estates[i]->getPrice()>estates[j]->getPrice())
+                    {
+                        Estate* temporaryEstate=estates[i]->Clone();
+                        estates[i]=estates[j]->Clone();
+                        estates[j]=temporaryEstate->Clone();
+                    }
                 }
             }
         }
     }
     for(int i=0; i<current; i++)
     {
-        cout<<informationForEstate<<endl;
-        estates[i]->print();
+        if(!strcmp(estates[i]->getTypeOfEstate(),house))
+        {
+            cout<<informationForEstate<<endl;
+            estates[i]->print();
+        }
     }
 
 }
@@ -188,9 +194,13 @@ void RealEstates::printFlatsFromLowestPrice()const
 
     for(int i=0; i<current; i++)
     {
-        cout<<informationForEstate<<endl;
-        estates[i]->print();
+        if(!strcmp(estates[i]->getTypeOfEstate(),flat))
+        {
+            cout<<informationForEstate<<endl;
+            estates[i]->print();
+        }
     }
+
 }
 
 void RealEstates::printEstatesFromLowestPrice()const
@@ -222,22 +232,26 @@ void RealEstates::printEstatesFromLowestPrice()const
 void RealEstates::printHouses()const
 {
     for(int i=0; i<current; i++)
-    {
-        cout<<informationForEstate<<endl;
-        estates[i]->print();
-    }
+        if(!strcmp(estates[i]->getTypeOfEstate(),house))
+        {
+            cout<<informationForEstate<<endl;
+            estates[i]->print();
+        }
 }
 
 void RealEstates::printFlats()const
 {
     for(int i=0; i<current; i++)
     {
-        cout<<informationForEstate<<endl;
-        estates[i]->print();
+        if(!strcmp(estates[i]->getTypeOfEstate(),flat))
+        {
+            cout<<informationForEstate<<endl;
+            estates[i]->print();
+        }
     }
 }
 
-void RealEstates::printByPriceRange(double price1,double price2)const
+void RealEstates::printByPriceRange(double smallerPrice,double biggerPrice)const
 {
     if(current==0)
     {
@@ -247,7 +261,7 @@ void RealEstates::printByPriceRange(double price1,double price2)const
 
     for(int i=0; i<current; i++)
     {
-        if(estates[i]->getPrice()>=price1 && estates[i]->getPrice()<=price2)
+        if(estates[i]->getPrice()>=smallerPrice && estates[i]->getPrice()<=biggerPrice)
         {
             cout<<informationForEstate<<endl;
             estates[i]->print();
@@ -300,7 +314,7 @@ void RealEstates::printEstatesByVip()const
 
     for(int i=0; i<current; i++)
     {
-        if(!strcmp(estates[i]->getTypeOfEstate(),vip)||!strcmp(estates[i]->getTypeOfEstate(),vip))
+        if(!strcmp(estates[i]->getOfferType(),vip))
         {
             cout<<informationForEstate<<endl;
             estates[i]->print();
@@ -308,7 +322,7 @@ void RealEstates::printEstatesByVip()const
     }
     for(int i=0; i<current; i++)
     {
-        if(strcmp(estates[i]->getTypeOfEstate(),vip))
+        if(strcmp(estates[i]->getOfferType(),vip))
         {
             cout<<informationForEstate<<endl;
             estates[i]->print();
@@ -321,25 +335,35 @@ void RealEstates::printHousesFromLowestPriceByVip()const
     if(current==0)
     {
         cout<<empty;
-        return;
     }
 
-    for(int i=0; i<current; i++)
+    for (int i = 0; i < current ; i++)
     {
-        if(!strcmp(estates[i]->getTypeOfEstate(),vip)||!strcmp(estates[i]->getTypeOfEstate(),vip))
+        if(!strcmp(estates[i]->getTypeOfEstate(),"House"))
         {
-            estates[i]->print();
+            for (int j = i + 1; j < current; j++)
+            {
+                if(!strcmp(estates[i]->getTypeOfEstate(),"House"))
+                {
+                    if(estates[i]->getPrice()>estates[j]->getPrice())
+                    {
+                        Estate* temporaryEstate=estates[i]->Clone();
+                        estates[i]=estates[j]->Clone();
+                        estates[j]=temporaryEstate->Clone();
+                    }
+                }
+            }
         }
     }
-
     for(int i=0; i<current; i++)
     {
-        if(strcmp(estates[i]->getTypeOfEstate(),vip))
+        if(!strcmp(estates[i]->getTypeOfEstate(),house))
         {
             cout<<informationForEstate<<endl;
             estates[i]->print();
         }
     }
+
 }
 
 void RealEstates::printFlatsFromLowestPriceByVip()const
@@ -349,31 +373,34 @@ void RealEstates::printFlatsFromLowestPriceByVip()const
         cout<<empty;
     }
 
-    for(int i=0; i<current; i++)
+    for (int i = 0; i < current ; i++)
     {
-        if(!strcmp(estates[i]->getTypeOfEstate(),vip)||!strcmp(estates[i]->getTypeOfEstate(),vip))
+        if(!strcmp(estates[i]->getTypeOfEstate(),flat))
         {
-            cout<<informationForEstate<<endl;
-            if(estates[i]->getFloor()>0)
+            for (int j = i + 1; j < current; j++)
             {
-                cout<<informationForEstate<<endl;
-                estates[i]->print();
+                if(!strcmp(estates[i]->getTypeOfEstate(),flat))
+                {
+                    if(estates[i]->getPrice()>estates[j]->getPrice())
+                    {
+                        Estate* temporaryEstate=estates[i]->Clone();
+                        estates[i]=estates[j]->Clone();
+                        estates[j]=temporaryEstate->Clone();
+                    }
+                }
             }
         }
     }
-
     for(int i=0; i<current; i++)
     {
-        if(strcmp(estates[i]->getTypeOfEstate(),vip))
+        if(!strcmp(estates[i]->getTypeOfEstate(),flat))
         {
-            if(estates[i]->getFloor()>0)
-            {
-                cout<<informationForEstate<<endl;
-                estates[i]->print();
-            }
+            cout<<informationForEstate<<endl;
+            estates[i]->print();
         }
     }
 }
+
 void RealEstates::printEstatesFromLowestPriceByVip()const
 {
     if(current==0)
@@ -395,7 +422,7 @@ void RealEstates::printEstatesFromLowestPriceByVip()const
     }
     for(int i=0; i<current; i++)
     {
-        if(!strcmp(estates[i]->getTypeOfEstate(),vip)||!strcmp(estates[i]->getTypeOfEstate(),vip))
+        if(!strcmp(estates[i]->getOfferType(),vip))
         {
             cout<<informationForEstate<<endl;
             estates[i]->print();
@@ -403,7 +430,7 @@ void RealEstates::printEstatesFromLowestPriceByVip()const
     }
     for(int i=0; i<current; i++)
     {
-        if(strcmp(estates[i]->getTypeOfEstate(),vip))
+        if(strcmp(estates[i]->getOfferType(),vip))
         {
             cout<<informationForEstate<<endl;
             estates[i]->print();
@@ -415,7 +442,7 @@ void RealEstates::printHousesByVip()const
 
     for(int i=0; i<current; i++)
     {
-        if(!strcmp(estates[i]->getTypeOfEstate(),vip)||!strcmp(estates[i]->getTypeOfEstate(),vip))
+        if(!strcmp(estates[i]->getOfferType(),vip)&& !strcmp(estates[i]->getTypeOfEstate(),house))
         {
             cout<<informationForEstate<<endl;
             estates[i]->print();
@@ -423,7 +450,7 @@ void RealEstates::printHousesByVip()const
     }
     for(int i=0; i<current; i++)
     {
-        if(strcmp(estates[i]->getTypeOfEstate(),vip))
+        if(strcmp(estates[i]->getOfferType(),vip)&& !strcmp(estates[i]->getTypeOfEstate(),house))
         {
             cout<<informationForEstate<<endl;
             estates[i]->print();
@@ -435,7 +462,7 @@ void RealEstates::printFlatsByVip()const
 
     for(int i=0; i<current; i++)
     {
-        if(!strcmp(estates[i]->getTypeOfEstate(),vip)||!strcmp(estates[i]->getTypeOfEstate(),vip))
+        if(!strcmp(estates[i]->getOfferType(),vip) && !strcmp(estates[i]->getTypeOfEstate(),flat))
         {
             cout<<informationForEstate<<endl;
             estates[i]->print();
@@ -443,7 +470,7 @@ void RealEstates::printFlatsByVip()const
     }
     for(int i=0; i<current; i++)
     {
-        if(strcmp(estates[i]->getTypeOfEstate(),vip))
+        if(strcmp(estates[i]->getOfferType(),vip)&& !strcmp(estates[i]->getTypeOfEstate(),flat))
         {
             cout<<informationForEstate<<endl;
             estates[i]->print();
@@ -461,24 +488,18 @@ void RealEstates::printByPriceRangeByVip(double fromPrice,double toPrice)const
 
     for(int i=0; i<current; i++)
     {
-        if(!strcmp(estates[i]->getTypeOfEstate(),vip)||!strcmp(estates[i]->getTypeOfEstate(),vip))
+        if(estates[i]->getPrice()>=fromPrice && estates[i]->getPrice()<=toPrice && (!strcmp(estates[i]->getOfferType(),vip)))
         {
-            if(estates[i]->getPrice()>=fromPrice && estates[i]->getPrice()<=toPrice)
-            {
-                cout<<informationForEstate<<endl;
-                estates[i]->print();
-            }
+            cout<<informationForEstate<<endl;
+            estates[i]->print();
         }
     }
     for(int i=0; i<current; i++)
     {
-        if(strcmp(estates[i]->getTypeOfEstate(),vip))
+        if(estates[i]->getPrice()>=fromPrice && estates[i]->getPrice()<=toPrice && strcmp(estates[i]->getOfferType(),vip))
         {
-            if(estates[i]->getPrice()>=fromPrice && estates[i]->getPrice()<=toPrice)
-            {
-                cout<<informationForEstate<<endl;
-                estates[i]->print();
-            }
+            cout<<informationForEstate<<endl;
+            estates[i]->print();
         }
     }
 }
@@ -492,24 +513,18 @@ void RealEstates::printEstatesByTownByVip(char* town)const
 
     for(int i=0; i<current; i++)
     {
-        if(!strcmp(estates[i]->getTypeOfEstate(),vip)||!strcmp(estates[i]->getTypeOfEstate(),vip))
+        if(!strcmp(estates[i]->getOfferType(),vip)&&(!strcmp(estates[i]->getTown(),town)))
         {
-            if(!strcmp(estates[i]->getTown(),town))
-            {
-                cout<<informationForEstate<<endl;
-                estates[i]->print();
-            }
+            cout<<informationForEstate<<endl;
+            estates[i]->print();
         }
     }
     for(int i=0; i<current; i++)
     {
-        if(strcmp(estates[i]->getTypeOfEstate(),vip))
+        if(!strcmp(estates[i]->getTown(),town)&& strcmp(estates[i]->getOfferType(),vip))
         {
-            if(!strcmp(estates[i]->getTown(),town))
-            {
-                cout<<informationForEstate<<endl;
-                estates[i]->print();
-            }
+            cout<<informationForEstate<<endl;
+            estates[i]->print();
         }
     }
 }
@@ -524,24 +539,18 @@ void RealEstates::printBySpaceRangeByVip(double fromSize,double toSize)const
 
     for(int i=0; i<current; i++)
     {
-        if(!strcmp(estates[i]->getTypeOfEstate(),vip)||!strcmp(estates[i]->getTypeOfEstate(),vip))
+        if((estates[i]->getSpace()>fromSize && estates[i]->getSpace()<toSize)&&!strcmp(estates[i]->getOfferType(),vip))
         {
-            if(estates[i]->getSpace()>fromSize && estates[i]->getSpace()<toSize)
-            {
-                cout<<informationForEstate<<endl;
-                estates[i]->print();
-            }
+            cout<<informationForEstate<<endl;
+            estates[i]->print();
         }
     }
     for(int i=0; i<current; i++)
     {
-        if(strcmp(estates[i]->getTypeOfEstate(),vip))
+        if((estates[i]->getSpace()>fromSize && estates[i]->getSpace()<toSize) &&(strcmp(estates[i]->getOfferType(),vip)))
         {
-            if(estates[i]->getSpace()>fromSize && estates[i]->getSpace()<toSize)
-            {
-                cout<<informationForEstate<<endl;
-                estates[i]->print();
-            }
+            cout<<informationForEstate<<endl;
+            estates[i]->print();
         }
     }
 }

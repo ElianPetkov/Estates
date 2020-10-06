@@ -11,7 +11,7 @@ class House:public Estate
 
     public:
     House();
-    House(const char* town, const char* TypeOfEstate, const char* addr, const char* owner, double price, double space, int rooms, int floor);
+    House(const char* typeOfEstate,const char* town, const char* offerType, const char* addr, const char* owner, double price, double space, int rooms, int floor);
     House(const House &house);
     House& operator=(const House &house);
 

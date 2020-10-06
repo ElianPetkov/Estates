@@ -4,7 +4,7 @@
 #include <cassert>
 #include "Constants.h"
 Flat::Flat():Estate(),rooms(1),floor(1) {}
-Flat::Flat(const char *town,const char *TypeOfEstate,const char*addr,const char*owner,double price,double space,int rooms,int floor):Estate(town,TypeOfEstate,addr,owner,price,space)
+Flat::Flat(const char* typeOfEstate ,const char *town,const char *offerType,const char*addr,const char*owner,double price,double space,int rooms,int floor):Estate(typeOfEstate,town,offerType,addr,owner,price,space)
 {
     assert(rooms > 0 && "rooms should be more than 0");
     this->rooms=rooms;
@@ -26,7 +26,7 @@ void Flat::print()const
 
 void Flat::addCharacteristicsToEstate()
 {
-    Estate::addCharacteristicsToEstate();
+    Estate::addCharacteristicsToEstate("Flat");
 
     std::cout<<numberOfRooms<<" ";
     int rooms;

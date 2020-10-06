@@ -10,7 +10,7 @@ Plot::Plot():Estate()
         comunnications[i]=0;
     }
 }
-Plot::Plot(const char *town,const char *TypeOfEstate,const char*addr,const char*owner,double price,double space):Estate(town,TypeOfEstate,addr,owner,price,space)
+Plot::Plot(const char* typeOfEstate,const char *town,const char *offerType,const char*addr,const char*owner,double price,double space):Estate(typeOfEstate,town,offerType,addr,owner,price,space)
 {
     for(int i=0; i<5; i++)
     {
@@ -19,7 +19,7 @@ Plot::Plot(const char *town,const char *TypeOfEstate,const char*addr,const char*
 }
 void Plot::addCharacteristicsToEstate()
 {
-    Estate::addCharacteristicsToEstate();
+    Estate::addCharacteristicsToEstate("Plot");
     cout<<"Are the following comunnications included in the plot:"<<endl;
     char answer[20];
     do

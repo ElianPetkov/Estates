@@ -50,7 +50,7 @@ int RegisterEstates(RealEstates &listOfEstates)
             estates[i]=new Plot();
         }
 
-        estates[i]->addCharacteristicsToEstate();
+        estates[i]->addCharacteristicsToEstate(typeOfEstate);
         listOfEstates.addEstate(estates[i]);
         cout<<endl;
 

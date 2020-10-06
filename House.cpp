@@ -5,7 +5,7 @@
 #include "Constants.h"
 
 House::House():Estate(),rooms(1),floors(1),yard(1) {}
-House::House(const char *town,const char *TypeOfEstate,const char*addr,const char*owner,double price,double space,int rooms,int floors):Estate(town,TypeOfEstate,addr,owner,price,space)
+House::House(const char* typeOfEstate,const char *town,const char *offerType,const char*addr,const char*owner,double price,double space,int rooms,int floors):Estate(typeOfEstate,town,offerType,addr,owner,price,space)
 {
     assert(rooms> 0 && "rooms should be more than 0");
     this->rooms=rooms;
@@ -47,7 +47,7 @@ void House::print()const
 
 void House::addCharacteristicsToEstate()
 {
-    Estate::addCharacteristicsToEstate();
+    Estate::addCharacteristicsToEstate("House");
     std::cout<<"Square meters of the yard:"<<" ";
     int yard;
     std::cin>>yard;
