@@ -8,11 +8,12 @@ class RealEstates
 private:
     void Erase();
     void Copy(const RealEstates& x);
-    void resize();
+
 protected:
     int capacity;
     int current;
     Estate **estates;
+    void resize();
 
 public:
     RealEstates();
@@ -20,6 +21,7 @@ public:
     RealEstates(const RealEstates &estate);
     virtual ~RealEstates();
     RealEstates & operator=(const RealEstates &estate);
+    Estate* getEstateByPosition(int);
 
     virtual void print()const;
     void addEstate(Estate*);

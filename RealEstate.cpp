@@ -11,7 +11,6 @@ RealEstates::RealEstates():capacity(10),current(0),estates(nullptr)
 }
 RealEstates::RealEstates(Estate** estates)
 {
-
     capacity=10;
     current=0;
     this->estates=new Estate*[capacity];
@@ -115,6 +114,7 @@ int RealEstates::getCurrent()
 {
     return current;
 }
+
 RealEstates* RealEstates::Clone()const
 {
     return new RealEstates(*this);
@@ -153,6 +153,12 @@ void RealEstates::printHousesFromLowestPrice()const
     }
 
 }
+
+Estate *RealEstates :: getEstateByPosition(int position)
+{
+    return this->estates[position]->Clone();
+}
+
 void RealEstates::newPrice(double newPrice)
 {
     for(int i=0; i<current; i++)
