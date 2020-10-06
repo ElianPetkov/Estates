@@ -143,6 +143,11 @@ void searchEstates(Agent *listOfAgents[3])
 }
 #include "tests_problem1.cpp"
 #include "House_Test.cpp"
+#include "Simple_Broker_Test.cpp"
+#include "Helpful_Broker_Test.cpp"
+#include "Dishonest_Broker_Test.cpp"
+#include "Simple_Broker_Test.cpp"
+#include "Real_Estate_Test.cpp"
 using namespace std;
 int main ()
 {
