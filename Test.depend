@@ -349,7 +349,7 @@
 	"RegImot.h"
 	<cassert>
 
-1601991127 source:d:\uni\kpk\test\main.cpp
+1602074932 source:d:\uni\kpk\test\main.cpp
 	<iostream>
 	<string.h>
 	"Estate.h"
@@ -461,7 +461,7 @@
 1601988823 d:\uni\kpk\test\estate.h
 	<iostream>
 
-1601981410 d:\uni\kpk\test\realestate.h
+1602076829 d:\uni\kpk\test\realestate.h
 	<iostream>
 	"Estate.h"
 
@@ -472,7 +472,7 @@
 	<cassert>
 	"Constants.h"
 
-1601991406 source:d:\uni\kpk\test\realestate.cpp
+1602076840 source:d:\uni\kpk\test\realestate.cpp
 	<string.h>
 	<iostream>
 	"RealEstate.h"
@@ -508,4 +508,10 @@
 1601986410 d:\uni\kpk\test\real_estate_test.cpp
 
 1601986730 d:\uni\kpk\test\estate_test.cpp
+
+1602073451 d:\uni\kpk\test\algorithms.cpp
+
+1602074540 d:\uni\kpk\test\algorithms.h
+
+1602073245 d:\uni\kpk\test\example.h
 

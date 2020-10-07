@@ -12,6 +12,7 @@
 #include "agent.h"
 #include "Constants.h"
 
+
 using namespace std;
 int RegisterEstates(RealEstates &listOfEstates)
 {

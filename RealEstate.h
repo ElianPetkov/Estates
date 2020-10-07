@@ -6,14 +6,19 @@ using namespace std;
 class RealEstates
 {
 private:
-    void Erase();
-    void Copy(const RealEstates& x);
 
-protected:
+    Estate **estates;
     int capacity;
     int current;
-    Estate **estates;
+
+protected:
+    void Erase();
+    void Copy(const RealEstates& x);
     void resize();
+    void sortEstatesByPrice()const;
+    void printEstatesByTypeAndVip(const char * typeOfEstate) const;
+    void printEstatesByType(const char * typeOfEstate) const;
+
 
 public:
     RealEstates();
@@ -27,8 +32,9 @@ public:
     void addEstate(Estate*);
     bool removeEstate(Estate*);
     int getCurrent();
-    virtual void printEstatesByVip()const;
     virtual RealEstates* Clone()const;
+    void newPrice(double);
+
     virtual void printHousesFromLowestPrice()const;
     virtual void printFlatsFromLowestPrice()const;
     virtual void printEstatesFromLowestPrice()const;
@@ -37,7 +43,6 @@ public:
     virtual void printFlats()const;
     virtual void printEstatesByTown(char* town)const;
     virtual void printBySpaceRange(double,double)const;
-    void newPrice(double);
 
     virtual void printHousesFromLowestPriceByVip()const;
     virtual void printFlatsFromLowestPriceByVip()const;
@@ -47,5 +52,6 @@ public:
     virtual void printByPriceRangeByVip(double,double)const;
     virtual void printEstatesByTownByVip(char* town)const;
     virtual void printBySpaceRangeByVip(double,double)const;
+    virtual void printEstatesByVip()const;
 };
 #endif
