@@ -175,9 +175,9 @@ char* Estate::getOwner() const
     return owner;
 }
 
-void Estate::setPrice(double price)
+void Estate::setPrice(double percentagesFromAgent= 0)
 {
-    this->price=price;
+    this->price=(this->price*percentagesFromAgent/100)+this->price;
 }
 double Estate::getPrice()const
 {

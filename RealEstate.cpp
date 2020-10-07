@@ -141,11 +141,11 @@ Estate* RealEstates :: getEstateByPosition(int position)
     return estate;
 }
 
-void RealEstates::newPrice(double newPrice)
+void RealEstates::newPrice(double percentagesFromAgent)
 {
     for(int i=0; i<current; i++)
     {
-        estates[i]->Estate::setPrice(newPrice);
+        estates[i]->Estate::setPrice(percentagesFromAgent);
     }
 }
 

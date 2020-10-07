@@ -41,9 +41,9 @@ TEST_CASE("test getSpace")
 
 TEST_CASE("test setPrice")
 {
-     Estate estate("House","Plovdiv","Classic","bul. Dunav 1","Olga Petkova",130000,60);
-     estate.setPrice(120000);
-     CHECK(estate.getPrice() == 120000);
+     Estate estate("House","Plovdiv","Classic","bul. Dunav 1","Olga Petkova",120000,60);
+     estate.setPrice(5);
+     CHECK(estate.getPrice() == 126000);
 }
 
 #endif
