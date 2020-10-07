@@ -8,7 +8,7 @@
 using namespace std;
 RealEstates::RealEstates():capacity(10),current(0),estates(nullptr)
 {
-    this->estates=new Estate*[capacity];
+    this->estates=new Estate*[10];
 }
 RealEstates::RealEstates(Estate** estates)
 {
@@ -130,7 +130,7 @@ void RealEstates::printHousesFromLowestPrice()const
         return ;
     }
 
-    sortEstatesByPrice();
+    sortEstatesByLowerPrice();
     printEstatesByType(house);
 
 }
@@ -157,7 +157,7 @@ void RealEstates::printFlatsFromLowestPrice()const
         return;
     }
 
-    sortEstatesByPrice();
+    sortEstatesByLowerPrice();
     printEstatesByType(flat);
 }
 
@@ -168,7 +168,7 @@ void RealEstates::printEstatesFromLowestPrice()const
         cout<<empty;
         return;
     }
-    sortEstatesByPrice();
+    sortEstatesByLowerPrice();
     for(int i=0; i<current; i++)
     {
         cout<<informationForEstate<<endl;
@@ -242,19 +242,19 @@ void RealEstates::printBySpaceRange(double fromSize,double toSize)const
 
 void RealEstates::printHousesFromLowestPriceByVip()const
 {
-    sortEstatesByPrice();
+    sortEstatesByLowerPrice();
     printEstatesByTypeAndVip(house);
 }
 
 void RealEstates::printFlatsFromLowestPriceByVip()const
 {
-    sortEstatesByPrice();
+    sortEstatesByLowerPrice();
     printEstatesByTypeAndVip(flat);
 }
 
 void RealEstates::printEstatesFromLowestPriceByVip()const
 {
-    sortEstatesByPrice();
+    sortEstatesByLowerPrice();
     printEstatesByVip();
 }
 void RealEstates::printHousesByVip()const
@@ -342,8 +342,11 @@ void RealEstates::printBySpaceRangeByVip(double fromSize,double toSize)const
         }
     }
 }
-void RealEstates::sortEstatesByPrice() const
+bool RealEstates::sortEstatesByLowerPrice() const
 {
+    if(current == 0)
+        return 0;
+
     for (int i = 0; i < current ; i++)
     {
         for (int j = i + 1; j < current; j++)
@@ -356,6 +359,7 @@ void RealEstates::sortEstatesByPrice() const
             }
         }
     }
+    return 1;
 }
 void RealEstates::printEstatesByTypeAndVip(const char * typeOfEstate) const
 {
