@@ -24,7 +24,7 @@ void Flat::print()const
     std::cout<<numberOfFloors<<" "<<floor<<std::endl;
 }
 
-void Flat::addCharacteristicsToEstate()
+void Flat::addCharacteristicsToEstate(const char *)
 {
     Estate::addCharacteristicsToEstate("Flat");
 

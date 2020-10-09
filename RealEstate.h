@@ -16,7 +16,6 @@ protected:
     void Copy(const RealEstates& x);
     void resize();
     void printEstatesByTypeAndVip(const char * typeOfEstate) const;
-    void printEstatesByType(const char * typeOfEstate) const;
 
 
 public:
@@ -27,6 +26,7 @@ public:
     RealEstates & operator=(const RealEstates &estate);
     Estate* getEstateByPosition(int);
     bool sortEstatesByLowerPrice()const;
+    void printEstatesByType(const char * typeOfEstate) const;
 
     virtual void print()const;
     void addEstate(Estate*);

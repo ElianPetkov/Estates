@@ -45,7 +45,7 @@ void House::print()const
     std::cout<<"Square meters of the yard:"<<" "<<yard<<std::endl;
 }
 
-void House::addCharacteristicsToEstate()
+void House::addCharacteristicsToEstate(const char *)
 {
     Estate::addCharacteristicsToEstate("House");
     std::cout<<"Square meters of the yard:"<<" ";

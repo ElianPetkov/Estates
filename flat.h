@@ -14,7 +14,7 @@ class Flat:public Estate
     Flat(const char* typeOfEstate,const char* town, const char* offerType, const char* addr, const char* owner, double price, double space, int rooms, int floor);
 
     virtual void  print() const;
-    virtual void addCharacteristicsToEstate();
+    virtual void addCharacteristicsToEstate(const char *);
     void setRooms(int room);
     void setFloors(int floor);
     int getRooms()const;

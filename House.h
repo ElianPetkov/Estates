@@ -20,6 +20,6 @@ class House:public Estate
     double getYard()const;
     House* Clone()const;
     virtual void print()const;
-    virtual void addCharacteristicsToEstate();
+    virtual void addCharacteristicsToEstate(const char *);
 };
 #endif

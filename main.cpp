@@ -12,7 +12,6 @@
 #include "agent.h"
 #include "Constants.h"
 
-
 using namespace std;
 int RegisterEstates(RealEstates &listOfEstates)
 {
@@ -22,7 +21,7 @@ int RegisterEstates(RealEstates &listOfEstates)
     {
         cin>>NumberOfEstates;
     }
-    while(NumberOfEstates<0 );
+    while(NumberOfEstates<0);
     cin.ignore();
 
     Estate **estates=new Estate*[NumberOfEstates];
