@@ -24,4 +24,9 @@ const char informationForEstate[32] = "Information about the estate:";
 const char empty[30] = "Empty list with estates";
 
 const char plovdiv[10]="Plovdiv";
+
+const char yes[4]="yes";
+const char no[3]="no";
+const char typeYourAnswer[20]="Type your answer: ";
+const char answerWithYesOrNo[30]=". Answer with Yes or No ";
 #endif

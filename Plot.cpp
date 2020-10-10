@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string.h>
 #include "Plot.h"
-#include "Estate.h"
+#include "Constants.h"
 using namespace std;
 Plot::Plot():Estate()
 {
@@ -27,12 +27,12 @@ void Plot::addCharacteristicsToEstate(const char *)
     char answer[20];
     do
     {
-        cout<<"Does the plot has water"<<". Answer with Yes or No "<<endl;
-        cout<<"Type your answer: ";
+        cout<<"Does the plot has water"<<answerWithYesOrNo<<endl;
+        cout<<typeYourAnswer;
         cin.getline(answer,20);
     }
-    while(strcmp(answer,"Yes") && strcmp(answer,"No"));
-    if(!strcmp(answer,"Yes"))
+    while(strcmp(answer,yes) && strcmp(answer,no));
+    if(!strcmp(answer,yes))
     {
         this->hasWater=1;
     }
@@ -43,12 +43,12 @@ void Plot::addCharacteristicsToEstate(const char *)
 
     do
     {
-        cout<<"Does the plot has an electicity"<<". Answer with Yes or No "<<endl;
-        cout<<"Type your answer: ";
+        cout<<"Does the plot has an electicity"<<answerWithYesOrNo<<endl;
+        cout<<typeYourAnswer;
         cin.getline(answer,20);
     }
-    while(strcmp(answer,"Yes") && strcmp(answer,"No"));
-    if(!strcmp(answer,"Yes"))
+    while(strcmp(answer,yes) && strcmp(answer,no));
+    if(!strcmp(answer,yes))
     {
         this->hasElectricity=1;
     }
@@ -59,12 +59,12 @@ void Plot::addCharacteristicsToEstate(const char *)
 
     do
     {
-        cout<<"Does the plot has a telephone"<<". Answer with Yes or No "<<endl;
-        cout<<"Type your answer: ";
+        cout<<"Does the plot has a telephone"<<answerWithYesOrNo<<endl;
+        cout<<typeYourAnswer;
         cin.getline(answer,20);
     }
-    while(strcmp(answer,"Yes") && strcmp(answer,"No"));
-    if(!strcmp(answer,"Yes"))
+    while(strcmp(answer,yes) && strcmp(answer,no));
+    if(!strcmp(answer,yes))
     {
         this->hasTelepfone=1;
     }
@@ -75,12 +75,12 @@ void Plot::addCharacteristicsToEstate(const char *)
 
     do
     {
-        cout<<"Does the plot is near a road"<<". Answer with Yes or No "<<endl;
-        cout<<"Type your answer: ";
+        cout<<"Does the plot is near a road"<<answerWithYesOrNo<<endl;
+        cout<<typeYourAnswer;
         cin.getline(answer,20);
     }
-    while(strcmp(answer,"Yes") && strcmp(answer,"No"));
-    if(!strcmp(answer,"Yes"))
+    while(strcmp(answer,yes) && strcmp(answer,no));
+    if(!strcmp(answer,yes))
     {
         this->hasRoad=1;
     }
@@ -91,12 +91,12 @@ void Plot::addCharacteristicsToEstate(const char *)
 
     do
     {
-        cout<<"Does the plot has a sewerage"<<". Answer with Yes or No "<<endl;
-        cout<<"Type your answer: ";
+        cout<<"Does the plot has a sewerage"<<answerWithYesOrNo<<endl;
+        cout<<typeYourAnswer;
         cin.getline(answer,20);
     }
-    while(strcmp(answer,"Yes") && strcmp(answer,"No"));
-    if(!strcmp(answer,"Yes"))
+    while(strcmp(answer,yes) && strcmp(answer,no));
+    if(!strcmp(answer,yes))
     {
         this->hasSewerage=1;
     }
