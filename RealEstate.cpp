@@ -50,7 +50,7 @@ void RealEstates::print()const
 {
     if(current==0)
     {
-        cout<<empty;
+        cout<<emptyListWithEstates;
     }
 
     for(int i=0; i<current; i++)
@@ -127,7 +127,7 @@ void RealEstates::printEstatesByTypeAndLowestPrice(const char *typeOfEstate)cons
 {
         if(current==0)
     {
-        cout<<empty;
+        cout<<emptyListWithEstates;
         return ;
     }
 
@@ -154,7 +154,7 @@ void RealEstates::printEstatesFromLowestPrice()const
 {
     if(current==0)
     {
-        cout<<empty;
+        cout<<emptyListWithEstates;
         return;
     }
     sortEstatesByLowerPrice();
@@ -169,7 +169,7 @@ void RealEstates::printByPriceRange(double smallerPrice,double biggerPrice)const
 {
     if(current==0)
     {
-        cout<<empty;
+        cout<<emptyListWithEstates;
         return ;
     }
 
@@ -187,7 +187,7 @@ void RealEstates::printEstatesByTown(char * town)const
 {
     if(current==0)
     {
-        cout<<empty;
+        cout<<emptyListWithEstates;
         return;
     }
 
@@ -205,7 +205,7 @@ void RealEstates::printBySpaceRange(double fromSize,double toSize)const
 {
     if(current==0)
     {
-        cout<<empty;
+        cout<<emptyListWithEstates;
         return ;
     }
 
@@ -235,7 +235,7 @@ void RealEstates::printByPriceRangeByVip(double fromPrice,double toPrice)const
 {
     if(current==0)
     {
-        cout<<empty;
+        cout<<emptyListWithEstates;
         return ;
     }
 
@@ -260,7 +260,7 @@ void RealEstates::printEstatesByTownByVip(char* town)const
 {
     if(current==0)
     {
-        cout<<empty;
+        cout<<emptyListWithEstates;
         return ;
     }
 
@@ -286,7 +286,7 @@ void RealEstates::printBySpaceRangeByVip(double fromSize,double toSize)const
 {
     if(current==0)
     {
-        cout<<empty;
+        cout<<emptyListWithEstates;
         return ;
     }
 
@@ -330,7 +330,7 @@ void RealEstates::printEstatesByTypeAndVip(const char * typeOfEstate) const
 {
     if(current==0)
     {
-        cout<<empty;
+        cout<<emptyListWithEstates;
     }
     for(int i=0; i<current; i++)
     {
@@ -366,7 +366,7 @@ void RealEstates::printEstatesByVip()const
 {
     if(current==0)
     {
-        cout<<empty;
+        cout<<emptyListWithEstates;
         return;
     }
 

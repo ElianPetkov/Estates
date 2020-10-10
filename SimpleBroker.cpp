@@ -55,7 +55,7 @@ SimpleBroker& SimpleBroker::operator=(const SimpleBroker &broker)
 void SimpleBroker::print()const
 {
     std::cout<<simpleBroker<<std::endl;
-    std::cout<<brokerName<<name<<std::endl<<percentageForSales<<" "<<percentage<<std::endl;
+    std::cout<<brokerName<<name<<std::endl<<percentageForSales<<emptyString<<percentage<<std::endl;
     std::cout<<estates;
     listOfEstates.print();
     std::cout<<std::endl;
@@ -63,7 +63,7 @@ void SimpleBroker::print()const
 void SimpleBroker::printEstateFromLowestPriceByType(const char* typeOfEstate)
 {
     std::cout<<simpleBroker<<std::endl;
-    std::cout<<brokerName<<name<<std::endl<<percentageForSales<<" "<<percentage<<std::endl;
+    std::cout<<brokerName<<name<<std::endl<<percentageForSales<<emptyString<<percentage<<std::endl;
     std::cout<<estates;
     listOfEstates.printEstatesByTypeAndLowestPrice(typeOfEstate);
     std::cout<<std::endl;
@@ -72,7 +72,7 @@ void SimpleBroker::printEstateFromLowestPriceByType(const char* typeOfEstate)
 void SimpleBroker::printEstatesFromLowestPrice()
 {
     std::cout<<simpleBroker<<std::endl;
-    std::cout<<brokerName<<name<<std::endl<<percentageForSales<<" "<<percentage<<std::endl;
+    std::cout<<brokerName<<name<<std::endl<<percentageForSales<<emptyString<<percentage<<std::endl;
     std::cout<<estates;
     listOfEstates.printEstatesFromLowestPrice();
     std::cout<<std::endl;
@@ -87,7 +87,7 @@ void SimpleBroker::printByPriceRange(double fromPrice, double toPrice)
     }
 
     std::cout<<simpleBroker<<std::endl;
-    std::cout<<brokerName<<name<<std::endl<<percentageForSales<<" "<<percentage<<std::endl;
+    std::cout<<brokerName<<name<<std::endl<<percentageForSales<<emptyString<<percentage<<std::endl;
     std::cout<<estates;
     listOfEstates.printByPriceRange(fromPrice,toPrice);
     std::cout<<std::endl;
@@ -96,11 +96,11 @@ void SimpleBroker::printByPriceRange(double fromPrice, double toPrice)
 void SimpleBroker::printEstatesByTown(char *townName)
 {
     if(townName[0] == '\0'){
-        throw std::invalid_argument ("townName shouldn't be empty name");
+        throw std::invalid_argument ("townName should not be empty name");
     }
 
     std::cout<<simpleBroker<<std::endl;
-    std::cout<<brokerName<<name<<std::endl<<percentageForSales<<" "<<percentage<<std::endl;
+    std::cout<<brokerName<<name<<std::endl<<percentageForSales<<emptyString<<percentage<<std::endl;
     std::cout<<estates;
     listOfEstates.printEstatesByTown(townName);
     std::cout<<std::endl;
@@ -113,7 +113,7 @@ void SimpleBroker::printBySpaceRange(double fromSize,double toSize)
     }
 
     std::cout<<simpleBroker<<std::endl;
-    std::cout<<brokerName<<name<<std::endl<<percentageForSales<<" "<<percentage<<std::endl;
+    std::cout<<brokerName<<name<<std::endl<<percentageForSales<<emptyString<<percentage<<std::endl;
     std::cout<<estates;
     listOfEstates.printBySpaceRange(fromSize, toSize);
     std::cout<<std::endl;

@@ -40,15 +40,15 @@ House & House::operator=(const House &house)
 void House::print()const
 {
     Estate::print();
-    std::cout<<numberOfRooms<<" "<<rooms<<std::endl;
-    std::cout<<numberOfFloors<<" "<<floors<<std::endl;
-    std::cout<<"Square meters of the yard:"<<" "<<yard<<std::endl;
+    std::cout<<numberOfRooms<<emptyString<<rooms<<std::endl;
+    std::cout<<numberOfFloors<<emptyString<<floors<<std::endl;
+    std::cout<<squereMetersOfYard<<emptyString<<yard<<std::endl;
 }
 
 void House::addCharacteristicsToEstate(const char *)
 {
-    Estate::addCharacteristicsToEstate("House");
-    std::cout<<"Square meters of the yard:"<<" ";
+    Estate::addCharacteristicsToEstate(house);
+    std::cout<<squereMetersOfYard<<emptyString;
     int yard;
     std::cin>>yard;
     if(yard <= 0)
@@ -57,7 +57,7 @@ void House::addCharacteristicsToEstate(const char *)
     }
     this->yard=yard;
 
-    std::cout<<numberOfRooms<<" ";
+    std::cout<<numberOfRooms<<emptyString;
     int rooms;
     std::cin>>rooms;
     if(rooms <= 0)
@@ -66,7 +66,7 @@ void House::addCharacteristicsToEstate(const char *)
     }
     this->rooms=rooms;
 
-    std::cout<<numberOfFloors<<" ";
+    std::cout<<numberOfFloors<<emptyString;
     int floors;
     std::cin>>floors;
     if(floors <= 0)
