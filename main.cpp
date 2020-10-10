@@ -92,21 +92,25 @@ void searchEstates(Agent *listOfAgents[3])
         {
         case 1:
             char typeOfEstates[20];
-            cout<<"Type of the estates you want to sort ,by lowest price:Flat or House:"<<" ";
+            cout<<"Type of the estates you want to sort ,by lowest price:Flat , House or Plot:"<<" ";
             do
             {
                 cin.getline(typeOfEstates,20);
             }
-            while(strcmp(typeOfEstates,flat)&&strcmp(typeOfEstates,house));
+            while(strcmp(typeOfEstates,flat)&&strcmp(typeOfEstates,house)&&strcasecmp(typeOfEstates,plot));
 
             if(!strcmp(typeOfEstates,house))
             {
-                listOfAgents[chosenAgent-1]->printHousesFromLowestPrice();
+                listOfAgents[chosenAgent-1]->printEstateFromLowestPriceByType(house);
             }
 
             if(!strcmp(typeOfEstates,flat))
             {
-                listOfAgents[chosenAgent-1]->printFlatsFromLowestPrice();
+                listOfAgents[chosenAgent-1]->printEstateFromLowestPriceByType(flat);
+            }
+            if(!strcasecmp(typeOfEstates,plot))
+            {
+                listOfAgents[chosenAgent-1]->printEstateFromLowestPriceByType(plot);
             }
             break;
 

@@ -122,16 +122,17 @@ RealEstates* RealEstates::Clone()const
 {
     return new RealEstates(*this);
 }
-void RealEstates::printHousesFromLowestPrice()const
+
+void RealEstates::printEstatesByTypeAndLowestPrice(const char *typeOfEstate)const
 {
-    if(current==0)
+        if(current==0)
     {
         cout<<empty;
         return ;
     }
 
     sortEstatesByLowerPrice();
-    printEstatesByType(house);
+    printEstatesByType(typeOfEstate);
 
 }
 
@@ -149,18 +150,6 @@ void RealEstates::newPrice(double percentagesFromAgent)
     }
 }
 
-void RealEstates::printFlatsFromLowestPrice()const
-{
-    if(current==0)
-    {
-        cout<<empty;
-        return;
-    }
-
-    sortEstatesByLowerPrice();
-    printEstatesByType(flat);
-}
-
 void RealEstates::printEstatesFromLowestPrice()const
 {
     if(current==0)
@@ -174,16 +163,6 @@ void RealEstates::printEstatesFromLowestPrice()const
         cout<<informationForEstate<<endl;
         estates[i]->print();
     }
-}
-
-void RealEstates::printHouses()const
-{
-    printEstatesByType(house);
-}
-
-void RealEstates::printFlats()const
-{
-    printEstatesByType(flat);
 }
 
 void RealEstates::printByPriceRange(double smallerPrice,double biggerPrice)const
@@ -240,30 +219,16 @@ void RealEstates::printBySpaceRange(double fromSize,double toSize)const
     }
 }
 
-void RealEstates::printHousesFromLowestPriceByVip()const
+void RealEstates::printEstatesLowestPriceByVipAndType(const char* typeOfEstate)const
 {
     sortEstatesByLowerPrice();
-    printEstatesByTypeAndVip(house);
-}
-
-void RealEstates::printFlatsFromLowestPriceByVip()const
-{
-    sortEstatesByLowerPrice();
-    printEstatesByTypeAndVip(flat);
+    printEstatesByTypeAndVip(typeOfEstate);
 }
 
 void RealEstates::printEstatesFromLowestPriceByVip()const
 {
     sortEstatesByLowerPrice();
     printEstatesByVip();
-}
-void RealEstates::printHousesByVip()const
-{
-    printEstatesByTypeAndVip(house);
-}
-void RealEstates::printFlatsByVip()const
-{
-    printEstatesByTypeAndVip(flat);
 }
 
 void RealEstates::printByPriceRangeByVip(double fromPrice,double toPrice)const

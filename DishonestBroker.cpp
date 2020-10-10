@@ -60,22 +60,12 @@ void DishonestBroker::print() const
     listOfEstates.print();
     std::cout<<std::endl;
 }
-
-void DishonestBroker::printHousesFromLowestPrice()
+void DishonestBroker:: printEstateFromLowestPriceByType(const char* typeOfEstate)
 {
-    std::cout<<dishonestBroker<<std::endl;
+    std::cout<<simpleBroker<<std::endl;
     std::cout<<brokerName<<name<<std::endl<<percentageForSales<<" "<<percentage<<std::endl;
     std::cout<<estates;
-    listOfEstates.printHousesFromLowestPrice();
-    std::cout<<std::endl;
-}
-
-void DishonestBroker::printFlatsFromLowestPrice()
-{
-    std::cout<<dishonestBroker<<std::endl;
-    std::cout<<brokerName<<name<<std::endl<<percentageForSales<<" "<<percentage<<std::endl;
-    std::cout<<estates;
-    listOfEstates.printFlatsFromLowestPrice();
+    listOfEstates.printEstatesLowestPriceByVipAndType(typeOfEstate);
     std::cout<<std::endl;
 }
 
@@ -88,23 +78,6 @@ void DishonestBroker::printEstatesFromLowestPrice()
     std::cout<<std::endl;
 }
 
-void DishonestBroker::printHouses()
-{
-    std::cout<<dishonestBroker<<std::endl;
-    std::cout<<brokerName<<name<<std::endl<<percentageForSales<<" "<<percentage<<std::endl;
-    std::cout<<estates;
-    listOfEstates.printHouses();
-    std::cout<<std::endl;
-}
-
-void DishonestBroker::printFlats()
-{
-    std::cout<<dishonestBroker<<std::endl;
-    std::cout<<brokerName<<name<<std::endl<<percentageForSales<<" "<<percentage<<std::endl;
-    std::cout<<estates;
-    listOfEstates.printFlats();
-    std::cout<<std::endl;
-}
 
 void DishonestBroker::printByPriceRange(double fromPrice,double toPrice)
 {
