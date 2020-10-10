@@ -121,11 +121,3 @@ void HelpfulBroker::printBySpaceRange(double fromSize, double toSize)
     std::cout<<std::endl;
 }
 
-char* HelpfulBroker::getName()const
-{
-    return this->name;
-}
-double HelpfulBroker::getPercentages()const
-{
-    return this->percentage;
-}

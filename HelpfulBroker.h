@@ -27,8 +27,6 @@ public:
     ~HelpfulBroker();
     HelpfulBroker & operator=(const HelpfulBroker &broker);
 
-    char* getName()const;
-    double getPercentages()const;
     virtual void print()const;
 };
 #endif

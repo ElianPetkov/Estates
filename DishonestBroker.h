@@ -25,8 +25,6 @@ public:
     virtual ~DishonestBroker();
     DishonestBroker& operator=(const DishonestBroker &broker);
 
-    char* getName()const;
-    double getPercentages()const;
     virtual void print()const;
 
 };

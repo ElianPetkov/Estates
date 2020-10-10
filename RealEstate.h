@@ -16,6 +16,7 @@ protected:
     void Copy(const RealEstates& x);
     void resize();
     void printEstatesByTypeAndVip(const char * typeOfEstate) const;
+    virtual RealEstates* Clone()const;
 
 
 public:
@@ -25,22 +26,21 @@ public:
     virtual ~RealEstates();
     RealEstates & operator=(const RealEstates &estate);
 
-
-    virtual void print()const;
+    //tested helping functions for the class
+    Estate* getEstateByPosition(int);
     void addEstate(Estate*);
-    bool removeEstate(Estate*);
-    int getCurrent();
-    virtual RealEstates* Clone()const;
     void newPrice(double);
     void printEstatesByType(const char * typeOfEstate) const;
-    Estate* getEstateByPosition(int);
+    int getCurrent();
     bool sortEstatesByLowerPrice()const;
+    bool removeEstate(Estate*);
 
     virtual void printEstatesByTypeAndLowestPrice(const char*)const;
     virtual void printEstatesFromLowestPrice()const;
     virtual void printByPriceRange(double,double)const;
     virtual void printEstatesByTown(char* town)const;
     virtual void printBySpaceRange(double,double)const;
+    virtual void print()const;
 
     virtual void printEstatesLowestPriceByVipAndType(const char*)const;
     virtual void printEstatesFromLowestPriceByVip()const;

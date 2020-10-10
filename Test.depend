@@ -288,7 +288,7 @@
 
 1526819378 source:d:\uni\kpk\project\thoughfulbroker.cpp
 
-1602320220 source:d:\uni\kpk\test\dishonestbroker.cpp
+1602321059 source:d:\uni\kpk\test\dishonestbroker.cpp
 	<iostream>
 	"RealEstate.h"
 	<string.h>
@@ -303,25 +303,25 @@
 1591121542 d:\uni\kpk\test\imot.h
 	<iostream>
 
-1602320394 d:\uni\kpk\test\dishonestbroker.h
+1602321081 d:\uni\kpk\test\dishonestbroker.h
 	<iostream>
 	"agent.h"
 
 1602319968 d:\uni\kpk\test\agent.h
 	<iostream>
 
-1602260148 source:d:\uni\kpk\test\flat.cpp
+1602320922 source:d:\uni\kpk\test\flat.cpp
 	<string.h>
 	<iostream>
 	"flat.h"
 	<cassert>
 	"Constants.h"
 
-1602260152 d:\uni\kpk\test\flat.h
+1602320925 d:\uni\kpk\test\flat.h
 	<iostream>
 	"Estate.h"
 
-1602320254 source:d:\uni\kpk\test\helpfulbroker.cpp
+1602321100 source:d:\uni\kpk\test\helpfulbroker.cpp
 	<iostream>
 	"RealEstate.h"
 	<string.h>
@@ -329,18 +329,18 @@
 	<cassert>
 	"Constants.h"
 
-1602320406 d:\uni\kpk\test\helpfulbroker.h
+1602321094 d:\uni\kpk\test\helpfulbroker.h
 	<iostream>
 	"agent.h"
 
-1602260190 source:d:\uni\kpk\test\house.cpp
+1602320971 source:d:\uni\kpk\test\house.cpp
 	<string.h>
 	<iostream>
 	"House.h"
 	<cassert>
 	"Constants.h"
 
-1602260180 d:\uni\kpk\test\house.h
+1602320976 d:\uni\kpk\test\house.h
 	"Estate.h"
 
 1591121744 source:d:\uni\kpk\test\imot.cpp
@@ -372,11 +372,11 @@
 	"Real_Estate_Test.cpp"
 	"Estate_Test.cpp"
 
-1602260207 d:\uni\kpk\test\plot.h
+1602320816 d:\uni\kpk\test\plot.h
 	<iostream>
 	"Estate.h"
 
-1602320452 d:\uni\kpk\test\simplebroker.h
+1602321122 d:\uni\kpk\test\simplebroker.h
 	<iostream>
 	"agent.h"
 
@@ -461,7 +461,7 @@
 1601988823 d:\uni\kpk\test\estate.h
 	<iostream>
 
-1602320103 d:\uni\kpk\test\realestate.h
+1602320769 d:\uni\kpk\test\realestate.h
 	<iostream>
 	"Estate.h"
 
@@ -496,14 +496,14 @@
 	"SimpleBroker.h"
 	"agent.h"
 
-1601987024 d:\uni\kpk\test\house_test.cpp
+1602320966 d:\uni\kpk\test\house_test.cpp
 	"House.h"
 
-1601982675 d:\uni\kpk\test\simple_broker_test.cpp
+1602321129 d:\uni\kpk\test\simple_broker_test.cpp
 
-1601982639 d:\uni\kpk\test\helpful_broker_test.cpp
+1602321106 d:\uni\kpk\test\helpful_broker_test.cpp
 
-1601982629 d:\uni\kpk\test\dishonest_broker_test.cpp
+1602321046 d:\uni\kpk\test\dishonest_broker_test.cpp
 
 1602078390 d:\uni\kpk\test\real_estate_test.cpp
 

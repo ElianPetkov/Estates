@@ -24,16 +24,8 @@ public:
     SimpleBroker(RealEstates listOfEstates, const char* name, double percentage);
     SimpleBroker(const SimpleBroker &broker);
     virtual ~SimpleBroker();
-
-    char* getName()const
-    {
-        return name;
-    }
-    double getPercentages()const
-    {
-        return percentage;
-    }
     SimpleBroker& operator=(const SimpleBroker &broker);
+
     virtual void print()const;
 
 };

@@ -48,27 +48,6 @@ void Flat::addCharacteristicsToEstate(const char *)
     std::cin.ignore();
 }
 
-
-void Flat::setRooms(int room)
-{
-    this->rooms=room;
-}
-
-void Flat::setFloors(int floor)
-{
-    this->floor=floor;
-}
-
-int Flat::getFloor()const
-{
-    return floor;
-}
-
-int Flat::getRooms()const
-{
-    return rooms;
-}
-
 Flat* Flat::Clone()const
 {
     return new Flat(*this);

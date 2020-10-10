@@ -7,6 +7,9 @@ class House:public Estate
     int rooms;
     int floors;
     double yard;
+
+    protected:
+    House* Clone()const;
     void Copy(const House &house);
 
     public:
@@ -15,10 +18,6 @@ class House:public Estate
     House(const House &house);
     House& operator=(const House &house);
 
-    int getRooms()const;
-    int getFloor()const;
-    double getYard()const;
-    House* Clone()const;
     virtual void print()const;
     virtual void addCharacteristicsToEstate(const char *);
 };

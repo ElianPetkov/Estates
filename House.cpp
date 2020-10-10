@@ -81,19 +81,3 @@ House* House::Clone()const
 {
     return new House(*this);
 }
-
-int House::getRooms()const
-{
-    return this->rooms;
-}
-
-int House::getFloor()const
-{
-    return this->floors;
-}
-
-double House::getYard()const
-{
-    return this->yard;
-}
-

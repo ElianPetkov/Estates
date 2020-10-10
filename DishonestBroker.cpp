@@ -120,11 +120,3 @@ void DishonestBroker::printBySpaceRange(double fromSize,double toSize)
     listOfEstates.printBySpaceRange(fromSize,toSize);
     std::cout<<std::endl;
 }
-char* DishonestBroker:: getName()const
-{
-    return name;
-}
-double DishonestBroker::getPercentages()const
-{
-    return percentage;
-}

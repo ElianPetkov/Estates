@@ -5,21 +5,6 @@
 #include "House.h"
 
 
-TEST_CASE("Test the number of rooms that are initialize in House constructor")
-{
-    House house("House","Plovdiv","Classic","bul. Dunav 1","Olga Petkov",130000,60,8,2);
-    CHECK(house.getRooms()==8);
-}
-TEST_CASE("Test the yard field that is initialize in House constructor")
-{
-    House house("House","Plovdiv","Classic","bul. Dunav 1","Olga Petkov",130000,60,8,2);
-    CHECK(house.getYard()==60);
-}
-TEST_CASE("Test the floor field that is initialize in House constructor")
-{
-    House house("House","Plovdiv","Classic","bul. Dunav 1","Olga Petkov",130000,60,8,2);
-    CHECK(house.getFloor()==2);
-}
 TEST_CASE("Test the price field that is initialize in House constructor")
 {
     House house("House","Plovdiv","Classic","bul. Dunav 1","Olga Petkov",130000,60,8,2);
