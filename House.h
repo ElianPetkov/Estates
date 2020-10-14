@@ -19,6 +19,6 @@ class House:public Estate
     House& operator=(const House &house);
 
     virtual void print()const;
-    virtual void addCharacteristicsToEstate(const char *);
+    virtual void addCharacteristicsToEstate();
 };
 #endif

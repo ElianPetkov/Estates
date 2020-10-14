@@ -16,17 +16,16 @@ protected:
     void Copy(const RealEstates& x);
     void resize();
     void printEstatesByTypeAndVip(const char * typeOfEstate) const;
-    virtual RealEstates* Clone()const;
+    RealEstates* Clone()const;
 
 
 public:
     RealEstates();
     RealEstates(Estate** estates);
     RealEstates(const RealEstates &estate);
-    virtual ~RealEstates();
+    ~RealEstates();
     RealEstates & operator=(const RealEstates &estate);
 
-    //tested helping functions for the class
     Estate* getEstateByPosition(int);
     void addEstate(Estate*);
     void newPrice(double);
@@ -35,18 +34,18 @@ public:
     bool sortEstatesByLowerPrice()const;
     bool removeEstate(Estate*);
 
-    virtual void printEstatesByTypeAndLowestPrice(const char*)const;
-    virtual void printEstatesFromLowestPrice()const;
-    virtual void printByPriceRange(double,double)const;
-    virtual void printEstatesByTown(char* town)const;
-    virtual void printBySpaceRange(double,double)const;
-    virtual void print()const;
+    void printEstatesByTypeAndLowestPrice(const char*)const;
+    void printEstatesFromLowestPrice()const;
+    void printByPriceRange(double,double)const;
+    void printEstatesByTown(char* town)const;
+    void printBySpaceRange(double,double)const;
+    void print()const;
 
-    virtual void printEstatesLowestPriceByVipAndType(const char*)const;
-    virtual void printEstatesFromLowestPriceByVip()const;
-    virtual void printByPriceRangeByVip(double,double)const;
-    virtual void printEstatesByTownByVip(char* town)const;
-    virtual void printBySpaceRangeByVip(double,double)const;
-    virtual void printEstatesByVip()const;
+    void printEstatesLowestPriceByVipAndType(const char*)const;
+    void printEstatesFromLowestPriceByVip()const;
+    void printByPriceRangeByVip(double,double)const;
+    void printEstatesByTownByVip(char* town)const;
+    void printBySpaceRangeByVip(double,double)const;
+    void printEstatesByVip()const;
 };
 #endif

@@ -310,7 +310,7 @@
 1602319968 d:\uni\kpk\test\agent.h
 	<iostream>
 
-1602320922 source:d:\uni\kpk\test\flat.cpp
+1602321918 source:d:\uni\kpk\test\flat.cpp
 	<string.h>
 	<iostream>
 	"flat.h"
@@ -333,14 +333,14 @@
 	<iostream>
 	"agent.h"
 
-1602320971 source:d:\uni\kpk\test\house.cpp
+1602321769 source:d:\uni\kpk\test\house.cpp
 	<string.h>
 	<iostream>
 	"House.h"
 	<cassert>
 	"Constants.h"
 
-1602320976 d:\uni\kpk\test\house.h
+1602699894 d:\uni\kpk\test\house.h
 	"Estate.h"
 
 1591121744 source:d:\uni\kpk\test\imot.cpp
@@ -448,20 +448,21 @@
 	"Imot.h"
 	<cassert>
 
-1602319490 source:d:\uni\kpk\test\simplebroker.cpp
+1602699590 source:d:\uni\kpk\test\simplebroker.cpp
 	<iostream>
 	"RealEstate.h"
 	<string.h>
 	"SimpleBroker.h"
 	<cassert>
 	"Constants.h"
+	<cmath>
 
 1526819378 source:d:\uni\kpk\test\thoughfulbroker.cpp
 
 1601988823 d:\uni\kpk\test\estate.h
 	<iostream>
 
-1602320769 d:\uni\kpk\test\realestate.h
+1602697963 d:\uni\kpk\test\realestate.h
 	<iostream>
 	"Estate.h"
 
@@ -480,7 +481,7 @@
 	<cassert>
 	"Constants.h"
 
-1602321768 d:\uni\kpk\test\constants.h
+1602321907 d:\uni\kpk\test\constants.h
 	<iostream>
 
 1601900850 source:d:\uni\kpk\test\house_test.cpp

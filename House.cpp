@@ -5,6 +5,12 @@
 #include "Constants.h"
 
 House::House():Estate(),rooms(1),floors(1),yard(1) {}
+/*
+*House constructor
+* rooms : initialize the number of the rooms in the house , can't be 0 or negative number
+* floors : initialize the number of floors of the house , can't be 0 or negative number
+* yard : initialize the yard size of the house , can't be 0 or negative number
+*/
 House::House(const char* typeOfEstate,const char *town,const char *offerType,const char*addr,const char*owner,double price,double space,int rooms,int floors):Estate(typeOfEstate,town,offerType,addr,owner,price,space)
 {
     assert(rooms> 0 && "rooms should be more than 0");
@@ -36,7 +42,9 @@ House & House::operator=(const House &house)
     }
     return *this;
 }
-
+/*
+* print all of the information for the estate
+*/
 void House::print()const
 {
     Estate::print();
@@ -44,8 +52,10 @@ void House::print()const
     std::cout<<numberOfFloors<<emptyString<<floors<<std::endl;
     std::cout<<squereMetersOfYard<<emptyString<<yard<<std::endl;
 }
-
-void House::addCharacteristicsToEstate(const char *)
+/*
+* this function initialize the House properties
+*/
+void House::addCharacteristicsToEstate()
 {
     Estate::addCharacteristicsToEstate(house);
     std::cout<<squereMetersOfYard<<emptyString;

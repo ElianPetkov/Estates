@@ -20,6 +20,9 @@ Plot::Plot(bool hasWater,bool hasElectricity,bool hasTelepfone,bool hasRoad,bool
     this->hasSewerage=hasSewerage;
     this->hasTelepfone=hasTelepfone;
 }
+/*
+* this function initialize the Flat properties using the console
+*/
 void Plot::addCharacteristicsToEstate(const char *)
 {
     Estate::addCharacteristicsToEstate("Plot");
@@ -105,7 +108,9 @@ void Plot::addCharacteristicsToEstate(const char *)
         this->hasSewerage=0;
     }
 }
-
+/*
+* print all of the information for the estate
+*/
 void Plot::print()const
 {
     Estate::print();
