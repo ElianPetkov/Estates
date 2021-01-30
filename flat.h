@@ -7,18 +7,16 @@ class Flat:public Estate
     private:
     int rooms;
     int floor;
+
+    protected:
+    Flat* Clone()const;
     void Copy(const Flat &flat);
 
     public:
     Flat();
-    Flat(const char* town, const char* TypeOfEstate, const char* addr, const char* owner, double price, double space, int rooms, int floor);
+    Flat(const char* typeOfEstate,const char* town, const char* offerType, const char* addr, const char* owner, double price, double space, int rooms, int floor);
 
     virtual void  print() const;
-    virtual void addCharacteristicsToEstate();
-    void setRooms(int room);
-    void setFloors(int floor);
-    int getRooms()const;
-    int getFloor()const;
-    Flat* Clone()const;
+    virtual void addCharacteristicsToEstate(const char *);
 };
 #endif

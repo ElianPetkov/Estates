@@ -4,8 +4,15 @@
 #include "SimpleBroker.h"
 #include <cassert>
 #include "Constants.h"
+#include <cmath>
 
 SimpleBroker::SimpleBroker():listOfEstates(),name(nullptr),percentage(0) {}
+/*
+* constructor for Simple broker with 3 arguments
+* listOfEstate : RealEstate type parameter with list of Estates
+* name : the name of the broker can't be empty
+* percentage : the percentages of the broker which are added to the estate value , can't be 0
+*/
 SimpleBroker::SimpleBroker(RealEstates listOfEstates,const char* name,double percentage)
 {
     assert(name != nullptr && "name: requires non-null argument");
@@ -51,61 +58,50 @@ SimpleBroker& SimpleBroker::operator=(const SimpleBroker &broker)
     }
     return *this;
 }
-
+/*
+* This function print all the information about Simple broker information with the estate list and the changed price of the estates
+*/
 void SimpleBroker::print()const
 {
     std::cout<<simpleBroker<<std::endl;
-    std::cout<<brokerName<<name<<std::endl<<percentageForSales<<" "<<percentage<<std::endl;
+    std::cout<<brokerName<<name<<std::endl<<percentageForSales<<emptyString<<percentage<<std::endl;
     std::cout<<estates;
     listOfEstates.print();
     std::cout<<std::endl;
 }
-
-void SimpleBroker::printHousesFromLowestPrice()
+/*
+* Print all estates of the type given as argument in ascending order by price
+* const char* typeOfEstate : can be 3 different values (Plot,House,Flat)
+*/
+void SimpleBroker::printEstateFromLowestPriceByType(const char* typeOfEstate)
 {
+    if(abs(strcmp(typeOfEstate,house) && abs(strcmp(typeOfEstate,flat) && abs(strcmp(typeOfEstate,house))))){
+        throw std::invalid_argument ("does not match the 3 possible types of estate(Plot,House,Flat)");
+    }
     std::cout<<simpleBroker<<std::endl;
-    std::cout<<brokerName<<name<<std::endl<<percentageForSales<<" "<<percentage<<std::endl;
+    std::cout<<brokerName<<name<<std::endl<<percentageForSales<<emptyString<<percentage<<std::endl;
     std::cout<<estates;
-    listOfEstates.printHousesFromLowestPrice();
+    listOfEstates.printEstatesByTypeAndLowestPrice(typeOfEstate);
     std::cout<<std::endl;
 }
-
-void SimpleBroker::printFlatsFromLowestPrice()
-{
-    std::cout<<simpleBroker<<std::endl;
-    std::cout<<brokerName<<name<<std::endl<<percentageForSales<<" "<<percentage<<std::endl;
-    std::cout<<estates;
-    listOfEstates.printFlatsFromLowestPrice();
-    std::cout<<std::endl;
-}
-
+/*
+* Print all estates in ascending order by price
+*/
 void SimpleBroker::printEstatesFromLowestPrice()
 {
     std::cout<<simpleBroker<<std::endl;
-    std::cout<<brokerName<<name<<std::endl<<percentageForSales<<" "<<percentage<<std::endl;
+    std::cout<<brokerName<<name<<std::endl<<percentageForSales<<emptyString<<percentage<<std::endl;
     std::cout<<estates;
     listOfEstates.printEstatesFromLowestPrice();
     std::cout<<std::endl;
 }
 
-void SimpleBroker::printHouses()
-{
-    std::cout<<simpleBroker<<std::endl;
-    std::cout<<brokerName<<name<<std::endl<<percentageForSales<<" "<<percentage<<std::endl;
-    std::cout<<estates;
-    listOfEstates.printHouses();
-    std::cout<<std::endl;
-}
 
-void SimpleBroker::printFlats()
-{
-    std::cout<<simpleBroker<<std::endl;
-    std::cout<<brokerName<<name<<std::endl<<percentageForSales<<" "<<percentage<<std::endl;
-    std::cout<<estates;
-    listOfEstates.printFlats();
-    std::cout<<std::endl;
-}
-
+/*
+* Print all estates in ascending order in the given range
+* double fromPrice : is the lower price
+* double toPrice: is the max price
+*/
 void SimpleBroker::printByPriceRange(double fromPrice, double toPrice)
 {
     if(toPrice-fromPrice<0){
@@ -113,25 +109,31 @@ void SimpleBroker::printByPriceRange(double fromPrice, double toPrice)
     }
 
     std::cout<<simpleBroker<<std::endl;
-    std::cout<<brokerName<<name<<std::endl<<percentageForSales<<" "<<percentage<<std::endl;
+    std::cout<<brokerName<<name<<std::endl<<percentageForSales<<emptyString<<percentage<<std::endl;
     std::cout<<estates;
     listOfEstates.printByPriceRange(fromPrice,toPrice);
     std::cout<<std::endl;
 }
-
+/*
+* Print all estates from the given town
+*/
 void SimpleBroker::printEstatesByTown(char *townName)
 {
     if(townName[0] == '\0'){
-        throw std::invalid_argument ("townName shouldn't be empty name");
+        throw std::invalid_argument ("townName should not be empty name");
     }
 
     std::cout<<simpleBroker<<std::endl;
-    std::cout<<brokerName<<name<<std::endl<<percentageForSales<<" "<<percentage<<std::endl;
+    std::cout<<brokerName<<name<<std::endl<<percentageForSales<<emptyString<<percentage<<std::endl;
     std::cout<<estates;
     listOfEstates.printEstatesByTown(townName);
     std::cout<<std::endl;
 }
-
+/*
+* Print all estates in the between yard range
+* double fromSize : is the lower size of the yard
+* double toSize: is the bigger size of the yard
+*/
 void SimpleBroker::printBySpaceRange(double fromSize,double toSize)
 {
     if(toSize-fromSize<0){
@@ -139,7 +141,7 @@ void SimpleBroker::printBySpaceRange(double fromSize,double toSize)
     }
 
     std::cout<<simpleBroker<<std::endl;
-    std::cout<<brokerName<<name<<std::endl<<percentageForSales<<" "<<percentage<<std::endl;
+    std::cout<<brokerName<<name<<std::endl<<percentageForSales<<emptyString<<percentage<<std::endl;
     std::cout<<estates;
     listOfEstates.printBySpaceRange(fromSize, toSize);
     std::cout<<std::endl;

@@ -7,18 +7,17 @@ class House:public Estate
     int rooms;
     int floors;
     double yard;
+
+    protected:
+    House* Clone()const;
     void Copy(const House &house);
 
     public:
     House();
-    House(const char* town, const char* TypeOfEstate, const char* addr, const char* owner, double price, double space, int rooms, int floor);
+    House(const char* typeOfEstate,const char* town, const char* offerType, const char* addr, const char* owner, double price, double space, int rooms, int floor);
     House(const House &house);
     House& operator=(const House &house);
 
-    int getRooms()const;
-    int getFloor()const;
-    double getYard()const;
-    House* Clone()const;
     virtual void print()const;
     virtual void addCharacteristicsToEstate();
 };

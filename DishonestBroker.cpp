@@ -7,6 +7,12 @@
 
 using namespace std;
 DishonestBroker::DishonestBroker():listOfEstates(),name(nullptr),percentage(0) {}
+/*
+* constructor for Dishonest broker with 3 arguments
+* listOfEstate : RealEstate type parameter with list of Estates
+* name : the name of the broker can't be empty
+* percentage : the percentages of the broker which are added to the estate value , can't be 0
+*/
 DishonestBroker::DishonestBroker(RealEstates listOfEstates,const char* name,double percentage)
 {
     assert(name != nullptr && "name: requires non-null argument");
@@ -51,7 +57,9 @@ DishonestBroker &DishonestBroker:: operator=(const DishonestBroker & broker)
     }
     return *this;
 }
-
+/*
+* This function print all the information about Simple broker information with the estate list and the changed price of the estates
+*/
 void DishonestBroker::print() const
 {
     std::cout<<dishonestBroker<<std::endl;
@@ -60,25 +68,21 @@ void DishonestBroker::print() const
     listOfEstates.print();
     std::cout<<std::endl;
 }
-
-void DishonestBroker::printHousesFromLowestPrice()
+/*
+* Print all estates of the type given as argument in ascending order by price
+* const char* typeOfEstate : can be 3 different values (Plot,House,Flat)
+*/
+void DishonestBroker:: printEstateFromLowestPriceByType(const char* typeOfEstate)
 {
-    std::cout<<dishonestBroker<<std::endl;
+    std::cout<<simpleBroker<<std::endl;
     std::cout<<brokerName<<name<<std::endl<<percentageForSales<<" "<<percentage<<std::endl;
     std::cout<<estates;
-    listOfEstates.printHousesFromLowestPrice();
+    listOfEstates.printEstatesLowestPriceByVipAndType(typeOfEstate);
     std::cout<<std::endl;
 }
-
-void DishonestBroker::printFlatsFromLowestPrice()
-{
-    std::cout<<dishonestBroker<<std::endl;
-    std::cout<<brokerName<<name<<std::endl<<percentageForSales<<" "<<percentage<<std::endl;
-    std::cout<<estates;
-    listOfEstates.printFlatsFromLowestPrice();
-    std::cout<<std::endl;
-}
-
+/*
+* Print all estates in ascending order by price
+*/
 void DishonestBroker::printEstatesFromLowestPrice()
 {
     std::cout<<dishonestBroker<<std::endl;
@@ -88,24 +92,11 @@ void DishonestBroker::printEstatesFromLowestPrice()
     std::cout<<std::endl;
 }
 
-void DishonestBroker::printHouses()
-{
-    std::cout<<dishonestBroker<<std::endl;
-    std::cout<<brokerName<<name<<std::endl<<percentageForSales<<" "<<percentage<<std::endl;
-    std::cout<<estates;
-    listOfEstates.printHouses();
-    std::cout<<std::endl;
-}
-
-void DishonestBroker::printFlats()
-{
-    std::cout<<dishonestBroker<<std::endl;
-    std::cout<<brokerName<<name<<std::endl<<percentageForSales<<" "<<percentage<<std::endl;
-    std::cout<<estates;
-    listOfEstates.printFlats();
-    std::cout<<std::endl;
-}
-
+/*
+* Print all estates in ascending order in the given range
+* double fromPrice : is the lower price
+* double toPrice: is the max price
+*/
 void DishonestBroker::printByPriceRange(double fromPrice,double toPrice)
 {
     if(toPrice-fromPrice<0)
@@ -119,7 +110,9 @@ void DishonestBroker::printByPriceRange(double fromPrice,double toPrice)
     listOfEstates.printByPriceRange(fromPrice,toPrice);
     std::cout<<std::endl;
 }
-
+/*
+* Print all estates from the given town
+*/
 void DishonestBroker::printEstatesByTown(char* townName)
 {
     if(townName[0] == '\0')
@@ -133,7 +126,11 @@ void DishonestBroker::printEstatesByTown(char* townName)
     listOfEstates.printEstatesByTown(townName);
     std::cout<<std::endl;
 }
-
+/*
+* Print all estates in the between yard range
+* double fromSize : is the lower size of the yard
+* double toSize: is the bigger size of the yard
+*/
 void DishonestBroker::printBySpaceRange(double fromSize,double toSize)
 {
     if(toSize-fromSize<0)
@@ -146,12 +143,4 @@ void DishonestBroker::printBySpaceRange(double fromSize,double toSize)
     std::cout<<estates;
     listOfEstates.printBySpaceRange(fromSize,toSize);
     std::cout<<std::endl;
-}
-char* DishonestBroker:: getName()const
-{
-    return name;
-}
-double DishonestBroker::getPercentages()const
-{
-    return percentage;
 }

@@ -5,7 +5,13 @@
 #include "Constants.h"
 
 House::House():Estate(),rooms(1),floors(1),yard(1) {}
-House::House(const char *town,const char *TypeOfEstate,const char*addr,const char*owner,double price,double space,int rooms,int floors):Estate(town,TypeOfEstate,addr,owner,price,space)
+/*
+*House constructor
+* rooms : initialize the number of the rooms in the house , can't be 0 or negative number
+* floors : initialize the number of floors of the house , can't be 0 or negative number
+* yard : initialize the yard size of the house , can't be 0 or negative number
+*/
+House::House(const char* typeOfEstate,const char *town,const char *offerType,const char*addr,const char*owner,double price,double space,int rooms,int floors):Estate(typeOfEstate,town,offerType,addr,owner,price,space)
 {
     assert(rooms> 0 && "rooms should be more than 0");
     this->rooms=rooms;
@@ -36,19 +42,23 @@ House & House::operator=(const House &house)
     }
     return *this;
 }
-
+/*
+* print all of the information for the estate
+*/
 void House::print()const
 {
     Estate::print();
-    std::cout<<numberOfRooms<<" "<<rooms<<std::endl;
-    std::cout<<numberOfFloors<<" "<<floors<<std::endl;
-    std::cout<<"Square meters of the yard:"<<" "<<yard<<std::endl;
+    std::cout<<numberOfRooms<<emptyString<<rooms<<std::endl;
+    std::cout<<numberOfFloors<<emptyString<<floors<<std::endl;
+    std::cout<<squereMetersOfYard<<emptyString<<yard<<std::endl;
 }
-
+/*
+* this function initialize the House properties
+*/
 void House::addCharacteristicsToEstate()
 {
-    Estate::addCharacteristicsToEstate();
-    std::cout<<"Square meters of the yard:"<<" ";
+    Estate::addCharacteristicsToEstate(house);
+    std::cout<<squereMetersOfYard<<emptyString;
     int yard;
     std::cin>>yard;
     if(yard <= 0)
@@ -57,7 +67,7 @@ void House::addCharacteristicsToEstate()
     }
     this->yard=yard;
 
-    std::cout<<numberOfRooms<<" ";
+    std::cout<<numberOfRooms<<emptyString;
     int rooms;
     std::cin>>rooms;
     if(rooms <= 0)
@@ -66,7 +76,7 @@ void House::addCharacteristicsToEstate()
     }
     this->rooms=rooms;
 
-    std::cout<<numberOfFloors<<" ";
+    std::cout<<numberOfFloors<<emptyString;
     int floors;
     std::cin>>floors;
     if(floors <= 0)
@@ -81,19 +91,3 @@ House* House::Clone()const
 {
     return new House(*this);
 }
-
-int House::getRooms()const
-{
-    return this->rooms;
-}
-
-int House::getFloor()const
-{
-    return this->floors;
-}
-
-double House::getYard()const
-{
-    return this->yard;
-}
-

@@ -21,7 +21,7 @@ int RegisterEstates(RealEstates &listOfEstates)
     {
         cin>>NumberOfEstates;
     }
-    while(NumberOfEstates<0 );
+    while(NumberOfEstates<0);
     cin.ignore();
 
     Estate **estates=new Estate*[NumberOfEstates];
@@ -50,7 +50,7 @@ int RegisterEstates(RealEstates &listOfEstates)
             estates[i]=new Plot();
         }
 
-        estates[i]->addCharacteristicsToEstate();
+        estates[i]->addCharacteristicsToEstate(typeOfEstate);
         listOfEstates.addEstate(estates[i]);
         cout<<endl;
 
@@ -92,21 +92,25 @@ void searchEstates(Agent *listOfAgents[3])
         {
         case 1:
             char typeOfEstates[20];
-            cout<<"Type of the estates you want to sort ,by lowest price:Flat or House:"<<" ";
+            cout<<"Type of the estates you want to sort ,by lowest price:Flat , House or Plot:"<<" ";
             do
             {
                 cin.getline(typeOfEstates,20);
             }
-            while(strcmp(typeOfEstates,flat)&&strcmp(typeOfEstates,house));
+            while(strcmp(typeOfEstates,flat)&&strcmp(typeOfEstates,house)&&strcasecmp(typeOfEstates,plot));
 
             if(!strcmp(typeOfEstates,house))
             {
-                listOfAgents[chosenAgent-1]->printHousesFromLowestPrice();
+                listOfAgents[chosenAgent-1]->printEstateFromLowestPriceByType(house);
             }
 
             if(!strcmp(typeOfEstates,flat))
             {
-                listOfAgents[chosenAgent-1]->printFlatsFromLowestPrice();
+                listOfAgents[chosenAgent-1]->printEstateFromLowestPriceByType(flat);
+            }
+            if(!strcasecmp(typeOfEstates,plot))
+            {
+                listOfAgents[chosenAgent-1]->printEstateFromLowestPriceByType(plot);
             }
             break;
 
@@ -142,10 +146,16 @@ void searchEstates(Agent *listOfAgents[3])
     while(option!=0);
 }
 #include "tests_problem1.cpp"
+#include "House_Test.cpp"
+#include "Simple_Broker_Test.cpp"
+#include "Helpful_Broker_Test.cpp"
+#include "Dishonest_Broker_Test.cpp"
+#include "Simple_Broker_Test.cpp"
+#include "Real_Estate_Test.cpp"
+#include "Estate_Test.cpp"
 using namespace std;
 int main ()
 {
-    // пускане на тестовете
     doctest::Context().run();
 
     RealEstates georgiListWithEstates;
@@ -155,7 +165,6 @@ int main ()
     RegisterEstates(georgiListWithEstates);
     RegisterEstates(denislavListWithEstates);
     RegisterEstates(ivanListWithEstates);
-
 
     DishonestBroker Georgi(georgiListWithEstates,"Georgi Dimitrov",5.0);
     Georgi.print();

@@ -1,0 +1,6 @@
+#ifndef __SIMPLE_BROKER_TEST__CPP
+#define __SIMPLE_BROKER_TEST__CPP
+#define DOCTEST_CONFIG_IMPLEMENT
+
+
+#endif

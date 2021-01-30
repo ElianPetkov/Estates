@@ -4,8 +4,9 @@
 class Estate
 {
 private:
+    char* typeOfEstate;
     char* town;
-    char* TypeOfEstate;
+    char* offerType;
     char* addr;
     char* owner;
     double price;
@@ -16,11 +17,12 @@ private:
 
 public:
     Estate();
-    Estate(const char *town,const char *TypeOfEstate,const char* addr,const char* owner,double price,double space);
+    Estate(const char* typeOfEstate,const char *town,const char *offerType,const char* addr,const char* owner,double price,double space);
     Estate(const Estate &estate);
     virtual ~Estate();
     Estate& operator=(const Estate &estate);
 
+    char* getOfferType()const;
     char* getTypeOfEstate()const;
     char* getAddr()const;
     char* getOwner()const;
@@ -33,6 +35,6 @@ public:
     virtual int getFloor()const{}
     virtual char* getTown()const;
     virtual void print()const;
-    virtual void addCharacteristicsToEstate();
+    virtual void addCharacteristicsToEstate(const char *);
 };
 #endif

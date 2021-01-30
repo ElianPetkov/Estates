@@ -7,6 +7,12 @@
 
 
 HelpfulBroker::HelpfulBroker():name(nullptr),percentage(0),listOfEstates() {}
+/*
+* constructor for Helpful broker with 3 arguments
+* listOfEstate : RealEstate type parameter with list of Estates
+* name : the name of the broker can't be empty
+* percentage : the percentages of the broker which are added to the estate value , can't be 0
+*/
 HelpfulBroker::HelpfulBroker(RealEstates listOfEstates, const char* name, double percentage)
 {
     assert(name != nullptr && "name: requires non-null argument");
@@ -51,7 +57,9 @@ HelpfulBroker& HelpfulBroker:: operator=(const HelpfulBroker& broker)
     }
     return *this;
 }
-
+/*
+* This function print all the information about Simple broker information with the estate list and the changed price of the estates starting with the Vip estates first
+*/
 void HelpfulBroker::print()const
 {
     std::cout<<helpfulBroker<<std::endl;
@@ -60,26 +68,24 @@ void HelpfulBroker::print()const
     listOfEstates.printEstatesByVip();
     std::cout<<std::endl;
 }
-
-
-void HelpfulBroker::printHousesFromLowestPrice()
+/*
+* Print all estates of the type given as argument in ascending order by price starting with the Vip estates first
+* const char* typeOfEstate : can be 3 different values (Plot,House,Flat)
+*/
+void HelpfulBroker:: printEstateFromLowestPriceByType(const char* typeOfEstate)
 {
-    std::cout<<helpfulBroker<<std::endl;
+    if(abs(strcmp(typeOfEstate,house) && abs(strcmp(typeOfEstate,flat) && abs(strcmp(typeOfEstate,house))))){
+        throw std::invalid_argument ("does not match the 3 possible types of estate(Plot,House,Flat)");
+    }
+    std::cout<<simpleBroker<<std::endl;
     std::cout<<brokerName<<name<<std::endl<<percentageForSales<<" "<<percentage<<std::endl;
     std::cout<<estates;
-    listOfEstates.printHousesFromLowestPriceByVip();
+    listOfEstates.printEstatesLowestPriceByVipAndType(typeOfEstate);
     std::cout<<std::endl;
 }
-
-void HelpfulBroker::printFlatsFromLowestPrice()
-{
-    std::cout<<helpfulBroker<<std::endl;
-    std::cout<<brokerName<<name<<std::endl<<percentageForSales<<" "<<percentage<<std::endl;
-    std::cout<<estates;
-    listOfEstates.printFlatsFromLowestPriceByVip();
-    std::cout<<std::endl;
-}
-
+/*
+* Print all estates in ascending order by price starting with the vip estates first
+*/
 void HelpfulBroker::printEstatesFromLowestPrice()
 {
     std::cout<<helpfulBroker<<std::endl;
@@ -88,25 +94,11 @@ void HelpfulBroker::printEstatesFromLowestPrice()
     listOfEstates.printEstatesFromLowestPriceByVip();
     std::cout<<std::endl;
 }
-
-void HelpfulBroker::printHouses()
-{
-    std::cout<<helpfulBroker<<std::endl;
-    std::cout<<brokerName<<name<<std::endl<<percentageForSales<<" "<<percentage<<std::endl;
-    std::cout<<estates;
-    listOfEstates.printHousesByVip();
-    std::cout<<std::endl;
-}
-
-void HelpfulBroker::printFlats()
-{
-    std::cout<<helpfulBroker<<std::endl;
-    std::cout<<brokerName<<name<<std::endl<<percentageForSales<<" "<<percentage<<std::endl;
-    std::cout<<estates;
-    listOfEstates.printFlatsByVip();
-    std::cout<<std::endl;
-}
-
+/*
+* Print all estates in ascending order in the given range starting with the Vip estates first
+* double fromPrice : is the lower price
+* double toPrice: is the max price
+*/
 void HelpfulBroker::printByPriceRange(double fromPrice, double toPrice)
 {
     if(toPrice-fromPrice<0)
@@ -120,7 +112,9 @@ void HelpfulBroker::printByPriceRange(double fromPrice, double toPrice)
     listOfEstates.printByPriceRangeByVip(fromPrice,toPrice);
     std::cout<<std::endl;
 }
-
+/*
+* Print all estates from the given town starting with the Vip estate
+*/
 void HelpfulBroker::printEstatesByTown(char *townName)
 {
     if(townName[0] == '\0')
@@ -134,7 +128,11 @@ void HelpfulBroker::printEstatesByTown(char *townName)
     listOfEstates.printEstatesByTownByVip(townName);
     std::cout<<std::endl;
 }
-
+/*
+* Print all estates in the between yard range starting with the Vip estates
+* double fromSize : is the lower size of the yard
+* double toSize: is the bigger size of the yard
+*/
 void HelpfulBroker::printBySpaceRange(double fromSize, double toSize)
 {
     if(toSize-fromSize<0)
@@ -149,11 +147,3 @@ void HelpfulBroker::printBySpaceRange(double fromSize, double toSize)
     std::cout<<std::endl;
 }
 
-char* HelpfulBroker::getName()const
-{
-    return this->name;
-}
-double HelpfulBroker::getPercentages()const
-{
-    return this->percentage;
-}

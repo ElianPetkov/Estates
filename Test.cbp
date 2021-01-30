@@ -32,24 +32,25 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Constants.h" />
 		<Unit filename="DishonestBroker.cpp" />
 		<Unit filename="DishonestBroker.h" />
+		<Unit filename="Estate.cpp" />
+		<Unit filename="Estate.h" />
 		<Unit filename="HelpfulBroker.cpp" />
 		<Unit filename="HelpfulBroker.h" />
 		<Unit filename="House.cpp" />
 		<Unit filename="House.h" />
-		<Unit filename="Imot.h" />
 		<Unit filename="Plot.cpp" />
 		<Unit filename="Plot.h" />
-		<Unit filename="RegImot.cpp" />
-		<Unit filename="RegImot.h" />
+		<Unit filename="RealEstate.cpp" />
+		<Unit filename="RealEstate.h" />
 		<Unit filename="SimpleBroker.cpp" />
 		<Unit filename="SimpleBroker.h" />
 		<Unit filename="agent.h" />
 		<Unit filename="doctest.h" />
 		<Unit filename="flat.cpp" />
 		<Unit filename="flat.h" />
-		<Unit filename="imot.cpp" />
 		<Unit filename="main.cpp" />
 		<Extensions />
 	</Project>

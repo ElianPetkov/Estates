@@ -1,0 +1,7 @@
+#ifndef __HELPFUL_BROKER_TEST__CPP
+#define __HELPFUL_BROKER_TEST__CPP
+#define DOCTEST_CONFIG_IMPLEMENT
+
+
+
+#endif

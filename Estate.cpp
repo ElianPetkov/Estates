@@ -2,18 +2,24 @@
 #include <iostream>
 #include "RealEstate.h"
 #include <cassert>
-Estate::Estate():town(nullptr),TypeOfEstate(nullptr),addr(nullptr),owner(nullptr),space(0),price(0) {}
-Estate::Estate(const char *town,const char *TypeOfEstate,const char*addr,const char*owner,double price,double space):price(price),space(space)
+#include "Constants.h"
+Estate::Estate():town(nullptr),offerType(nullptr),addr(nullptr),owner(nullptr),space(0),price(0) {}
+Estate::Estate(const char* typeOfEstate,const char *town,const char *offerType,const char*addr,const char*owner,double price,double space):price(price),space(space)
 {
+    assert(typeOfEstate != nullptr && "typeOfEstate is nullptr");
+    assert(typeOfEstate[0] != '\0' && "typeOfEstate is empty string");
+    this->typeOfEstate=new char[strlen(typeOfEstate)+1];
+    strcpy(this->typeOfEstate,typeOfEstate);
+
     assert(town != nullptr && "town is nullptr");
     assert(town[0] != '\0' && "town is empty string");
     this->town=new char[strlen(town)+1];
     strcpy(this->town,town);
 
-    assert(TypeOfEstate != nullptr && "TypeOfEstate is nullptr");
-    assert(TypeOfEstate[0] != '\0' && "TypeOfEstate is an empty string");
-    this->TypeOfEstate=new char[strlen(TypeOfEstate)+1];
-    strcpy(this->TypeOfEstate,TypeOfEstate);
+    assert(offerType != nullptr && "offerType is nullptr");
+    assert(offerType[0] != '\0' && "offerType is an empty string");
+    this->offerType=new char[strlen(offerType)+1];
+    strcpy(this->offerType,offerType);
 
     assert(addr != nullptr && "addr is nullptr");
     assert(addr[0] != '\0' && "addr is empty string");
@@ -28,14 +34,18 @@ Estate::Estate(const char *town,const char *TypeOfEstate,const char*addr,const c
 }
 void Estate::Copy(const Estate &estate)
 {
+    this->typeOfEstate=new char[strlen(estate.typeOfEstate)+1];
+    assert(this->typeOfEstate != nullptr);
+    strcpy(this->typeOfEstate,estate.typeOfEstate);
+
     this->town=new char[strlen(estate.town)+1];
     assert(this->town != nullptr);
     strcpy(this->town,estate.town);
 
 
-    this->TypeOfEstate=new char[strlen(estate.TypeOfEstate)+1];
-    assert(this->TypeOfEstate != nullptr);
-    strcpy(this->TypeOfEstate,estate.TypeOfEstate);
+    this->offerType=new char[strlen(estate.offerType)+1];
+    assert(this->offerType != nullptr);
+    strcpy(this->offerType,estate.offerType);
 
     this->addr=new char[strlen(estate.addr)+1];
     assert(this->addr != nullptr);
@@ -54,8 +64,8 @@ Estate::Estate(const Estate &estate)
 }
 void Estate::Erase()
 {
-    delete [] TypeOfEstate;
-    TypeOfEstate=nullptr;
+    delete [] offerType;
+    offerType=nullptr;
     delete [] addr;
     addr=nullptr;
     delete [] owner;
@@ -77,16 +87,20 @@ Estate & Estate::operator =(const Estate &estate)
 void Estate::print()const
 {
     std::cout<<"Town:"<<" "<<town<<std::endl;
-    std::cout<<"Type of the Offert:"<<" "<<TypeOfEstate<<std::endl;
+    std::cout<<"Type of the Offert:"<<" "<<offerType<<std::endl;
     std::cout<<"Addres:"<<" "<<addr<<std::endl;
     std::cout<<"Name of the owner:"<<" "<<owner<<std::endl;
     std::cout<<"Price:"<<" "<<price<<std::endl;
     std::cout<<"Square meters of the estate:"<<" "<<space<<std::endl;
 }
-void Estate::addCharacteristicsToEstate()
+void Estate::addCharacteristicsToEstate(const char * typeOfEstate)
 {
-    std::cout<<"Town:"<<" ";
+
+    this->typeOfEstate=new char[strlen(typeOfEstate)+1];
+    strcpy(this->typeOfEstate,typeOfEstate);
+
     char buffer[1024];
+    std::cout<<"Town:"<<" ";
     std::cin.getline(buffer,1024);
     if(buffer == nullptr)
     {
@@ -105,16 +119,16 @@ void Estate::addCharacteristicsToEstate()
         std::cin.getline(buffer,1024);
     }
     while(strcmp(buffer,vip)&&strcmp(buffer,"Classic"));
-    this->TypeOfEstate=new char[strlen(buffer)+1];
+    this->offerType=new char[strlen(buffer)+1];
     if(buffer == nullptr)
     {
-        throw std::invalid_argument ("TypeOfEstate is nullptr");
+        throw std::invalid_argument ("offerType is nullptr");
     }
     if(buffer[0] == '\0')
     {
-        throw std::invalid_argument ("TypeOfEstate does not have a value");
+        throw std::invalid_argument ("offerType does not have a value");
     }
-    strcpy(this->TypeOfEstate,buffer);
+    strcpy(this->offerType,buffer);
 
     std::cout<<"Addres of the estate:"<<" ";
     std::cin.getline(buffer,1024);
@@ -161,9 +175,9 @@ char* Estate::getOwner() const
     return owner;
 }
 
-void Estate::setPrice(double price)
+void Estate::setPrice(double percentagesFromAgent= 0)
 {
-    this->price=this->price+(this->price*price)/100.0;
+    this->price=(this->price*percentagesFromAgent/100)+this->price;
 }
 double Estate::getPrice()const
 {
@@ -185,7 +199,12 @@ double Estate::getSpace()const
     return space;
 }
 
+char* Estate::getOfferType()const
+{
+    return offerType;
+}
+
 char* Estate::getTypeOfEstate()const
 {
-    return TypeOfEstate;
+    return typeOfEstate;
 }
